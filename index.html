@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        <?php if (is_front_page() || is_home()) {
+            echo get_bloginfo('name');
+        } else {
+            wp_title('|', true, 'right');
+            echo bloginfo('name');
+        } ?>
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="<?php echo home_url(); ?>" />
+
+    <link rel="icon" type="image/vnd.microsoft.icon"
+        href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.ico" />
+
+    <!-- Fonts and CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sawarabi+Mincho&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/reset.css" /> -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/common.css">
+
+</head>
+<body>
+
+    <div id="loading"></div>
+
+    <nav id="nav" class="tb">
+        <div class="sec-inner">
+
+        </div>
+    </nav>
+
+    <header id="header">
+        <div class="sec-inner">
+
+        </div>
+    </header>
+
+    <div id="mv">
+        <div class="sec-inner">
+        </div>
+    </div>
+
+    <main id="main-top">
+
+        <section id="" class="section-1">
+            <div class="sec-inner c-inner">
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer">
+        <div class="sec-inner c-inner">
+
+        </div>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

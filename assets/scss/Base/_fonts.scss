@@ -1,0 +1,97 @@
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+
+@font-face {
+    font-family: KozGoPr6N-Bold;
+    src: url('../fonts/KozGoPr6N-Bold.otf');
+}
+
+@font-face {
+    font-family: KozGoPr6N-Medium;
+    src: url('../fonts/KozGoPr6N-Medium.otf');
+}
+
+@font-face {
+    font-family: KozGoPr6N-Regular;
+    src: url('../fonts/KozGoPr6N-Regular.otf');
+}
+
+@font-face {
+    font-family: gothicMB101Pro-Medium;
+    src: url('../fonts/A-OTF-GothicMB101Pro-Medium.otf');
+}
+
+@font-face {
+    font-family: gothicMB101Pro-Regular;
+    src: url('../fonts/A-OTF-GothicMB101Pro-Reg.otf');
+}
+
+@font-face {
+    font-family: notoSansCJKjp-black;
+    src: url('../fonts/NotoSansCJKjp-Black.otf');
+}
+
+@font-face {
+    font-family: notoSansCJKjp-bold;
+    src: url('../fonts/NotoSansCJKjp-Bold.otf');
+}
+
+@font-face {
+    font-family: notoSansCJKjp-Regular;
+    src: url('../fonts/NotoSansCJKjp-Regular.otf');
+}
+
+@font-face {
+    font-family: hiraMinPro-W6;
+    src: url('../fonts/HiraMinPro-W6.otf');
+}
+
+@font-face {
+    font-family: noto-extra;
+    src: url('../fonts/NotoSans-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: acumin;
+    src: url('../fonts/FontsFree-Net-aa2woff2.ttf');
+}
+@mixin KozGoPr6N($type: 'regular') {
+    @if ($type == 'bold') {
+        font-family: KozGoPr6N-Bold;
+        font-weight: bold;
+    }
+    @if ($type == 'medium') {
+        font-family: KozGoPr6N-Medium;
+        font-weight: 500;
+    }
+    @if ($type == 'regular') {
+        font-family: KozGoPr6N-Regular;
+        font-weight: 400;
+    }
+    @if ($type == 'light') {
+        font-family: KozGoPr6N-Light;
+    }
+}
+
+@mixin hiraMinPro($type: 'regular') {
+    @if ($type == 'bold') {
+        font-family: hiraMinPro-W3;
+    }
+    @if ($type == 'regular') {
+        font-family: hiraMinPro-W6;
+    }
+       
+}
+
+@mixin notoSansCJKjp($type: 'regular') {
+    @if ($type == 'black') {
+        font-family: notoSansCJKjp-black;
+    }
+    @if ($type == 'bold') {
+        font-family: notoSansCJKjp-bold;
+    }
+    @if ($type == 'regular') {
+        font-family: notoSansCJKjp-Regular;
+    }
+}
