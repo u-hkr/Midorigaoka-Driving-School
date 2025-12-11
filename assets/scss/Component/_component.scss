@@ -1,0 +1,109 @@
+// 共通コンテナ
+.c-section {
+  padding: 0 2.5rem;
+@include media('tc') {
+    padding-left: 100px;
+  }
+}
+.c-inner {
+  max-width: 1430px;
+  margin: 0 auto;
+
+  &-max {
+    max-width: 1920px;
+  }
+}
+
+// 共通タイトル
+.c-title {
+  .en {
+    display: block;
+    background: url(../img/common/bg-dot-80.png) top left/ .5982em .3em, #B4E5E3; /* /1217*2427 */
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: $font_en;
+    font-weight: 500;
+    font-size: 9.6rem;
+    line-height: .7;
+  }
+  .ja {
+    display: block;
+    background: $main_gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 4.8rem;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+  &.white .ja {
+    background: none;
+    color: #fff;
+  }
+}
+
+.c-title-s {
+  text-align: center;
+
+  .ja {
+    display: block;
+    background: $main_gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+  .en {
+    display: block;
+    background: $gra_gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: $font_en;
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+}
+
+// グラデーションテキスト（メインカラー）
+.c-text-gradient {
+  background: $main_gradient;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#heading {
+  .sec-inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 32rem;
+    padding: 7rem 0 0;
+    background: $main_gradient;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 26.56%;
+      background: url(../img/common/bg-dot.png) top left/auto 260% repeat-x;
+      opacity: .55;
+    }
+  }
+  .sec-title {
+    color: #fff;
+    font-size: 4.8rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center;
+  }
+}

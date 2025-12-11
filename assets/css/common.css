@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* margin css */
 .mt-0 {
   margin-top: 0 !important;
@@ -1691,6 +1692,12 @@
 .xl-row > [class*=col-] {
   padding-right: 3rem;
   padding-left: 3rem;
+}
+
+/* font family */
+.ff-en {
+  font-family: "Jost", "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  font-weight: 500;
 }
 
 /* font size */

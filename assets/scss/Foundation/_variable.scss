@@ -12,21 +12,33 @@
 // $font_roboto: 'Roboto', sans-serif;
 // $font_mukta: 'Mukta', sans-serif;
 // $font_srisakdi: 'Srisakdi', sans-serif;
-$font: "BIZ UDPGothic", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+$font: "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
 $font_mincho: "游明朝", YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", serif;
+$font_en: "Jost", "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
 
 $main_color: #64B5E7;
-$base_color: #231815;
-$green_color: #82CE98;
-$orange_color: #FF7100;
-$title_color: #4A5778;
-$gray_color: #B3B3B3;
-$white_color: #FFFFFF;
-$pink_color: #FF7BAC;
+$main_gradient: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%);
+$gra_gradient: linear-gradient(180deg, #FFD776 0%, #FFB400 100%);
+$par_gra_gradient: linear-gradient(90deg, #B490DE 0%, #C4A1EC 100%);
+
+$green_dot_bg: url(../img/common/bg-dot-20.png), #8CE3DE;
+$gra_dot_bg: url(../img/common/bg-dot-20.png), $main_gradient;
+$orange_dot_bg: url(../img/common/bg-dot-20.png), #F6AE00;
+
+
+$green_color: #00C4BB;
+$accent_color: #FFB400;
+$base_color: #333;
+// $title_color: #4A5778;
+$white_color: #FFF;
 $red_color: #E60012;
-$olive_color: #C3BE71;
-$teal_color: #32A7E0;
-$purple_color: #B16E9E;
-$brown_color: #633E1C;
 $black_color: #000000;
-$yellow_color: #FCEE21;
+
+// $orange_color: #FF7100;
+// $gray_color: #B3B3B3;
+// $pink_color: #FF7BAC;
+// $olive_color: #C3BE71;
+// $teal_color: #32A7E0;
+// $purple_color: #B16E9E;
+// $brown_color: #633E1C;
+// $yellow_color: #FCEE21;
