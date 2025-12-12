@@ -2330,12 +2330,21 @@
   align-items: center;
   gap: 0 10px;
   padding: 10px;
+  height: 100%;
   width: 100%;
   max-width: 182px;
 }
-#header .sec-list-2 .list-item.i-2, #header .sec-list-2 .list-item.i-3 {
+#header .sec-list-2 .list-item.i-1 {
   max-width: 160px;
   background: #64B5E7;
+}
+#header .sec-list-2 .list-item.i-2 {
+  max-width: 160px;
+  background: linear-gradient(to right, #64B5E7, #00C4BB);
+}
+#header .sec-list-2 .list-item.i-3 {
+  max-width: 180px;
+  background: linear-gradient(to right, #00A29A, #00C4BB);
 }
 #header .sec-list-2 .list-item .icon {
   width: 24px;

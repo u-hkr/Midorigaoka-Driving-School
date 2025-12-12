@@ -5,10 +5,15 @@
   height: 88px;
   width: calc(100% - 100px);
   background: #fff;
+  display: flex;
+  justify-content: flex-end;
 
   .sec-inner{
     display: flex;
-
+    margin-left: auto;
+    margin-right: 0;
+    width: 100%;
+    max-width: 1655px;
   }
   .sec-logo{
     max-width: 192px;
@@ -32,12 +37,21 @@
       align-items: center;
       gap: 0 10px;
       padding: 10px;
+      height: 100%;
       width: 100%;
       max-width: 182px;
 
-      &.i-2, &.i-3{
+      &.i-1{
         max-width: 160px;
-        background: $main_color;
+        background: $green_color;
+      }
+      &.i-2{
+        max-width: 160px;
+        background: linear-gradient(to right, $main_color, $main_light_color);
+      }
+      &.i-3{
+        max-width: 180px;
+        background: linear-gradient(to right, $accent_color, $accent_light_color);
       }
 
       .icon{
