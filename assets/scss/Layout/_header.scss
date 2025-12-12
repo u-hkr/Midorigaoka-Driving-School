@@ -1,26 +1,35 @@
 #header{
   position: fixed;
-  left: 100px;
   top: 0;
   height: 88px;
-  width: calc(100% - 100px);
-  background: #fff;
-  display: flex;
-  justify-content: flex-end;
+  width: 100%;
+  z-index: 100;
 
   .sec-inner{
+    max-width: 1920px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
     display: flex;
-    margin-left: auto;
-    margin-right: 0;
+    justify-content: end;
+  }
+  .sec-box{
+    margin-left: 100px;
+    background: #fff;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     max-width: 1655px;
   }
   .sec-logo{
-    max-width: 192px;
+    min-width: 192px;
+    padding: 4px 0;
   }
   .sec-list-1{
     display: flex;
     justify-content: space-around;
+    gap: 8px;
     align-items: center;
     max-width: 881px;
     width: 100%;
@@ -41,16 +50,16 @@
       width: 100%;
 
       &.i-1{
-        width: 160px;
-        background: $green_color;
+        width: 182px;
+        background: $green_light_color;
       }
       &.i-2{
         width: 160px;
-        background: linear-gradient(to right, $main_color, $main_light_color);
+        background: $main_gradient;
       }
       &.i-3{
-        width: 180px;
-        background: linear-gradient(to right, $accent_color, $accent_light_color);
+        width: 160px;
+        background: $gra_gradient;
       }
       .icon{
         width: 24px;
