@@ -12,10 +12,21 @@
     margin: 0 auto;
     display: flex;
     justify-content: end;
+    position: relative;
+    
+
+    &::before{
+      position: absolute;
+      content: "";
+      width: calc(100% - 99px);
+      height: 100%;
+      left: 99px;
+      top: 0;
+      background: $white_color;
+    }
   }
   .sec-box{
     margin-left: 100px;
-    background: #fff;
     position: relative;
     display: flex;
     justify-content: space-between;

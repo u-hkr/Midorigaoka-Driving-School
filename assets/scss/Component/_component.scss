@@ -1,8 +1,11 @@
 // 共通コンテナ
 .c-section {
-  padding: 0 2.5rem;
+  padding: 0 0 0 2.5rem;
 @include media('tc') {
-    padding-left: 100px;
+    padding-left: 99px;
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
   }
 }
 .c-inner {

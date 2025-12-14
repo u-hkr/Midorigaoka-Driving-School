@@ -3,19 +3,22 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 101;
+  z-index: 2;
 
   .sec-inner{
     max-width: 1920px;
     width: 100%;
     margin: 0 auto;
+    position: relative;
   }
   .sec-box{
     width: 100px;
     height: 100vh;
     background: rgba($color: #fff, $alpha: .88);
     z-index: 100;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
   .sec-top{
     width: 100%;

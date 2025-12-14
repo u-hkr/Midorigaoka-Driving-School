@@ -2311,10 +2311,19 @@
   margin: 0 auto;
   display: flex;
   justify-content: end;
+  position: relative;
+}
+#header .sec-inner::before {
+  position: absolute;
+  content: "";
+  width: calc(100% - 99px);
+  height: 100%;
+  left: 99px;
+  top: 0;
+  background: #FFF;
 }
 #header .sec-box {
   margin-left: 100px;
-  background: #fff;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -2373,19 +2382,22 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 101;
+  z-index: 2;
 }
 #nav .sec-inner {
   max-width: 1920px;
   width: 100%;
   margin: 0 auto;
+  position: relative;
 }
 #nav .sec-box {
   width: 100px;
   height: 100vh;
   background: rgba(255, 255, 255, 0.88);
   z-index: 100;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 #nav .sec-top {
   width: 100%;
