@@ -61,6 +61,7 @@
     }
     .box-right{
       display: flex;
+      gap: 0 2.4%;
 
       .column{
         width: 100%;
@@ -87,6 +88,21 @@
           width: 16px;
           height: 18px;
           background: url("../img/common/arrow-w.svg") center / contain no-repeat;
+        }
+      }
+      .item{
+        font-size: 16px;
+        font-weight: 700;
+        background: $main_gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        border-bottom: 1px solid;
+        border-image: $main_gradient 1;
+        padding: 10px;
+
+        &-e{
+          height: 37px;
+          border-bottom: none;
         }
       }
     }
