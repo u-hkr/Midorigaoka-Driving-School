@@ -51,13 +51,16 @@
       }
     }
   }
-  .sec-box-btm{
+  .sec-box-mid{
     display: grid;
     grid-template-columns: 352fr 996fr;
     gap: 0 5.6%;
+    align-items: flex-start;
+    margin-bottom: 139px;
 
     .box-left{
       max-width: 352px;
+      padding-top: 40px;
     }
     .box-right{
       display: flex;
@@ -65,6 +68,11 @@
 
       .column{
         width: 100%;
+      }
+      .list{
+        &:not(:nth-of-type(1)){
+          margin-top: 73px;
+        }
       }
       .top{
         display: flex;
@@ -76,7 +84,41 @@
         color: $white_color;
         position: relative;
         margin-bottom: 16px;
+        border-radius: 2px;
 
+        &-i{
+          padding-left: 63px;
+            .image{
+              position: absolute;
+              bottom: 0;
+              left: 6px;
+              width: 60px;
+            }
+        }
+        &-l{
+          padding: 0;
+          justify-content: center;
+          margin-top: 35px;
+
+          .container{
+            max-width: 228px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            padding-left: 59px;
+            position: relative;
+            height: 56px;
+          }
+
+          .image{
+            position: absolute;
+            bottom: 0;
+            left: 6px;
+            width: 50px;
+          }
+        }
         .icon{
           width: 24px;
         }
@@ -89,6 +131,10 @@
           height: 18px;
           background: url("../img/common/arrow-w.svg") center / contain no-repeat;
         }
+        .text{
+          position: relative;
+          z-index: 2;
+        }
       }
       .item{
         font-size: 16px;
@@ -98,13 +144,17 @@
         -webkit-text-fill-color: transparent;
         border-bottom: 1px solid;
         border-image: $main_gradient 1;
-        padding: 10px;
+        padding: 5px 10px;
+        position: relative;
 
         &-e{
-          height: 37px;
+          height: 40px;
           border-bottom: none;
         }
       }
     }
+  }
+  .sec-box-btm{
+    
   }
 }
