@@ -1,3 +1,46 @@
+#mv {
+  position: relative;
+  height: 100lvh;
+  background: url(../img/index/mv-bg.jpg) center/cover no-repeat;
+  overflow: hidden;
+
+  .sec-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    .item {
+      position: relative;
+      width: 100%;
+      height: 100lvh;
+      overflow: hidden;
+      
+      img {
+        position: absolute;
+        top: -7.53%;
+        left: -36.66%;
+        width: 154.12%;
+        height: 103.94%;
+        object-position: top;
+      }
+    }
+  }
+
+  .sec-line {
+    position: absolute;
+    width: 112.10vw;
+    height: 35.83vw;
+    left: -6vw;
+    bottom: 0;
+
+    object {
+      object-position: top;
+    }
+  }
+}
+
 #main-top {
   margin-top: 88px;
 
