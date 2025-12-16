@@ -167,8 +167,16 @@
     gap: 0 24px;
     padding: 82px 20px 51px ;
     position: relative;
-    background:  linear-gradient(180deg, rgba(0, 162, 154, 0),rgba(0, 162, 154, 0.2));
 
-    
+    &::before{
+      position: absolute;
+      content: "";
+      width: calc(100% + 99px);
+      height: 100%;
+      left: -99px;
+      bottom: 0;
+      background:  linear-gradient(180deg, rgba(0, 162, 154, 0.02),rgba(0, 162, 154, 0.08));
+
+    }
   }
 }
