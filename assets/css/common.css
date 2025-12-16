@@ -2515,7 +2515,7 @@
   grid-template-columns: 352fr 996fr;
   gap: 0 5.6%;
   align-items: flex-start;
-  margin-bottom: 139px;
+  margin-bottom: 57px;
 }
 #footer .sec-box-mid .box-left {
   max-width: 352px;
@@ -2605,4 +2605,19 @@
 #footer .sec-box-mid .box-right .item-e {
   height: 40px;
   border-bottom: none;
+}
+#footer .sec-box-btm {
+  justify-content: left;
+  font-size: 12px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  gap: 0 24px;
+  padding: 82px 20px 51px;
+  position: relative;
+  background: linear-gradient(180deg, rgba(0, 162, 154, 0), rgba(0, 162, 154, 0.2));
 }/*# sourceMappingURL=common.css.map */
