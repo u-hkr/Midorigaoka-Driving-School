@@ -286,6 +286,57 @@ figure img,
   background: url(../img/index/mv-bg.jpg) center/cover no-repeat;
   overflow: hidden;
 }
+#mv .sec-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#mv .sec-box {
+  position: absolute;
+  left: 0;
+  bottom: 306px;
+  background: #FFF;
+  border-radius: 8px;
+  max-width: 563px;
+  width: 100%;
+  padding: 46px 16px;
+}
+#mv .sec-box .container {
+  max-width: 459px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 158px;
+}
+#mv .sec-box .top {
+  position: relative;
+  display: flex;
+}
+#mv .sec-box .bg {
+  position: absolute;
+  left: -158px;
+  top: 0;
+  display: inline-block;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 700;
+  width: 138px;
+  padding: 0 8px;
+  text-align: center;
+  background: #C4A1EC;
+}
+#mv .sec-box .date {
+  font-size: 14px;
+  color: #7D7D7D;
+  line-height: 1.21;
+}
+#mv .sec-box .text {
+  font-size: 16px;
+  font-weight: 500;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
 #mv .sec-slide {
   position: absolute;
   top: 0;
@@ -320,9 +371,6 @@ figure img,
      object-position: top;
 }
 
-#main-top {
-  margin-top: 88px;
-}
 #main-top #driver {
   background: linear-gradient(180deg, #01C2B9 0%, rgba(0, 196, 187, 0) 100%);
   padding-top: 72px;
