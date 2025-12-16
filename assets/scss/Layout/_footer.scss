@@ -1,9 +1,46 @@
 #footer{
-
+  
   .sec-inner{
     max-width: 1920px;
     width: 100%;
     margin: 0 auto;
+    position: relative;
+
+    &::before{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 446px;
+      top: -484px;
+      background:  url(../img/common/bg-dot-20.png) top left / 465px 233px repeat;
+      z-index: 2;
+    }
+  }
+  .sec-bg{
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    top: -272px;
+    left: 0;
+
+    &::before{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 684px;
+      top: -240px;
+      background:  url(../img/common/fig-footer-1.png) center / cover no-repeat;
+      z-index: 3;
+    }
+    &::after{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 463px;
+      top: 0;
+      background:  url(../img/common/fig-footer-2.png) center / cover no-repeat;
+      z-index: 2;
+    }
   }
   .sec-box-top{
     position: relative;
@@ -155,18 +192,9 @@
     }
   }
   .sec-box-btm{
-    justify-content: left;
-    font-size: 12px;
-    font-weight: 700;
-    background: $main_gradient;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row-reverse;
-    gap: 0 24px;
     padding: 82px 20px 51px ;
     position: relative;
+    overflow: hidden;
 
     &::before{
       position: absolute;
@@ -176,7 +204,29 @@
       left: -99px;
       bottom: 0;
       background:  linear-gradient(180deg, rgba(0, 162, 154, 0.02),rgba(0, 162, 154, 0.08));
-
+      z-index: -2;
+    }
+    &::after{
+      position: absolute;
+      content: "";
+      width: calc(100% + 99px);
+      height: calc(100% + 79px);
+      left: -99px;
+      top: 0;
+      background:  url(../img/common/bg-dot.png) center / contain repeat;
+      z-index: -1;
+    }
+    .box{
+      justify-content: left;
+      font-size: 12px;
+      font-weight: 700;
+      background: $main_gradient;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row-reverse;
+      gap: 0 24px;
     }
   }
 }
