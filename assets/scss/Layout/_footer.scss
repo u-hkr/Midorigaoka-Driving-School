@@ -15,6 +15,23 @@
       background:  url(../img/common/bg-dot-20.png) top left / 465px 233px repeat;
       z-index: 2;
     }
+    .pagetop{
+      position: absolute;
+      height: 172px;
+      right: 71px;
+      bottom: 50px;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.5;
+      background: $main_gradient;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      writing-mode: vertical-rl;
+      border-left: 2px solid;
+      border-image: $main_gradient 1;
+      text-align: end;
+      display: inline-block;
+    }
   }
   .sec-bg{
     position: absolute;
@@ -228,5 +245,6 @@
       flex-direction: row-reverse;
       gap: 0 24px;
     }
+    
   }
 }

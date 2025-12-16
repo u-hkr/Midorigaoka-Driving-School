@@ -46,6 +46,14 @@
     background: none;
     color: #fff;
   }
+  @include media('sp') {
+   .en {
+      font-size: 6.4rem;
+    }
+    .ja {
+      font-size: 2rem;
+    }
+  }
 }
 
 .c-title-s {
