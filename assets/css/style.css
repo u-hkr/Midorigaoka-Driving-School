@@ -173,6 +173,10 @@ figure img,
   opacity: 0.7;
 }
 
+.u-ib {
+  display: inline-block;
+}
+
 .c-section {
   padding: 0 0 0 2.5rem;
 }
@@ -386,7 +390,9 @@ figure img,
 }
 #driver .btm-btn {
   width: 100%;
-  height: 90px;
+  min-height: 90px;
+  height: -moz-fit-content;
+  height: fit-content;
   background: #00A29A;
   display: flex;
   justify-content: center;
@@ -429,8 +435,8 @@ figure img,
   text-align: center;
 }
 #driver .sec-box-top .box.single {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
   padding-bottom: 20px;
   position: relative;
 }
@@ -629,66 +635,42 @@ figure img,
     padding-bottom: 614px;
   }
   #driver .btm-btn {
-    width: 100%;
-    height: 90px;
-    background: #00A29A;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 16px;
+    height: auto;
+    min-height: 52px;
+    padding: 8px;
   }
   #driver .btm-btn .txt {
-    font-size: 2.4rem;
-    font-weight: 700;
-    color: #FFF;
+    font-size: 16px;
   }
-  #driver .btm-btn .arrow {
-    width: 16px;
-    height: 18px;
-    background: url("../img/common/arrow-w.svg") center/contain no-repeat;
-  }
-  #driver .sec-inner {
-    position: relative;
+  #driver .btm-btn .txt .large {
+    font-size: 2rem;
   }
   #driver .sec-title {
-    margin-bottom: 48px;
+    margin-bottom: 16px;
   }
   #driver .sec-box-top {
-    display: grid;
-    grid-template-columns: 717fr 1108fr;
-    border: 2px solid #FFF;
+    grid-template-columns: 1fr;
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid #FFF;
+    border-bottom: 1px solid #FFF;
   }
   #driver .sec-box-top .box {
-    padding-top: 21px;
+    padding-top: 24px;
   }
   #driver .sec-box-top .box:not(:nth-of-type(1)) {
-    border-left: 2px solid #FFF;
+    border-left: none;
   }
   #driver .sec-box-top .title {
-    font-size: 4rem;
-    font-weight: 700;
-    line-height: 1.5;
-    color: #FFF;
-    margin-bottom: 21px;
-    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 16px;
   }
   #driver .sec-box-top .box.single {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-    position: relative;
-  }
-  #driver .sec-box-top .box.single .image {
-    max-width: 611px;
-    width: 100%;
-    aspect-ratio: 611/308;
-    margin: 0 auto;
+    padding-bottom: 40px;
   }
   #driver .sec-box-top .box.single .btm-btn {
     position: absolute;
-    max-width: 360px;
-    bottom: 0;
-    right: 0;
+    max-width: 203px;
     gap: 0 8.8%;
     padding: 16px;
   }
