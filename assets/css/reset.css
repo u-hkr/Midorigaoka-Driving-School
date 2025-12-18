@@ -303,6 +303,14 @@ fieldset {
     left: -30px;
   }
 }
+@keyframes aniShine {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 @keyframes link-lineloop {
   0% {
     transform: scaleX(1);

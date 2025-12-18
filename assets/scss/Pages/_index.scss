@@ -39,13 +39,18 @@
     position: absolute;
     top: 0;
     left: 0;
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 100lvh;
+    height: 100%;
+    padding-top: calc(100lvh - 225px);
+    padding-left: 10rem;
   }
 
   .sec-img-1 {
     position: absolute;
     top: 21.7rem;
+    top: clamp(21.7rem, 20lvh, 20lvh);
     left: 24.8rem;
     width: 87.3rem;
     height: 16.2rem;
@@ -53,6 +58,7 @@
   .sec-img-2 {
     position: absolute;
     top: 26.5rem;
+    top: clamp(26.5rem, 24lvh, 24lvh);
     left: 114.2rem;
     width: 53.3rem;
     background: #fff;
@@ -62,15 +68,16 @@
   .sec-scroll {
     // opacity: 1;
     // transition: .2s ease opacity;
-    position: absolute;
-    top: 58lvh;
-    left: 11.2rem;
+    // position: absolute;
+    // top: 58lvh;
+    // left: 11.2rem;
+    margin-left: calc(1.2rem - 172px);
     pointer-events: none;
     user-select: none;
     width: 172px;
     padding-bottom: 4px;
     transform: rotate(90deg);
-    transform-origin: left bottom;
+    transform-origin: right bottom;
     color: #C9F4F2;
     font-size: 16px;
     font-weight: bold;
@@ -103,10 +110,11 @@
   }
 
   .sec-news {
-    position: absolute;
-    top: calc(58lvh + 172px + 52px);
-    left: 10rem;
+    // position: absolute;
+    // top: calc(58lvh + 172px + 52px);
+    // left: 10rem;
     width: 563px;
+    margin-top: 22px;
     padding: 43px 40px 43px 50px;
     background: #fff;
     border-radius: 8px;
@@ -116,6 +124,10 @@
       grid-template-columns: 161px 1fr;
       align-items: start;
       justify-items: start;
+
+      + .sec-news-item {
+        margin-top: 20px;
+      }
 
       .cat {
         display: inline-block;
@@ -222,7 +234,7 @@
 #driver{
   background:  linear-gradient(180deg, #01C2B9 0%, #00C4BB00 100%);
   padding-top: 7.2rem;
-  padding-bottom: 61.4rem;
+  // padding-bottom: 100lvh;
   // padding-bottom: 516px;
 
   .btm-btn{
@@ -237,6 +249,7 @@
 
     .txt{
       font-size: 2.4rem;
+      font-size: clamp(16px, 2.4rem, 2.4rem);
       font-weight: 700;
       color: $white_color;
       line-height: 1.2;
@@ -261,7 +274,7 @@
     .box{
       padding-top: 21px;
 
-      &:not(:nth-of-type(1)){
+      &:not(:nth-child(1)){
         border-left: 2px solid $white_color;
       }
     }
@@ -274,9 +287,9 @@
       text-align: center;
     }
     .box.single{
-      padding-left: 24px;
-      padding-right: 24px;
-      padding-bottom: 20px;
+      padding-left: 2.4rem;
+      padding-right: 2.4rem;
+      padding-bottom: 2rem;
       position: relative;
 
       .image{
@@ -302,6 +315,7 @@
       .top-btn{
         text-align: center;
         font-size: 2.4rem;
+        font-size: clamp(16px, 2.4rem, 2.4rem);
         font-weight: 700;
         background: $main_gradient;
         -webkit-background-clip: text;
@@ -471,22 +485,32 @@
     }
   }
   .sec-box-img{
-    position: absolute;
-    height: 61.4rem;
-    width: calc(100% + 99px);
-    left: -99px;
-    bottom: -61.4rem;
-    img{
-      object-position: top center;
-    }
-    &::before{
-      position: absolute;
+    position: relative;
+    // position: absolute;
+    height: 100lvh;
+    width: 100vw;
+    left: auto;
+    right: 0;
+    // bottom: -61.4rem;
+    clip-path: inset(0 0 2px);
+
+    &::before {
       content: "";
-      width: 100%;
-      height: 40rem;
+      position: absolute;
       bottom: 0;
       left: 0;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0),rgba(255, 255, 255, .3));
+      width: 100%;
+      height: 100px;
+      background: linear-gradient(180deg, #ffffff00 0%, #ffffff 100%);
+    }
+
+    img{
+      position: fixed;
+      top: 80px;
+      left: 0;
+      height: calc(100% - 80px);
+      object-position: top center;
+      z-index: -1;
     }
   }
   @include media('tb') {
@@ -850,6 +874,7 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-size: 2.4rem;
+        font-size: clamp(16px, 2.4rem, 2.4rem);
         font-weight: 700;
       }
       .arrow{
@@ -896,13 +921,11 @@
         display: inline-block;
         width: 162px;
         padding: 3px 8px;
+        background: $main_gradient;
         text-align: center;
 
-        &-p{
-          background: #C4A1EC;
-        }
-        &-g{
-          background: $main_gradient;
+        &.important{
+          background: $sub_color;
         }
       }
       .text{

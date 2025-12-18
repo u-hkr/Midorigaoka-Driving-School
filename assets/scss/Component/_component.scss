@@ -38,6 +38,10 @@
     font-weight: 500;
     font-size: 9.6rem;
     line-height: 1;
+
+    // opacity: 0;
+    // visibility: hidden;
+    // transition: opacity 1s, visibility 1s, transform 1s;
   }
   .ja {
     display: block;
@@ -52,6 +56,15 @@
   &.white .ja {
     background: none;
     color: #fff;
+  }
+
+  &.inview {
+    // .en {
+    //   animation: aniShine 3s;
+    //   opacity: 1;
+    //   transform: translateY(0px);
+    //   visibility: visible;
+    // }
   }
   @include media('sp') {
    .en {

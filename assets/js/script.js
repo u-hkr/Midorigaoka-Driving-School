@@ -43,4 +43,17 @@ $(function(){
       topReturn = false;
     }
   });
+
+	$(".js-inview").each(function(){
+	  ScrollTrigger.create({
+	      trigger: $(this),
+	      start: "top 70%",
+	      end: "bottom 50%",
+	      toggleClass: {
+	          targets: $(this),
+	          className: "inview",
+	      },
+	      once: true,
+	  });
+	});
 });
