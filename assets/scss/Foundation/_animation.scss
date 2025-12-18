@@ -1,3 +1,28 @@
+@keyframes ScrollSuggestionLinePc {
+  0% {
+    opacity: 1;
+    left: -30px;
+  }
+
+  80% {
+    opacity: 1;
+    left: 100%;
+  }
+
+  99% {
+    opacity: 0;
+    left: 100%;
+  }
+
+  to {
+    opacity: 0;
+    left: -30px;
+  }
+}
+
+
+
+// backup
 @-webkit-keyframes link-lineloop {
   0% {
     -webkit-transform: scaleX(1);

@@ -2305,7 +2305,6 @@
   z-index: 100;
 }
 #header .sec-inner {
-  max-width: 1920px;
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -2316,34 +2315,42 @@
 #header .sec-inner::before {
   position: absolute;
   content: "";
-  width: calc(100% - 99px);
+  width: calc(100% - 10rem);
   height: 100%;
-  left: 99px;
+  left: 10rem;
   top: 0;
   background: #FFF;
 }
 #header .sec-box {
-  margin-left: 100px;
+  margin-left: 10rem;
   position: relative;
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-width: 1655px;
+  max-width: 165.5rem;
+}
+@media print, screen and (max-width: 1920px) {
+  #header .sec-box {
+    max-width: 1655px;
+  }
 }
 #header .sec-logo {
-  min-width: 192px;
+  width: 192px;
+  max-width: 8vw;
+  flex-shrink: 0;
   padding: 4px 0;
 }
 #header .sec-list-1 {
   display: flex;
   justify-content: space-around;
-  gap: 8px;
+  gap: 0.8rem;
   align-items: center;
-  max-width: 881px;
+  max-width: 880px;
   width: 100%;
   font-size: 16px;
+  font-size: clamp(14px, 1.3vw, 16px);
   font-weight: 700;
-  padding: 0 24px;
+  padding: 0 2.4rem;
 }
 #header .sec-list-1 li {
   height: 100%;
@@ -2357,29 +2364,32 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0 10px;
-  padding: 10px;
+  gap: 0 1rem;
+  padding: 1rem;
   height: 100%;
   width: 100%;
+  font-size: 16px;
+  font-size: clamp(14px, 1.3vw, 16px);
+  font-weight: 700;
+  white-space: nowrap;
 }
 #header .sec-list-2 .list-item.i-1 {
   width: 182px;
+  width: clamp(0px, 15vw, 182px);
   background: #8CE3DE;
 }
 #header .sec-list-2 .list-item.i-2 {
   width: 160px;
+  width: clamp(0px, 10vw, 160px);
   background: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%);
 }
 #header .sec-list-2 .list-item.i-3 {
   width: 160px;
+  width: clamp(0px, 10vw, 160px);
   background: linear-gradient(180deg, #FFD776 0%, #FFB400 100%);
 }
 #header .sec-list-2 .list-item .icon {
-  width: 24px;
-}
-#header .sec-list-2 .list-item .text {
-  font-size: 16px;
-  font-weight: 700;
+  width: 1.5em;
 }
 @media print, screen and (max-width: 1024px) {
   #header {
@@ -2436,13 +2446,12 @@
   z-index: 200;
 }
 #nav .sec-inner {
-  max-width: 1920px;
   width: 100%;
   margin: 0 auto;
   position: relative;
 }
 #nav .sec-box {
-  width: 100px;
+  width: 10rem;
   height: 100vh;
   background: rgba(255, 255, 255, 0.88);
   z-index: 100;
@@ -2452,7 +2461,9 @@
 }
 #nav .sec-top {
   width: 100%;
-  padding-top: 11px;
+  min-height: 88px;
+  padding: 1.1rem 0;
+  padding: clamp(11px, 1.1rem, 1.1rem) 0;
   cursor: pointer;
 }
 #nav .sec-top .text {
@@ -2463,33 +2474,33 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 1;
-  margin-bottom: 5px;
+  margin-bottom: 1rem;
 }
 #nav .sec-top .btn {
-  width: 62px;
-  height: 34px;
+  width: 6.2rem;
+  height: 3.4rem;
   margin: 0 auto;
   position: relative;
 }
 #nav .sec-top .btn span {
   position: absolute;
-  left: calc(50% - 26px);
-  top: calc(50% - 2px);
+  left: calc(50% - 2.6rem);
+  top: calc(50% - 0.2rem);
   display: block;
-  width: 52px;
-  height: 4px;
+  width: 5.2rem;
+  height: 0.4rem;
   border-radius: 2px;
   background: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%);
 }
 #nav .sec-top .btn span:nth-of-type(1) {
-  transform: translateY(-10px);
+  transform: translateY(-1rem);
 }
 #nav .sec-top .btn span:nth-of-type(3) {
-  transform: translateY(10px);
+  transform: translateY(1rem);
 }
 #nav .sec-mid {
   position: absolute;
-  width: 85px;
+  width: 8.5rem;
   left: 0;
   top: 45%;
   transform: translateY(-50%);
@@ -2509,6 +2520,7 @@
 #nav .sec-mid .text {
   writing-mode: vertical-rl;
   font-size: 2.4rem;
+  font-size: clamp(16px, 2.4rem, 2.4rem);
   font-weight: 700;
   letter-spacing: 0.06em;
 }

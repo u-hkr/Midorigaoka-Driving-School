@@ -4,9 +4,10 @@
   height: 88px;
   width: 100%;
   z-index: 100;
+  // background: $white_color;
 
   .sec-inner{
-    max-width: 1920px;
+    // max-width: 1920px;
     width: 100%;
     height: 100%;
     margin: 0 auto;
@@ -18,35 +19,42 @@
     &::before{
       position: absolute;
       content: "";
-      width: calc(100% - 99px);
+      width: calc(100% - 10rem);
       height: 100%;
-      left: 99px;
+      left: 10rem;
       top: 0;
       background: $white_color;
     }
   }
   .sec-box{
-    margin-left: 100px;
+    margin-left: 10rem;
     position: relative;
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 1655px;
+    max-width: 165.5rem;
+
+    @include media('full') {
+      max-width: 1655px;
+    }
   }
   .sec-logo{
-    min-width: 192px;
+    width: 192px;
+    max-width: 8vw;
+    flex-shrink: 0;
     padding: 4px 0;
   }
   .sec-list-1{
     display: flex;
     justify-content: space-around;
-    gap: 8px;
+    gap: .8rem;
     align-items: center;
-    max-width: 881px;
+    max-width: 880px;
     width: 100%;
     font-size: 16px;
+    font-size: clamp(14px, 1.3vw, 16px);
     font-weight: 700;
-    padding: 0 24px;
+    padding: 0 2.4rem;
     
     li{
       height: 100%;
@@ -61,29 +69,32 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 0 10px;
-      padding: 10px;
+      gap: 0 1rem;
+      padding: 1rem;
       height: 100%;
       width: 100%;
+      font-size: 16px;
+      font-size: clamp(14px, 1.3vw, 16px);
+      font-weight: 700;
+      white-space: nowrap;
 
       &.i-1{
         width: 182px;
+        width: clamp(0px, 15vw, 182px);
         background: $green_light_color;
       }
       &.i-2{
         width: 160px;
+        width: clamp(0px, 10vw, 160px);
         background: $main_gradient;
       }
       &.i-3{
         width: 160px;
+        width: clamp(0px, 10vw, 160px);
         background: $gra_gradient;
       }
       .icon{
-        width: 24px;
-      }
-      .text{
-        font-size: 16px;
-        font-weight: 700;
+        width: 1.5em;
       }
     }
   }
