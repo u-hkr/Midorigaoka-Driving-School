@@ -1,7 +1,6 @@
 #footer{
   
   .sec-inner{
-    max-width: 1920px;
     width: 100%;
     margin: 0 auto;
     position: relative;
@@ -44,8 +43,8 @@
       content: "";
       position: absolute;
       width: 100%;
-      height: 684px;
-      top: -240px;
+      height: 68.5rem;
+      top: -24rem;
       background:  url(../img/common/fig-footer-1.png) center / cover no-repeat;
       z-index: 3;
     }
@@ -64,24 +63,24 @@
     
     .box-image{
       display: flex;
-      height: 537px;
-      margin-left: -99px;
-      width: calc(100% + 99px);
+      height: 53.7rem;
+      margin-left: -10rem;
+      width: calc(100% + 10rem);
     }
     .box-list{
-      max-width: 1470px;
-      margin: -151px auto 85px;
+      max-width: 147rem;
+      margin: -15rem auto 8.5rem;
       padding: 0 20px;
       width: 100%;
       display: flex;
     }
     .box-item{
       width: 100%;
-      height: 111px;
+      height: 11rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 0 10px;
+      gap: 0 1rem;
       padding: 0 16px;
 
       .icon-l{

@@ -221,8 +221,8 @@
 
 #driver{
   background:  linear-gradient(180deg, #01C2B9 0%, #00C4BB00 100%);
-  padding-top: 72px;
-  padding-bottom: 614px;
+  padding-top: 7.2rem;
+  padding-bottom: 61.4rem;
   // padding-bottom: 516px;
 
   .btm-btn{
@@ -329,7 +329,7 @@
         width: 100%;
 
         .image{
-          height: 230px;
+          height: 23rem;
         }
         &:nth-of-type(1){
           .image{
@@ -398,7 +398,7 @@
         border-right: 2px solid;
       }
       .image{
-        height: 218px;
+        height: 21.8rem;
         background: #E7F9F8;
       }
       .btm-btn{
@@ -424,7 +424,7 @@
       justify-content: center;
       align-items: center;
       position: relative;
-      height: 146px;
+      height: 14.6rem;
 
       &:not(:nth-of-type(1)){
         margin-left: -2px;
@@ -472,10 +472,10 @@
   }
   .sec-box-img{
     position: absolute;
-    height: 614px;
+    height: 61.4rem;
     width: calc(100% + 99px);
     left: -99px;
-    bottom: -614px;
+    bottom: -61.4rem;
     img{
       object-position: top center;
     }
@@ -483,7 +483,7 @@
       position: absolute;
       content: "";
       width: 100%;
-      height: 400px;
+      height: 40rem;
       bottom: 0;
       left: 0;
       background: linear-gradient(180deg, rgba(255, 255, 255, 0),rgba(255, 255, 255, .3));
@@ -612,7 +612,7 @@
           // width: 100%;
 
           .image{
-            height: 160px;
+            height: 16rem;
           }
           &:nth-of-type(1){
             .image{
@@ -685,7 +685,7 @@
           border-right: 1px solid;
         }
         .image{
-          height: 160px;
+          height: 16rem;
           // background: #E7F9F8;
         }
         .btm-btn{
@@ -712,7 +712,7 @@
         // justify-content: center;
         // align-items: center;
         // position: relative;
-        height: 102px;
+        height: 10rem;
 
         &:not(:nth-of-type(1)){
           margin-left: 0;
@@ -749,7 +749,7 @@
           max-width: 106px;
           width: auto;
           min-width: auto;
-          height: 132px;
+          height: 13.2rem;
           // width: 135px;
           bottom: 0;
           // left: 8.3%;
@@ -764,7 +764,7 @@
     .sec-box-img{
       // position: absolute;
       // position: static;
-      height: 427px;
+      height: 42.7rem;
       width: 100%;
       left: 0;
       bottom: -427px;
@@ -810,7 +810,7 @@
   }
   .sec-inner{
     display: grid;
-    grid-template-columns: 284px 1fr;
+    grid-template-columns: 28.4rem 1fr;
     gap: 0 4.73%;
     margin-bottom: 90px;
   }
@@ -861,7 +861,7 @@
     box-shadow: 0 0 13.3px 1px rgba(0, 162, 154, 0.2);
 
     .box-list{
-      max-width: 798px;
+      max-width: 80rem;
       width: 100%;
       margin: 0 auto;
       padding: 56px 20px;
@@ -918,7 +918,7 @@
     }
   }
   .sec-box-img{
-    height: 748px;
+    height: 75rem;
     width: calc(100% + 99px);
     margin-left: -99px;
 
@@ -1076,8 +1076,8 @@
 }
 #banner{
   background: $main_gradient;
-  padding-top: 170px;
-  padding-bottom: 524px;
+  padding-top: 17rem;
+  padding-bottom: 52.5rem;
 
   .sec-box{
     display: flex;
