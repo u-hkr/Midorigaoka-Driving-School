@@ -539,14 +539,14 @@ figure img,
   position: relative;
 }
 #driver .sec-box-top .box.single .image {
-  max-width: 611px;
+  max-width: 61rem;
   width: 100%;
   aspect-ratio: 611/308;
   margin: 0 auto;
 }
 #driver .sec-box-top .box.single .btm-btn {
   position: absolute;
-  max-width: 360px;
+  max-width: 36rem;
   bottom: 0;
   right: 0;
   gap: 0 8.8%;
@@ -628,7 +628,7 @@ figure img,
 #driver .sec-box-mid .box-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  max-width: 1720px;
+  max-width: 172rem;
   width: 100%;
   margin: 0 auto;
 }
@@ -654,7 +654,7 @@ figure img,
 }
 #driver .sec-box-btm .box-list {
   display: flex;
-  max-width: 1720px;
+  max-width: 172rem;
   width: 100%;
   margin: 0 auto;
 }
