@@ -2570,16 +2570,17 @@
   content: "";
   position: absolute;
   width: 100%;
-  height: 446px;
-  top: -484px;
-  background: url(../img/common/bg-dot-20.png) top left/465px 233px repeat;
+  height: 44.6rem;
+  top: -48.4rem;
+  background: url(../img/common/bg-dot-20.png) top left/46.5rem 23.3rem repeat;
   z-index: 2;
+  pointer-events: none;
 }
 #footer .sec-inner .pagetop {
-  position: absolute;
+  position: fixed;
   height: 172px;
-  right: 71px;
-  bottom: 50px;
+  right: 7rem;
+  bottom: 5rem;
   font-size: 16px;
   font-weight: 700;
   line-height: 1.5;
@@ -2591,13 +2592,14 @@
   -o-border-image: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%) 1;
      border-image: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%) 1;
   text-align: end;
-  display: inline-block;
+  display: none;
+  z-index: 100;
 }
 #footer .sec-bg {
   position: absolute;
   width: 100%;
-  height: 500px;
-  top: -272px;
+  height: 50rem;
+  top: -27rem;
   left: 0;
 }
 #footer .sec-bg::before {
@@ -2608,12 +2610,13 @@
   top: -24rem;
   background: url(../img/common/fig-footer-1.png) center/cover no-repeat;
   z-index: 3;
+  pointer-events: none;
 }
 #footer .sec-bg::after {
   content: "";
   position: absolute;
   width: 100%;
-  height: 463px;
+  height: 46.3rem;
   top: 0;
   background: url(../img/common/fig-footer-2.png) center/cover no-repeat;
   z-index: 2;
@@ -2633,6 +2636,11 @@
   padding: 0 20px;
   width: 100%;
   display: flex;
+}
+@media print, screen and (max-width: 1920px) {
+  #footer .sec-box-top .box-list {
+    max-width: 1470px;
+  }
 }
 #footer .sec-box-top .box-item {
   width: 100%;

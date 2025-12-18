@@ -198,6 +198,11 @@ figure img,
   padding: 0 20px;
   margin: 0 auto;
 }
+@media print, screen and (max-width: 1920px) {
+  .c-inner {
+    max-width: 1470px;
+  }
+}
 
 .c-title .en {
   display: block;
@@ -487,7 +492,7 @@ figure img,
 }
 #driver .btm-btn {
   width: 100%;
-  min-height: 90px;
+  min-height: 9rem;
   height: -moz-fit-content;
   height: fit-content;
   background: #00A29A;
@@ -870,18 +875,19 @@ figure img,
 }
 
 #news {
-  padding-top: 366px;
+  padding-top: 36.6rem;
   position: relative;
 }
 #news::before {
   content: "";
   position: absolute;
   width: 100%;
-  height: 402px;
+  height: 40rem;
   top: 25px;
   left: 0;
   background: url(../img/index/fig-news-1-pc.png) center/cover no-repeat;
   z-index: 3;
+  pointer-events: none;
 }
 #news::after {
   content: "";
@@ -892,6 +898,7 @@ figure img,
   left: 0;
   background: url(../img/index/fig-news-2-pc.png) center/cover no-repeat;
   z-index: 2;
+  pointer-events: none;
 }
 #news .sec-inner {
   display: grid;
@@ -948,24 +955,27 @@ figure img,
   max-width: 80rem;
   width: 100%;
   margin: 0 auto;
-  padding: 56px 20px;
+  padding: 5.6rem 20px;
+}
+@media print, screen and (max-width: 1920px) {
+  #news .sec-box-right .box-list {
+    max-width: 800px;
+  }
 }
 #news .sec-box-right .box-item {
-  display: flex;
+  display: grid;
+  grid-template-columns: 124px 162px 1fr;
   align-items: center;
   padding: 19px 30px 19px 0;
   position: relative;
   gap: 20px 16px;
-}
-#news .sec-box-right .box-item .top {
-  display: flex;
-  gap: 0 24px;
-  min-width: 286px;
+  overflow: hidden;
 }
 #news .sec-box-right .box-item .date {
   font-size: 16px;
   font-family: "Jost", "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
   color: #7D7D7D;
+  letter-spacing: 0.1em;
 }
 #news .sec-box-right .box-item .bg {
   color: #FFF;
@@ -984,9 +994,13 @@ figure img,
   background: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%);
 }
 #news .sec-box-right .box-item .text {
+  width: 100%;
+  overflow: hidden;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.1em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 #news .sec-box-right .box-item .arrow {
   position: absolute;

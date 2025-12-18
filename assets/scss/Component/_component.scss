@@ -20,6 +20,10 @@
   // &-max {
   //   max-width: 1920px;
   // }
+  
+  @include media('full') {
+    max-width: 1470px;
+  }
 }
 
 // 共通タイトル
