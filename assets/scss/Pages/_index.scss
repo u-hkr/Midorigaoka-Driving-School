@@ -365,7 +365,7 @@
     left: -99px;
     bottom: -614px;
     img{
-      object-position: top center;
+      object-position: center 74%;
     }
     &::before{
       position: absolute;
@@ -653,11 +653,19 @@
       // position: absolute;
       // position: static;
       height: 427px;
-      width: 100%;
-      left: 0;
+      width: 102%;
+      min-width: 698px;
+      // left: 50%;
+      // transform: translateX(-50%);
+      // transform: translateX(calc(0px - (900px - 100vw) / (500 / -57)));
+      transform: translateX(calc(0px - (768px - 100vw) / (368 / -57)));
+      right: 0;
+      left: auto;
       bottom: -427px;
       img{
         // object-position: top 30%;
+        object-position: right 144%;
+        // object-position: center;
       }
       &::before{
         display: none;
@@ -823,23 +831,34 @@
     &::before{
       // content: "";
       // position: absolute;
-      width: 100%;
+      // width: 100%;
+      width: 115%;
+      min-width: 480px;
       // width: 256%;
-      height: 126px;
-      top: 25px;
-      left: 0;
-      background:  url(../img/index/fig-news-1-sp.png) center / cover no-repeat;
+      height: auto;
+      
+      aspect-ratio: 720/244;
+      // top: -65px;
+      top: calc(-100px - (768px - 100vw) / (368 / -35));
+      right: 0;
+      left: auto;
+      background:  url(../img/index/fig-news-1-sp.png) right center / cover no-repeat;
       // z-index: 3;
+      // display: none;
     }
     &::after{
-      content: "";
-      position: absolute;
+      // content: "";
+      // position: absolute;
       width: 100%;
-      height: 744px;
-      top: -354px;
-      left: 0;
-      background:  url(../img/index/fig-news-2.png) center / cover no-repeat;
-      z-index: 2;
+      min-width: 996px;
+      aspect-ratio: 1495/524;
+      height: auto;
+      top: -239px;
+      // top: calc(-90px - (768px - 100vw) / (268 / 149));
+      left: 50%;
+      transform: translateX(-50%);
+      background:  url(../img/index/fig-news-2-sp.png) center / cover no-repeat;
+      z-index: 4;
     }
     .sec-inner{
       display: grid;
