@@ -96,10 +96,13 @@
 
   .sec-line {
     position: absolute;
-    width: 112.10vw;
-    height: 35.83vw;
-    left: -6vw;
-    bottom: 0;
+    width: 112.10%;
+    // height: 35.83%;
+    height: 38.59%;
+    left: 50%;
+    // bottom: 0;
+    bottom: 10.76%;
+    transform: translateX(-50%);
 
     object {
       object-position: top;

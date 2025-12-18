@@ -361,10 +361,11 @@ figure img,
 }
 #mv .sec-line {
   position: absolute;
-  width: 112.1vw;
-  height: 35.83vw;
-  left: -6vw;
-  bottom: 0;
+  width: 112.1%;
+  height: 38.59%;
+  left: 50%;
+  bottom: 10.76%;
+  transform: translateX(-50%);
 }
 #mv .sec-line object {
   -o-object-position: top;
