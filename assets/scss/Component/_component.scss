@@ -1,11 +1,14 @@
 // 共通コンテナ
 .c-section {
   padding: 0 0 0 2.5rem;
-@include media('tc') {
+  @include media('tc') {
     padding-left: 99px;
     max-width: 1920px;
     width: 100%;
     margin: 0 auto;
+  }
+   @include media('tb') {
+    padding: 0;
   }
 }
 .c-inner {
@@ -45,6 +48,14 @@
   &.white .ja {
     background: none;
     color: #fff;
+  }
+  @include media('sp') {
+   .en {
+      font-size: 6.4rem;
+    }
+    .ja {
+      font-size: 2rem;
+    }
   }
 }
 
