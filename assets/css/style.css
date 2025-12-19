@@ -732,15 +732,12 @@ figure img,
   height: 100%;
 }
 #driver .sec-box-img {
-  position: absolute;
-  height: 614px;
-  width: calc(100% + 99px);
-  left: -99px;
-  bottom: -614px;
-}
-#driver .sec-box-img img {
-  -o-object-position: top center;
-     object-position: top center;
+  position: relative;
+  height: 100lvh;
+  width: 100vw;
+  left: auto;
+  right: 0;
+  clip-path: inset(0 0 2px);
 }
 #driver .sec-box-img::before {
   content: "";

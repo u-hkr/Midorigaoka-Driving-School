@@ -485,16 +485,16 @@
     }
   }
   .sec-box-img{
-    position: absolute;
-    height: 614px;
-    width: calc(100% + 99px);
-    left: -99px;
-    bottom: -614px;
-    img{
-      object-position: top center;
-    }
+    position: relative;
+    // position: absolute;
+    height: 100lvh;
+    width: 100vw;
+    left: auto;
+    right: 0;
+    // bottom: -61.4rem;
+    clip-path: inset(0 0 2px);
+
     &::before{
-      position: absolute;
       content: "";
       position: absolute;
       bottom: 0;
