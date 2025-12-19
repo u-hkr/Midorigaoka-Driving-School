@@ -22,11 +22,35 @@
 
 @keyframes aniShine {
   0% {
-    background-position: 100% 50%
+    -webkit-mask-position: left -20%;
+    mask-position: left -20%;
+    opacity: 0;
   }
-
+  20% {
+    opacity: 1;
+  }
   100% {
-    background-position: 0% 50%
+    -webkit-mask-position: right 100%;
+    mask-position: right 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes thumbSwipe {
+  0% {
+    -webkit-mask-position: left -20%;
+    mask-position: left -20%;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-mask-position: right 100%;
+    -webkit-mask-size: auto 500%;
+    mask-position: right 100%;
+    mask-size: auto 450%;
+    opacity: 1;
   }
 }
 

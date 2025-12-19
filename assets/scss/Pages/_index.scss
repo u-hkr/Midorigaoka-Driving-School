@@ -269,10 +269,11 @@
   .sec-box-top{
     display: grid;
     grid-template-columns: 717fr 1108fr;
-    border: 2px solid $white_color;
 
     .box{
       padding-top: 21px;
+      border-top: 2px solid $white_color;
+      border-bottom: 2px solid $white_color;
 
       &:not(:nth-child(1)){
         border-left: 2px solid $white_color;
@@ -382,7 +383,7 @@
     
   }
   .sec-box-mid{
-    border: 2px solid $white_color;
+    border-bottom: 2px solid $white_color;
     margin-top: -2px;
     padding: 32px 20px 43px;
 

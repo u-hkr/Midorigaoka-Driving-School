@@ -178,14 +178,41 @@ figure img,
 }
 
 .js-inview.fadeup {
-  transform: translateY(50px);
+  transform: translateY(20px);
   opacity: 0;
-  transition: transform 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: transform 1.3s, opacity 1.3s;
 }
 
 .js-inview.fadeup.inview {
   transform: translateY(0);
   opacity: 1;
+}
+
+.js-inview.ivimage {
+  position: relative;
+  overflow: hidden;
+}
+.js-inview.ivimage img {
+  -webkit-mask-image: linear-gradient(-7deg, #fff 30%, rgba(255, 255, 255, 0) 55%);
+  -webkit-mask-size: auto 250%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: left -20%;
+  z-index: 0;
+  mask-image: linear-gradient(-7deg, #fff 30%, rgba(255, 255, 255, 0) 55%);
+  mask-mode: alpha;
+  mask-position: left -20%;
+  mask-repeat: no-repeat;
+  mask-size: auto 250%;
+  opacity: 0;
+  position: relative;
+  scale: 1.2;
+  transform-origin: center;
+  display: block;
+}
+.js-inview.ivimage.inview img {
+  animation: thumbSwipe 1.3s cubic-bezier(0.25, 0.46, 0.45, 1) forwards;
+  scale: 1;
+  transition: scale 1s ease-out, transform 0.5s;
 }
 
 .c-section {
@@ -225,6 +252,16 @@ figure img,
   font-weight: 500;
   font-size: 9.6rem;
   line-height: 1;
+  opacity: 0;
+  -webkit-mask-image: linear-gradient(20deg, #fff 50%, rgba(255, 255, 255, 0) 55%);
+  -webkit-mask-size: auto 500%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: left -20%;
+  mask-image: linear-gradient(20deg, #fff 50%, rgba(255, 255, 255, 0) 55%);
+  mask-mode: alpha;
+  mask-position: left -20%;
+  mask-repeat: no-repeat;
+  mask-size: auto 500%;
 }
 .c-title .ja {
   display: block;
@@ -239,6 +276,9 @@ figure img,
 .c-title.white .ja {
   background: none;
   color: #fff;
+}
+.c-title.inview .en {
+  animation: aniShine 1.5s ease forwards;
 }
 @media only screen and (max-width: 768px) {
   .c-title .en {
@@ -537,10 +577,11 @@ figure img,
 #driver .sec-box-top {
   display: grid;
   grid-template-columns: 717fr 1108fr;
-  border: 2px solid #FFF;
 }
 #driver .sec-box-top .box {
   padding-top: 21px;
+  border-top: 2px solid #FFF;
+  border-bottom: 2px solid #FFF;
 }
 #driver .sec-box-top .box:not(:nth-child(1)) {
   border-left: 2px solid #FFF;
@@ -635,7 +676,7 @@ figure img,
   gap: 0 5.8%;
 }
 #driver .sec-box-mid {
-  border: 2px solid #FFF;
+  border-bottom: 2px solid #FFF;
   margin-top: -2px;
   padding: 32px 20px 43px;
 }
