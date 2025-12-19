@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 200;
+  z-index: 300;
 
   .sec-inner{
     // max-width: 1920px;
@@ -131,5 +131,28 @@
     }
   }
   @include media('sp') {
+  }
+}
+
+#menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: calc(100lvh + 100px);
+  padding-bottom: 100px;
+  background: #fff;
+  z-index: 200;
+
+  .sec-inner {
+    height: 100%;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar{
+      display: none;
+    }
   }
 }

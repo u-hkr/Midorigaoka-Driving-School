@@ -159,9 +159,10 @@ figure img,
 
 .h-opacity a, a.h-opacity {
   transition: opacity .3s;
-
+  
   &:hover {
-    opacity: .7;
+    transition: opacity .3s !important;
+    opacity: .63 !important;
   }
 }
 
@@ -174,10 +175,11 @@ figure img,
   transform: translateY(20px);
   opacity: 0;
   transition: transform 1.3s, opacity 1.3s;
-}
-.js-inview.fadeup.inview {
-  transform: translateY(0);
-  opacity: 1;
+
+  &.inview {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 .js-inview.ivimage {
   position: relative;
