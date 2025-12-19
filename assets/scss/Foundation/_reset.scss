@@ -8,7 +8,11 @@
 
 html {
   font-size: 10px;
+  font-size: 0.5208vw;
   margin: 0;
+  // @include media('full') {
+  //   font-size: 10px;
+  // }
   @include media('tb') {
     font-size: 0.9765vw;
   }

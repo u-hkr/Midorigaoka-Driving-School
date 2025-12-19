@@ -7,6 +7,7 @@
 
 html {
   font-size: 10px;
+  font-size: 0.5208vw;
   margin: 0;
 }
 @media print, screen and (max-width: 1024px) {
@@ -282,6 +283,33 @@ fieldset {
 
 *:first-child + html .clearfix {
   zoom: 1;
+}
+
+@keyframes ScrollSuggestionLinePc {
+  0% {
+    opacity: 1;
+    left: -30px;
+  }
+  80% {
+    opacity: 1;
+    left: 100%;
+  }
+  99% {
+    opacity: 0;
+    left: 100%;
+  }
+  to {
+    opacity: 0;
+    left: -30px;
+  }
+}
+@keyframes aniShine {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 @keyframes link-lineloop {
   0% {

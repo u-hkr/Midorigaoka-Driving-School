@@ -24,6 +24,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
 
     <script src="./assets/js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -95,28 +97,42 @@
         </div>
     </header>
 
-    <div id="mv" class="c-section">
-        <div class="sec-inner">
-            <div class="sec-bar">
-                <p>SCROLL</p>
-            </div>
-            <div class="sec-news">
-                <div class="container">
-                    <div class="top">
-                        <time datetime="2025-00-00" class="date">2025.00.00</time>
-                        <span class="bg">重要なお知らせ</span>
-                    </div>
-                    <p class="text">タイトル入りますタイトル入ります...</p>
-                </div>
-            </div>
-        </div>
+    <div id="mv">
         <div class="sec-slide js-slide-mv">
             <div class="item"><img src="./assets/img/index/mv-1.png" class="u-img-cover" alt="緑ヶ丘自動車学校 外観"></div>
             <div class="item"><img src="./assets/img/index/mv-2.png" class="u-img-cover" alt="大型車"></div>
             <div class="item"><img src="./assets/img/index/mv-3.png" class="u-img-cover" alt="免許取得の様子"></div>
         </div>
         <div class="sec-line">
-            <object type="image/svg+xml" data="" class="u-img-contain" width="2152.51" height="538" aria-label="線"></object>
+            <!-- <object type="image/svg+xml" data="" class="u-img-cover" width="2152.51" height="538" aria-label="線"></object> -->
+        </div>
+        <div class="sec-inner">
+            <div class="sec-scroll"><div class="sec-scroll-text">SCROLL</div><div class="sec-scroll-line"></div></div>
+            <div class="sec-img-1"><img src="./assets/img/index/mv-text-1.png" class="pc u-img-contain" alt="広い敷地でのびのび練習！"><img src="./assets/img/index/mv-text-1-sp.png" class="sp u-img-contain" alt="広い敷地でのびのび練習！"></div>
+            <div class="sec-img-2"><img src="./assets/img/index/mv-text-2.svg" class="u-img-contain" alt="緑ヶ丘自動車学校"></div>
+            <div class="sec-news">
+                <a href="" class="sec-news-item">
+                    <span class="cat important">重要なお知らせ</span>
+                    <div class="info">
+                        <time datetime="2025-00-00" class="date">2025.00.00</time>
+                        <p class="text">タイトル入りますタイトル入りますタイトル入りますタイトル入ります</p>
+                    </div>
+                </a>
+                <!-- <a href="" class="sec-news-item">
+                    <span class="cat important">重要なお知らせ</span>
+                    <div class="info">
+                        <time datetime="2025-00-00" class="date">2025.00.00</time>
+                        <p class="text">タイトル入りますタイトル入りますタイトル入りますタイトル入ります</p>
+                    </div>
+                </a>
+                <a href="" class="sec-news-item">
+                    <span class="cat important">重要なお知らせ</span>
+                    <div class="info">
+                        <time datetime="2025-00-00" class="date">2025.00.00</time>
+                        <p class="text">タイトル入りますタイトル入りますタイトル入りますタイトル入ります</p>
+                    </div>
+                </a> -->
+            </div>
         </div>
     </div>
 
@@ -125,29 +141,29 @@
         <section id="driver" class="section c-section">
             <div class="sec-inner c-inner-max">
                 <!-- 共通タイトル -->
-                <h2 class="c-title white text-center sec-title">
+                <h2 class="c-title white text-center sec-title js-inview">
                     <small class="en">DRIVER <span class="u-ib">LICENCE</span></small>
                     <strong class="ja">免許を取りたい方</strong>
                 </h2>
                 <div class="sec-box-top">
-                    <div class="box single">
+                    <a href="" class="box single">
                         <h3 class="title">初めての方へ</h3>
                         <div class="image"><img src="./assets/img/index/box-top-s.png" alt="" class="u-img-contain"></div>
-                        <a href="" class="btm-btn"><span class="txt">詳しい内容を見る</span><span class="arrow"></span></a>
-                    </div>
+                        <p class="btm-btn"><span class="txt">詳しい内容を見る</span><span class="arrow"></span></p>
+                    </a>
                     <div class="box double">
                         <h3 class="title">普通自動車・二輪車</h3>
                         <div class="bg">
                             <a href="" class="top-btn"><span class="txt">料金シミュレーションをする</span><span class="arrow"></span></a>
                             <div class="box-list">
-                                <div class="box-item">
+                                <a href="" class="box-item">
                                     <div class="image"><img src="./assets/img/index/box-top-d-1.png" alt="" class="u-img-contain"></div>
-                                    <a href="" class="btm-btn"><p class="txt"><span class="large">普通自動車</span>を<br class="tb">詳しく見る</p><span class="arrow"></span></a>
-                                </div>
-                                <div class="box-item">
+                                    <p class="btm-btn"><span class="txt"><span class="large">普通自動車</span>を<br class="tb">詳しく見る</span><span class="arrow"></span></p>
+                                </a>
+                                <a href="" class="box-item">
                                     <div class="image"><img src="./assets/img/index/box-top-d-2.png" alt="" class=""></div>
-                                    <a href="" class="btm-btn"><p class="txt"><span class="large">二輪車</span>を<br class="tb">詳しく見る</p><span class="arrow"></span></a>
-                                </div>
+                                    <p class="btm-btn"><span class="txt"><span class="large">二輪車</span>を<br class="tb">詳しく見る</span><span class="arrow"></span></p>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -155,22 +171,22 @@
                 <div class="sec-box-mid">
                     <h3 class="title">働く方向けの免許</h3>
                     <div class="box-list">
-                        <div class="box-item">
+                        <a href="" class="box-item">
                             <div class="image"><img src="./assets/img/index/box-mid-1.png" alt="" class="u-img-contain"></div>
-                            <a href="" class="btm-btn"><p class="txt"><span class="large">大型</span>を<br class="tb">詳しく見る</p><span class="arrow"></span></a>
-                        </div>
-                        <div class="box-item">
+                            <div class="btm-btn"><p class="txt"><span class="large">大型</span>を<br class="tb">詳しく見る</p><span class="arrow"></span></div>
+                        </a>
+                        <a href="" class="box-item">
                             <div class="image"><img src="./assets/img/index/box-mid-2.png" alt="" class="u-img-contain"></div>
-                            <a href="" class="btm-btn"><p class="txt"><span class="large">中型</span>を<br class="tb">詳しく見る</p><span class="arrow"></span></a>
-                        </div>
-                        <div class="box-item">
+                            <div class="btm-btn"><p class="txt"><span class="large">中型</span>を<br class="tb">詳しく見る</p><span class="arrow"></span></div>
+                        </a>
+                        <a href="" class="box-item">
                             <div class="image"><img src="./assets/img/index/box-mid-3.png" alt="" class="u-img-contain"></div>
-                            <a href="" class="btm-btn"><p class="txt"><span class="large">けん引</span>を<br class="tb">詳しく見る</p><span class="arrow"></span></a>
-                        </div>
-                        <div class="box-item">
+                            <div class="btm-btn"><p class="txt"><span class="large">けん引</span>を<br class="tb">詳しく見る</p><span class="arrow"></span></div>
+                        </a>
+                        <a href="" class="box-item">
                             <div class="image"><img src="./assets/img/index/box-mid-4.png" alt="" class="u-img-contain"></div>
-                            <a href="" class="btm-btn"><p class="txt"><span class="large">大特</span>を<br class="tb">詳しく見る</p><span class="arrow"></span></a>
-                        </div>
+                            <div class="btm-btn"><p class="txt"><span class="large">大特</span>を<br class="tb">詳しく見る</p><span class="arrow"></span></div>
+                        </a>
                     </div>
                 </div>
                 <div class="sec-box-btm">
@@ -206,30 +222,23 @@
                 <div class="sec-box-right">
                     <div class="box-list">
                         <a href="" class="box-item">
-                            <div class="top">
-                                <time datetime="2024-00-00" class="date">2024.00.00</time>
-                                <span class="bg bg-p">重要なお知らせ</span>
-                            </div>
+                            <time datetime="2024-00-00" class="date">2024.00.00</time>
+                            <span class="bg important">重要なお知らせ</span>
                             <span class="text">テキストテキストテキストテキストテキストテキスト</span>
                             <span class="arrow"></span>
                         </a>
                         <a href="" class="box-item">
-                            <div class="top">
-                                <time datetime="2024-00-00" class="date">2024.00.00</time>
-                                <span class="bg bg-g">お知らせ</span>
-                            </div>
+                            <time datetime="2024-00-00" class="date">2024.00.00</time>
+                            <span class="bg news">お知らせ</span>
                             <span class="text">テキストテキストテキストテキストテキストテキスト</span>
                             <span class="arrow"></span>
                         </a>
                         <a href="" class="box-item">
-                            <div class="top">
-                                <time datetime="2024-00-00" class="date">2024.00.00</time>
-                                <span class="bg bg-g">お知らせ</span>
-                            </div>
+                            <time datetime="2024-00-00" class="date">2024.00.00</time>
+                            <span class="bg news">お知らせ</span>
                             <span class="text">テキストテキストテキストテキストテキストテキスト</span>
                             <span class="arrow"></span>
                         </a>
-
                     </div>
                 </div>
                 
@@ -372,7 +381,7 @@
                     <small class="copyright">Copyright © Midorigaoka Driving School All Rights Reserved.</small>            
                 </div>
             </div>
-            <button type="button" class="pagetop js-pagetop" aria-label="ページの先頭へ戻る">PAGE TOP</button>
+            <a id="pagetop" href="#" class="pagetop" aria-label="ページの先頭へ戻る">PAGE TOP</a>
         </div>
     </footer>
 

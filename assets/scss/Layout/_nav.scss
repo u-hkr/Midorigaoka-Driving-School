@@ -6,13 +6,13 @@
   z-index: 200;
 
   .sec-inner{
-    max-width: 1920px;
+    // max-width: 1920px;
     width: 100%;
     margin: 0 auto;
     position: relative;
   }
   .sec-box{
-    width: 100px;
+    width: 10rem;
     height: 100vh;
     background: rgba($color: #fff, $alpha: .88);
     z-index: 100;
@@ -22,7 +22,9 @@
   }
   .sec-top{
     width: 100%;
-    padding-top: 11px;
+    min-height: 88px;
+    padding: 1.1rem 0;
+    padding: clamp(11px, 1.1rem, 1.1rem) 0;
     cursor: pointer;
     
     .text{
@@ -33,36 +35,37 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       line-height: 1;
-      margin-bottom: 5px;
+      margin-bottom: 1rem;
     }
     .btn{
-      width: 62px;
-      height: 34px;
+      width: 6.2rem;
+      height: 3.4rem;
+      // height: 6.2rem;
       margin: 0 auto;
       position: relative;
 
       span{
         position: absolute;
-        left: calc(50% - 26px);
-        top: calc(50% - 2px);
+        left: calc(50% - 2.6rem);
+        top: calc(50% - .2rem);
         display: block;
-        width: 52px;
-        height: 4px;
+        width: 5.2rem;
+        height: .4rem;
         border-radius: 2px;
         background: $main_gradient;
 
         &:nth-of-type(1){
-          transform: translateY(-10px);
+          transform: translateY(-1rem);
         }
         &:nth-of-type(3){
-          transform: translateY(10px);
+          transform: translateY(1rem);
         }
       }
     }
   }
   .sec-mid{
     position: absolute;
-    width: 85px;
+    width: 8.5rem;
     left: 0;
     top: 45%;
     transform: translateY(-50%);
@@ -82,6 +85,7 @@
     .text{
       writing-mode: vertical-rl;
       font-size: 2.4rem;
+      font-size: clamp(16px, 2.4rem, 2.4rem);
       font-weight: 700;
       letter-spacing: .06em;
     }

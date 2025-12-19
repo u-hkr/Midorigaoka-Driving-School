@@ -29,13 +29,31 @@ $(window).on('load', function() {
   });
 });
 
-$(function(){
 
-});
-$('.js-pagetop').on('click', function () {
-  $('html, body').animate(
-    { scrollTop: 0 },
-    500,
-    'swing'
-  );
+// common
+$(function(){
+  var topReturn = false;
+  var $topReturn = $('#pagetop');
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 500 && !topReturn) {
+      $topReturn.fadeIn();
+      topReturn = true;
+    } else if($(this).scrollTop() <= 500 && topReturn) {
+      $topReturn.fadeOut();
+      topReturn = false;
+    }
+  });
+
+	$(".js-inview").each(function(){
+	  ScrollTrigger.create({
+	      trigger: $(this),
+	      start: "top 70%",
+	      end: "bottom 50%",
+	      toggleClass: {
+	          targets: $(this),
+	          className: "inview",
+	      },
+	      once: true,
+	  });
+	});
 });
