@@ -328,7 +328,7 @@ figure img,
   justify-content: center;
   align-items: center;
   height: 32rem;
-  padding: 7rem 0 0;
+  padding: 88px 0 0;
   background: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%);
 }
 #heading .sec-inner::before {
@@ -1252,6 +1252,56 @@ figure img,
   right: 0;
   background: url(../img/index/check.svg);
 }
+#types .sec-box {
+  width: 86.1%;
+  margin: 83px auto 524px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+#types .sec-box .box-item {
+  width: 100%;
+  border: 2px solid;
+  -o-border-image: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%) 1;
+     border-image: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%) 1;
+}
+#types .sec-box .box-item .image {
+  aspect-ratio: 600/257;
+  width: 100%;
+}
+#types .sec-box .box-item .image-yellow {
+  background: #FEF0C6;
+}
+#types .sec-box .box-item .image-blue {
+  background: #60D7EA;
+}
+#types .sec-box .box-item .image-green {
+  background: #E7F9F8;
+}
+#types .sec-box .box-item .image-purple {
+  background: #DCC7F5;
+}
+#types .sec-box .box-item .btm-btn {
+  width: 100%;
+  background: #00A29A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 5.3%;
+  padding: 23px 16px;
+}
+#types .sec-box .box-item .btm-btn .txt {
+  font-size: 2.4rem;
+  font-size: clamp(16px, 2.4rem, 2.4rem);
+  font-weight: 700;
+  color: #FFF;
+}
+#types .sec-box .box-item .btm-btn .arrow {
+  width: 16px;
+  height: 18px;
+  background: url("../img/common/arrow-w.svg") center/contain no-repeat;
+}
+
 #types .sec-box {
   width: 86.1%;
   margin: 83px auto 524px;
