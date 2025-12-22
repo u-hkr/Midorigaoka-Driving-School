@@ -23,6 +23,10 @@ html {
 }
 
 body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
   font-family: "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
   font-weight: normal;
   font-size: 18px;
@@ -30,9 +34,9 @@ body {
   line-height: 1.8;
   color: #333;
   word-break: break-all;
-  margin: 0;
-  padding: 0;
-  border: 0;
+}
+body.fixed {
+  position: fixed;
 }
 @media only screen and (max-width: 768px) {
   body {

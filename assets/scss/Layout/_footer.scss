@@ -109,6 +109,16 @@
       &:nth-of-type(3){
         background: $gra_gradient;
       }
+
+      >* {
+        transition: opacity .3s;
+      }
+
+      &:hover {
+        > * {
+          opacity: .63;
+        }
+      }
     }
   }
   .sec-box-mid{

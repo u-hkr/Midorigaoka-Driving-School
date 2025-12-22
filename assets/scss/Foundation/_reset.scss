@@ -23,6 +23,10 @@ html {
 }
 
 body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
   font-family: $font;
   font-weight: normal;
   font-size: 18px;
@@ -30,9 +34,12 @@ body {
   line-height: 1.8;
   color: $base_color;
   word-break: break-all;
-  margin: 0;
-  padding: 0;
-  border: 0;
+
+  &.fixed {
+    position: fixed;
+
+  }
+
   @include media('sp') {
     font-size: 16px;
   }
