@@ -215,6 +215,8 @@
       padding: 50px 55px;
       position: relative;
       z-index: 2;
+      width: 72.68%;
+      position: relative;
 
       &:not(:nth-of-type(1)){
         margin-top: 24px;
@@ -224,6 +226,69 @@
       }
       &:nth-of-type(even){
         background: $accent_color;
+        margin-left: auto;
+        margin-right: 0;
+      }
+      &::before{
+        position: absolute;
+      }
+      .top{
+        text-align: center;
+        font-size: 3.2rem;
+        font-weight: 700;
+        font-family: $font_en;
+        line-height: 1.5;
+        color: transparent;
+        -webkit-text-stroke: 1px $white_color;
+        margin-bottom: 16px;
+      }
+      .text{
+        margin-bottom: 16px;
+        display: block;
+      }
+      .image{
+        display: block;
+        img{
+          border-radius: 24px;
+        }
+      }
+      .btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0 1.6%;
+        width: 100%;
+        border-radius: 100px;
+        background: #8CE3DE;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #084C49;
+        line-height: 1.5;
+        padding: 20px 30px 20px 8px;
+        box-shadow: 2px 2px 0 1px #156965;
+        margin-top: 42px;
+        position: relative;
+        
+        &::before{
+          position: absolute;
+          content: "";
+          max-width: 93px;
+          width: 17.41%;
+          height: auto;
+          bottom: 0;
+          right: 12px;
+          aspect-ratio: 140/171;
+          background: url(../img/visitor/reason-box-img.png) center/contain no-repeat;
+        }
+        &::after{
+          
+        }
+        .large{
+          font-size: 2.5rem;
+        }
+        .icon{
+          width: 42px;
+        }
       }
     }
   }
@@ -231,7 +296,7 @@
 #interview{
   position: relative;
   z-index: -2;
-  padding: 505px 0 484px;
+  padding: 505px 0 48.4rem;
   background: $main_gradient;
 
   .sec-box{
@@ -240,17 +305,19 @@
     gap: 50px 1.6%;
 
     .box-item{
+
       .text{
         background: $white_color;
         font-size: 16px;
-        padding: 20px 33px 36px;
+        line-height: 2;
+        padding: 20px 33px;
         position: relative;
         border: 1px solid $green_dark_color;
         margin-bottom: 27px;
         display: flex;
         justify-content: center;
         align-items: center;
-        min-height: 263px;
+        height: calc(100% - 107px);
 
         &::after{
           position: absolute;
@@ -265,11 +332,15 @@
           border-color: $white_color transparent transparent transparent;
         }
       }
+      .txt{
+        width: 100%;
+      }
       .profile{
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 0 10px;
+        height: 90px;
       }
       .image{
         width: 90px;
