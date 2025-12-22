@@ -1,0 +1,58 @@
+#types {
+  .sec-box{
+    // max-width: 1230px;
+    width: 86.1%;
+    margin: 83px auto 524px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+    .box-item{
+      width: 100%;
+      border: 2px solid;
+      border-image: $main_gradient 1;
+
+      .image{
+        aspect-ratio: 600/257;
+        width: 100%;
+
+        &-yellow{
+          background: #FEF0C6;
+        }
+        &-blue{
+          background: #60D7EA;
+        }
+        &-green{
+          background: #E7F9F8;
+        }
+        &-purple{
+          background: #DCC7F5;
+        }
+      }
+      .btm-btn{
+        width: 100%;
+        // min-height: 9rem;
+        // height: fit-content;
+        background: $green_dark_color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0 5.3%;
+        padding: 23px 16px;
+
+        .txt{
+          font-size: 2.4rem;
+          font-size: clamp(16px, 2.4rem, 2.4rem);
+          font-weight: 700;
+          color: $white_color;
+          // line-height: 1.2;
+        }
+        .arrow{
+          width: 16px;
+          height: 18px;
+          background: url("../img/common/arrow-w.svg") center / contain no-repeat;
+        }
+      }
+    }
+  }
+}
