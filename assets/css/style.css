@@ -1507,6 +1507,8 @@ figure img,
   padding: 50px 55px;
   position: relative;
   z-index: 2;
+  width: 72.68%;
+  position: relative;
 }
 #reason .sec-box .box-item:not(:nth-of-type(1)) {
   margin-top: 24px;
@@ -1516,12 +1518,71 @@ figure img,
 }
 #reason .sec-box .box-item:nth-of-type(even) {
   background: #FFB400;
+  margin-left: auto;
+  margin-right: 0;
+}
+#reason .sec-box .box-item::before {
+  position: absolute;
+}
+#reason .sec-box .box-item .top {
+  text-align: center;
+  font-size: 3.2rem;
+  font-weight: 700;
+  font-family: "Jost", "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  line-height: 1.5;
+  color: transparent;
+  -webkit-text-stroke: 1px #FFF;
+  margin-bottom: 16px;
+}
+#reason .sec-box .box-item .text {
+  margin-bottom: 16px;
+  display: block;
+}
+#reason .sec-box .box-item .image {
+  display: block;
+}
+#reason .sec-box .box-item .image img {
+  border-radius: 24px;
+}
+#reason .sec-box .box-item .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 1.6%;
+  width: 100%;
+  border-radius: 100px;
+  background: #8CE3DE;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #084C49;
+  line-height: 1.5;
+  padding: 20px 30px 20px 8px;
+  box-shadow: 2px 2px 0 1px #156965;
+  margin-top: 42px;
+  position: relative;
+}
+#reason .sec-box .box-item .btn::before {
+  position: absolute;
+  content: "";
+  max-width: 93px;
+  width: 17.41%;
+  height: auto;
+  bottom: 0;
+  right: 12px;
+  aspect-ratio: 140/171;
+  background: url(../img/visitor/reason-box-img.png) center/contain no-repeat;
+}
+#reason .sec-box .box-item .btn .large {
+  font-size: 2.5rem;
+}
+#reason .sec-box .box-item .btn .icon {
+  width: 42px;
 }
 
 #interview {
   position: relative;
   z-index: -2;
-  padding: 505px 0 484px;
+  padding: 505px 0 48.4rem;
   background: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%);
 }
 #interview .sec-box {
@@ -1532,14 +1593,15 @@ figure img,
 #interview .sec-box .box-item .text {
   background: #FFF;
   font-size: 16px;
-  padding: 20px 33px 36px;
+  line-height: 2;
+  padding: 20px 33px;
   position: relative;
   border: 1px solid #00A29A;
   margin-bottom: 27px;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 263px;
+  height: calc(100% - 107px);
 }
 #interview .sec-box .box-item .text::after {
   position: absolute;
@@ -1553,11 +1615,15 @@ figure img,
   border-width: 17px 8px 0px 8px;
   border-color: #FFF transparent transparent transparent;
 }
+#interview .sec-box .box-item .txt {
+  width: 100%;
+}
 #interview .sec-box .box-item .profile {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0 10px;
+  height: 90px;
 }
 #interview .sec-box .box-item .image {
   width: 90px;
