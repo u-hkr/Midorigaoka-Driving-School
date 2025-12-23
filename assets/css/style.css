@@ -1756,7 +1756,8 @@ figure img,
 #interview {
   position: relative;
   z-index: -2;
-  padding: 505px 0 48.4rem;
+  padding-top: 505px;
+  padding-bottom: 48.4rem;
   background: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%);
 }
 #interview .sec-box {
@@ -1806,4 +1807,103 @@ figure img,
 #interview .sec-box .box-item .info {
   font-size: 16px;
   line-height: 2;
+}
+
+.sec-container {
+  box-shadow: 0 0 13px 2px rgba(0, 162, 154, 0.2);
+}
+
+.sec-title {
+  margin: 18px;
+}
+
+.sec-container {
+  padding: 40px 20px 80px;
+}
+
+.section + .section {
+  margin-top: 70px;
+}
+
+.sec-box {
+  width: 74.1%;
+  margin: 0 auto;
+}
+
+#facilities {
+  margin-top: 200px;
+}
+#facilities .sec-box {
+  display: flex;
+  gap: 40px 24px;
+}
+#facilities .sec-box + .sec-box {
+  margin-top: 40px;
+}
+#facilities .sec-box .bg {
+  display: inline-block;
+  background: #00C4BB;
+  color: #FFF;
+  font-size: 2.4rem;
+  line-height: 1.6;
+  padding: 6px 16px;
+  margin-top: 8px;
+}
+#facilities .sec-text {
+  margin-top: 42px;
+  font-size: 2rem;
+  line-height: 1.6;
+  text-align: center;
+}
+#facilities .sec-banner {
+  margin-top: 70px;
+  position: relative;
+}
+#facilities .sec-banner::before {
+  content: "";
+  position: absolute;
+  width: 87px;
+  height: 87px;
+  bottom: 0;
+  right: 0;
+  background: url(../img/common/check.svg) center/contain no-repeat;
+}
+
+#course .box-item + .box-item {
+  margin-top: 40px;
+}
+#course .box-item .image {
+  margin-bottom: 8px;
+}
+#course .box-item .texts {
+  display: flex;
+  align-items: center;
+}
+#course .box-item .course {
+  font-size: 2.4rem;
+  color: #FFF;
+  line-height: 1.6;
+  padding: 6px 24px;
+  margin-right: 2.4rem;
+  background: #00C4BB;
+  display: inline-block;
+}
+#course .box-item .text {
+  font-size: 2rem;
+  line-height: 1.6;
+  display: inline-block;
+}
+
+#system .sec-container {
+  text-align: center;
+}
+#system .sec-text {
+  display: inline-block;
+  text-align: left;
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 58px;
+}
+#system .sec-box-top {
+  width: 70.16%;
 }/*# sourceMappingURL=style.css.map */
