@@ -1583,12 +1583,12 @@ figure img,
 #reason .sec-box::after {
   content: "";
   position: absolute;
-  width: calc(100% - 190px);
-  height: calc(100% - 160px);
+  width: calc((100% - 190px) * 0.78);
+  height: 86.5%;
   background: url(../img/visitor/reason-box-bg.png) top center/contain no-repeat;
-  top: 50%;
+  top: 120px;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%);
 }
 #reason .sec-box .box-item {
   border-radius: 50px;
@@ -1596,7 +1596,14 @@ figure img,
   position: relative;
   z-index: 2;
   width: 72.68%;
-  position: relative;
+}
+#reason .sec-box .box-item .people {
+  position: absolute;
+  top: 50%;
+  width: 20rem;
+}
+#reason .sec-box .box-item .people::after {
+  display: none;
 }
 #reason .sec-box .box-item:not(:nth-of-type(1)) {
   margin-top: 24px;
@@ -1604,13 +1611,42 @@ figure img,
 #reason .sec-box .box-item:nth-of-type(odd) {
   background: #00C4BB;
 }
+#reason .sec-box .box-item:nth-of-type(odd) ::after {
+  content: "";
+  position: absolute;
+  right: -21px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 13px 0px 13px 22px;
+  border-color: transparent transparent transparent #00C4BB;
+}
+#reason .sec-box .box-item:nth-of-type(odd) .people {
+  right: -8px;
+  transform: translateY(-50%) translateX(100%);
+}
 #reason .sec-box .box-item:nth-of-type(even) {
   background: #FFB400;
   margin-left: auto;
   margin-right: 0;
 }
-#reason .sec-box .box-item::before {
+#reason .sec-box .box-item:nth-of-type(even) ::after {
+  content: "";
   position: absolute;
+  left: -21px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 13px 22px 13px 0px;
+  border-color: transparent #FFB400 transparent transparent;
+}
+#reason .sec-box .box-item:nth-of-type(even) .people {
+  left: -8px;
+  transform: translateY(-50%) translateX(-100%);
 }
 #reason .sec-box .box-item .top {
   text-align: center;
@@ -1625,6 +1661,15 @@ figure img,
 #reason .sec-box .box-item .text {
   margin-bottom: 16px;
   display: block;
+}
+#reason .sec-box .box-item .text .line-1 {
+  max-height: 37px;
+}
+#reason .sec-box .box-item .text .line-2 {
+  max-height: 96px;
+}
+#reason .sec-box .box-item .text .line-3 {
+  max-height: 150px;
 }
 #reason .sec-box .box-item .image {
   display: block;
