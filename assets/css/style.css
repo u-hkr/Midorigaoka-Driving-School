@@ -1602,16 +1602,13 @@ figure img,
   top: 50%;
   width: 20rem;
 }
-#reason .sec-box .box-item .people::after {
-  display: none;
-}
 #reason .sec-box .box-item:not(:nth-of-type(1)) {
   margin-top: 24px;
 }
 #reason .sec-box .box-item:nth-of-type(odd) {
   background: #00C4BB;
 }
-#reason .sec-box .box-item:nth-of-type(odd) ::after {
+#reason .sec-box .box-item:nth-of-type(odd)::after {
   content: "";
   position: absolute;
   right: -21px;
@@ -1632,7 +1629,7 @@ figure img,
   margin-left: auto;
   margin-right: 0;
 }
-#reason .sec-box .box-item:nth-of-type(even) ::after {
+#reason .sec-box .box-item:nth-of-type(even)::after {
   content: "";
   position: absolute;
   left: -21px;
@@ -1704,12 +1701,56 @@ figure img,
   right: 12px;
   aspect-ratio: 140/171;
   background: url(../img/visitor/reason-box-img.png) center/contain no-repeat;
+  z-index: 2;
+}
+#reason .sec-box .box-item .btn::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url(../img/common/bg-dot-20.png) top center/313px 157px repeat;
+  border-radius: 100px;
 }
 #reason .sec-box .box-item .btn .large {
   font-size: 2.5rem;
 }
+#reason .sec-box .box-item .btn .txt {
+  z-index: 3;
+}
 #reason .sec-box .box-item .btn .icon {
   width: 42px;
+  z-index: 3;
+}
+#reason .sec-box .box-item .dot {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  mix-blend-mode: soft-light;
+}
+#reason .sec-box .box-item .dot::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 93px;
+  top: 0;
+  left: 0;
+  border-radius: 50px 50px 0 0;
+  background: url(../img/common/bg-dot-g.png) top center/cover repeat;
+}
+#reason .sec-box .box-item .dot::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 49px;
+  bottom: 0;
+  left: 0;
+  border-radius: 50px 50px 0 0;
+  background: url(../img/common/bg-dot-g.png) bottom center/cover repeat;
+  transform: scaleY(-1);
 }
 
 #interview {
