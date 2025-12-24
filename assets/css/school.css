@@ -1,0 +1,250 @@
+.sec-container {
+  box-shadow: 0 0 13px 2px rgba(0, 162, 154, 0.2);
+  padding: 40px 20px 80px;
+}
+
+.sec-title {
+  margin: 18px;
+}
+
+.section + .section {
+  margin-top: 70px;
+}
+
+#facilities {
+  margin-top: 90px;
+}
+#facilities .sec-box {
+  display: flex;
+  gap: 40px 24px;
+  width: 74.1%;
+  margin: 0 auto;
+}
+#facilities .sec-box + .sec-box {
+  margin-top: 40px;
+}
+#facilities .sec-box .bg {
+  display: inline-block;
+  background: #00C4BB;
+  color: #FFF;
+  font-size: 2.4rem;
+  line-height: 1.6;
+  padding: 6px 16px;
+  margin-top: 8px;
+}
+#facilities .sec-text {
+  margin-top: 42px;
+  font-size: 2rem;
+  line-height: 1.6;
+  text-align: center;
+}
+#facilities .sec-banner {
+  display: block;
+  margin-top: 70px;
+  position: relative;
+}
+#facilities .sec-banner::before {
+  content: "";
+  position: absolute;
+  width: 87px;
+  height: 87px;
+  bottom: 0;
+  right: 0;
+  background: url(../img/common/check.svg) center/contain no-repeat;
+}
+
+#course .sec-box {
+  width: 74.1%;
+  margin: 0 auto;
+}
+#course .box-item + .box-item {
+  margin-top: 40px;
+}
+#course .box-item .image {
+  margin-bottom: 8px;
+}
+#course .box-item .texts {
+  display: flex;
+  align-items: center;
+}
+#course .box-item .course {
+  font-size: 2.4rem;
+  color: #FFF;
+  line-height: 1.6;
+  padding: 6px 24px;
+  margin-right: 2.4rem;
+  background: #00C4BB;
+  display: inline-block;
+}
+#course .box-item .text {
+  font-size: 2rem;
+  line-height: 1.6;
+  display: inline-block;
+}
+
+#system {
+  padding-bottom: 540px;
+}
+#system .sec-container {
+  text-align: center;
+}
+#system .sec-text {
+  display: inline-block;
+  text-align: left;
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 58px;
+}
+#system .sec-box-top {
+  width: 68.34%;
+  border-radius: 50px;
+  background: #B3EDEB;
+  padding: 50px 20px;
+  margin: 0 auto 58px;
+}
+#system .sec-box-top .top {
+  width: 86.81%;
+  margin: 0 auto;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #FFF;
+  text-align: center;
+  background: #00C4BB;
+}
+#system .sec-box-top .box {
+  width: 86.81%;
+  margin: 8px auto 0;
+  background: #FFF;
+  padding: 15px 0 24px;
+  text-align: center;
+}
+#system .sec-box-top .tel {
+  font-size: 4.8rem;
+  font-weight: 700;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 10px;
+}
+#system .sec-box-top .icon {
+  width: 24px;
+}
+#system .sec-box-top .time {
+  font-size: 2.4rem;
+  line-height: 1.8;
+  display: inline-block;
+  text-align: right;
+}
+#system .sec-box-btm {
+  background: #F5F5F5;
+  width: 88.489%;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+#system .sec-box-btm .box {
+  margin: 0 auto;
+  width: 86.6%;
+  background: #FFF;
+  border: 1px solid;
+  -o-border-image: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%) 1;
+     border-image: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%) 1;
+  padding: 4rem;
+}
+#system .sec-box-btm .item + .item {
+  margin-top: 40px;
+}
+#system .sec-box-btm .item:nth-of-type(1) .bg::before {
+  content: "";
+  position: absolute;
+  width: 17%;
+  aspect-ratio: 162/199;
+  right: 0.8rem;
+  top: -60px;
+  background: url(../img/school/system-img-1.png) center/contain no-repeat;
+}
+#system .sec-box-btm .item:nth-of-type(2) .bg::before {
+  content: "";
+  position: absolute;
+  width: 17%;
+  aspect-ratio: 162/176;
+  left: 3.8rem;
+  top: -60px;
+  background: url(../img/school/system-img-2.png) center/contain no-repeat;
+}
+#system .sec-box-btm .bg {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #FFF;
+  background: #00C4BB;
+  margin-bottom: 33px;
+  position: relative;
+}
+#system .sec-box-btm .line {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.8;
+  margin-bottom: 24px;
+  background: linear-gradient(transparent 56%, #FFB400 56% 98%, transparent 98%);
+  display: inline;
+}
+#system .sec-box-btm .text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  width: 86%;
+  margin: 0 auto;
+  text-align: left;
+  padding-bottom: 24px;
+}
+#system .sec-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 1.6%;
+  width: 59.6%;
+  border-radius: 100px;
+  background: #8CE3DE;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #084C49;
+  line-height: 1.5;
+  padding: 32px 80px 25px 8px;
+  box-shadow: 4px 4px 0 2px #05615C;
+  margin: 143px auto 0;
+  position: relative;
+}
+#system .sec-btn::before {
+  position: absolute;
+  content: "";
+  max-width: 189px;
+  width: 22.18%;
+  height: auto;
+  bottom: 0;
+  right: 42px;
+  aspect-ratio: 1/1;
+  background: url(../img/school/btn-img.png) center/contain no-repeat;
+  z-index: 2;
+}
+#system .sec-btn::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url(../img/common/bg-dot-20.png) top center/500px 250px repeat;
+  border-radius: 100px;
+}
+#system .sec-btn .large {
+  font-size: 4rem;
+}
+#system .sec-btn .txt {
+  z-index: 3;
+}
+#system .sec-btn .icon {
+  width: 75px;
+  z-index: 3;
+}/*# sourceMappingURL=school.css.map */

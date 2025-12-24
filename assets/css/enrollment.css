@@ -1,0 +1,126 @@
+.sec-container {
+  box-shadow: 0 0 13px 2px rgba(0, 162, 154, 0.2);
+  padding: 40px 20px 80px;
+}
+
+.sec-title {
+  margin: 18px;
+}
+
+#top .sec-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 31.2rem;
+  margin-top: 88px;
+  background: url(../img/enrollment/top-bg.png) center 43.5%/cover no-repeat;
+}
+#top .sec-inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%);
+  opacity: 0.7;
+}
+#top .sec-inner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 27.24%;
+  background: url(../img/common/bg-dot.png) top left/auto 260% repeat-x;
+  opacity: 0.55;
+}
+#top .sec-title {
+  color: #fff;
+  font-size: 4.8rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+  padding-top: 7rem;
+}
+
+#procedure .sec-inner {
+  margin-top: 86px;
+}
+#procedure .sec-banner {
+  display: block;
+  width: 41.96%;
+  margin: 0 auto 80px;
+  box-shadow: 0 0 13.3px 2px rgba(0, 162, 154, 0.2);
+  position: relative;
+}
+#procedure .sec-banner::before {
+  content: "";
+  position: absolute;
+  width: 87px;
+  height: 87px;
+  bottom: 0;
+  right: 0;
+  background: url(../img/common/check.svg) center/contain no-repeat;
+}
+#procedure .sec-box {
+  margin: 64px auto 0;
+  width: 88.49%;
+}
+#procedure .sec-box .box-top {
+  background: #C4A1EC;
+  color: #FFF;
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.5;
+  padding: 16px;
+  text-align: center;
+  position: relative;
+}
+#procedure .sec-box .box-top .txt {
+  display: inline-block;
+  position: relative;
+}
+#procedure .sec-box .box-top .btn {
+  position: absolute;
+  background: #FFF;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#procedure .sec-box .box-top .btn::before, #procedure .sec-box .box-top .btn::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  background: #333;
+}
+#procedure .sec-box .box-top .btn::before {
+  transform: translateX(-50%) translateY(-50%);
+}
+#procedure .sec-box .box-top .btn::after {
+  transform: translateX(-50%) translateY(-50%) rotate(90deg);
+}
+#procedure .sec-box .box-content {
+  background: #F5F5F5;
+  padding: 40px 20px 80px;
+}
+#procedure .sec-box .bg-white {
+  margin: 0 auto;
+  width: 87.6%;
+  background: #FFF;
+  border: 1px solid;
+  -o-border-image: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%) 1;
+     border-image: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%) 1;
+  padding: 40px 20px 80px;
+}/*# sourceMappingURL=enrollment.css.map */
