@@ -228,6 +228,41 @@
   display: inline-block;
   text-align: left;
 }
+#procedure .sec-points {
+  margin: 40px auto 0;
+  width: 85.5%;
+}
 #procedure .sec-points .item {
-  padding-left: 1em;
+  padding-left: 13px;
+  text-align: left;
+  font-size: 1.8rem;
+  position: relative;
+}
+#procedure .sec-points .item::before {
+  content: "";
+  position: absolute;
+  top: 0.9em;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #333;
+}
+#procedure .sec-points .item + .item {
+  margin-top: 1.8em;
+}
+#procedure .sec-points .item + .item-mt0 {
+  margin-top: 0;
+}
+#procedure .sec-points .line {
+  background: linear-gradient(transparent 7%, #FFB400 7% 95%, transparent 95%);
+  display: inline;
+}
+#procedure .sec-points .underline {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+#procedure .sec-image {
+  margin: 18px auto 0;
+  width: 85.5%;
 }/*# sourceMappingURL=enrollment.css.map */

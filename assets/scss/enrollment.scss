@@ -246,9 +246,46 @@
     }
   }
   .sec-points{
+    margin: 40px auto 0;
+    width: 85.5%;
+    
     .item{
-      padding-left: 1em;
+      padding-left: 13px;
+      text-align: left;
+      font-size: 1.8rem;
+      position: relative;
+
+      &::before{
+        content: "";
+        position: absolute;
+        top: .9em;
+        left: 0;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: $base_color;
+
+      }
+      &+.item{
+        margin-top: 1.8em;
+
+        &-mt0{
+          margin-top: 0;
+        }
+      }
     }
+    .line{
+      background: linear-gradient(transparent 7%, $accent_color 7% 95%, transparent 95%);
+      display: inline;
+    }
+    .underline{
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+  }
+  .sec-image{
+    margin: 18px auto 0;
+    width: 85.5%;
   }
 }
 #faq{
