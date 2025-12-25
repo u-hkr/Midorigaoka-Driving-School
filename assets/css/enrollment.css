@@ -113,7 +113,7 @@
 }
 #procedure .sec-box .box-content {
   background: #F5F5F5;
-  padding: 40px 20px 80px;
+  padding: 40px 20px;
 }
 #procedure .sec-box .bg-white {
   margin: 0 auto;
@@ -123,4 +123,111 @@
   -o-border-image: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%) 1;
      border-image: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%) 1;
   padding: 40px 20px 80px;
+  text-align: center;
+}
+#procedure .sec-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 32px;
+  display: inline-block;
+  text-align: left;
+}
+#procedure .sec-item {
+  background: #B3EDEB;
+  border-radius: 50px;
+  padding: 50px 8%;
+  width: 85.2%;
+  margin: 0 auto 32px;
+}
+#procedure .sec-item .table-header {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #FFF;
+  background: #00C4BB;
+}
+#procedure .sec-item .table-row {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 384fr 303fr;
+  gap: 0 5px;
+}
+#procedure .sec-item .table-type {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.8;
+  color: #FFF;
+  background: #00C4BB;
+  padding: 15px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#procedure .sec-item .table-age {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.8;
+  background: #FFF;
+  padding: 8px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#procedure .sec-item .table-text {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.8;
+  background: #FFF;
+  padding: 15px 8px;
+  margin-top: 8px;
+}
+#procedure .sec-item .table-box {
+  background: #00C4BB;
+  padding: 15px 8px;
+  color: #FFF;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.8;
+  margin-top: 70px;
+  position: relative;
+}
+#procedure .sec-item .table-box::before {
+  position: absolute;
+  content: "";
+  top: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 63px;
+  height: 66px;
+  background: url(../img/enrollment/triangle.png) center/contain no-repeat;
+}
+#procedure .sec-item .table-box .top {
+  font-size: 2.4rem;
+  background: #FFF;
+  margin-bottom: 10px;
+}
+#procedure .sec-item .table-box .col {
+  background: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#procedure .sec-item .table-note {
+  background: #F5F5F5;
+  font-size: 16px;
+  padding: 24px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 8px;
+}
+#procedure .sec-item .large {
+  font-size: 3.2rem;
+}
+#procedure .sec-item .text {
+  font-size: 1.8rem;
+  display: inline-block;
+  text-align: left;
+}
+#procedure .sec-points .item {
+  padding-left: 1em;
 }/*# sourceMappingURL=enrollment.css.map */
