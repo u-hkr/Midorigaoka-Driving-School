@@ -1,6 +1,6 @@
 .sec-container {
   box-shadow: 0 0 13px 2px rgba(0, 162, 154, 0.2);
-  padding: 40px 20px 80px;
+  padding: 40px 6.993% 80px;
 }
 
 .sec-title {
@@ -48,17 +48,20 @@
   padding-top: 7rem;
 }
 
-#procedure .sec-inner {
+#enrollment {
+  margin-bottom: 100px;
+}
+#enrollment .sec-inner {
   margin-top: 86px;
 }
-#procedure .sec-banner {
+#enrollment .sec-banner {
   display: block;
   width: 41.96%;
   margin: 0 auto 80px;
   box-shadow: 0 0 13.3px 2px rgba(0, 162, 154, 0.2);
   position: relative;
 }
-#procedure .sec-banner::before {
+#enrollment .sec-banner::before {
   content: "";
   position: absolute;
   width: 87px;
@@ -67,11 +70,14 @@
   right: 0;
   background: url(../img/common/check.svg) center/contain no-repeat;
 }
-#procedure .sec-box {
-  margin: 64px auto 0;
-  width: 88.49%;
+#enrollment .sec-container + .sec-container {
+  margin-top: 90px;
 }
-#procedure .sec-box .box-top {
+#enrollment .sec-box {
+  margin: 64px auto 0;
+  width: 100%;
+}
+#enrollment .sec-box .box-top {
   background: #C4A1EC;
   color: #FFF;
   font-size: 3.2rem;
@@ -81,11 +87,11 @@
   text-align: center;
   position: relative;
 }
-#procedure .sec-box .box-top .txt {
+#enrollment .sec-box .box-top .txt {
   display: inline-block;
   position: relative;
 }
-#procedure .sec-box .box-top .btn {
+#enrollment .sec-box .box-top .btn {
   position: absolute;
   background: #FFF;
   width: 46px;
@@ -95,7 +101,7 @@
   top: 50%;
   transform: translateY(-50%);
 }
-#procedure .sec-box .box-top .btn::before, #procedure .sec-box .box-top .btn::after {
+#enrollment .sec-box .box-top .btn::before, #enrollment .sec-box .box-top .btn::after {
   content: "";
   position: absolute;
   width: 30px;
@@ -105,54 +111,57 @@
   transform-origin: center;
   background: #333;
 }
-#procedure .sec-box .box-top .btn::before {
+#enrollment .sec-box .box-top .btn::before {
   transform: translateX(-50%) translateY(-50%);
 }
-#procedure .sec-box .box-top .btn::after {
+#enrollment .sec-box .box-top .btn::after {
   transform: translateX(-50%) translateY(-50%) rotate(90deg);
 }
-#procedure .sec-box .box-content {
-  background: #F5F5F5;
-  padding: 40px 20px;
+#enrollment .sec-box .box-top-purple {
+  background: #00C4BB;
 }
-#procedure .sec-box .bg-white {
+#enrollment .sec-box .box-content {
+  background: #F5F5F5;
+  padding: 40px 7.723%;
+  text-align: center;
+}
+#enrollment .sec-box .bg-white {
   margin: 0 auto;
-  width: 87.6%;
+  width: 100%;
   background: #FFF;
   border: 1px solid;
   -o-border-image: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%) 1;
      border-image: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%) 1;
-  padding: 40px 20px 80px;
+  padding: 40px 8.93% 80px;
   text-align: center;
 }
-#procedure .sec-text {
+#enrollment .sec-text {
   font-size: 1.8rem;
   line-height: 1.8;
-  margin-bottom: 32px;
   display: inline-block;
   text-align: left;
 }
-#procedure .sec-item {
+#enrollment .sec-item {
   background: #B3EDEB;
   border-radius: 50px;
-  padding: 50px 8%;
-  width: 85.2%;
-  margin: 0 auto 32px;
+  padding: 50px 9.38%;
+  width: 100%;
+  margin: 32px auto 0;
 }
-#procedure .sec-item .table-header {
+#enrollment .sec-item .table-header {
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 1.5;
   color: #FFF;
   background: #00C4BB;
 }
-#procedure .sec-item .table-row {
+#enrollment .sec-item .table-row {
   margin-top: 10px;
   display: grid;
   grid-template-columns: 384fr 303fr;
   gap: 0 5px;
 }
-#procedure .sec-item .table-type {
+#enrollment .sec-item .table-left {
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 1.8;
@@ -162,8 +171,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
 }
-#procedure .sec-item .table-age {
+#enrollment .sec-item .table-right {
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 1.8;
@@ -172,8 +182,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
 }
-#procedure .sec-item .table-text {
+#enrollment .sec-item .table-text {
   font-size: 1.8rem;
   font-weight: 700;
   line-height: 1.8;
@@ -181,7 +192,7 @@
   padding: 15px 8px;
   margin-top: 8px;
 }
-#procedure .sec-item .table-box {
+#enrollment .sec-item .table-box {
   background: #00C4BB;
   padding: 15px 8px;
   color: #FFF;
@@ -191,7 +202,7 @@
   margin-top: 70px;
   position: relative;
 }
-#procedure .sec-item .table-box::before {
+#enrollment .sec-item .table-box::before {
   position: absolute;
   content: "";
   top: -70px;
@@ -201,17 +212,17 @@
   height: 66px;
   background: url(../img/enrollment/triangle.png) center/contain no-repeat;
 }
-#procedure .sec-item .table-box .top {
+#enrollment .sec-item .table-box .top {
   font-size: 2.4rem;
   background: #FFF;
   margin-bottom: 10px;
 }
-#procedure .sec-item .table-box .col {
+#enrollment .sec-item .table-box .col {
   background: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-#procedure .sec-item .table-note {
+#enrollment .sec-item .table-note {
   background: #F5F5F5;
   font-size: 16px;
   padding: 24px 8px;
@@ -220,25 +231,69 @@
   justify-content: center;
   margin-top: 8px;
 }
-#procedure .sec-item .large {
+#enrollment .sec-item .large {
   font-size: 3.2rem;
 }
-#procedure .sec-item .text {
+#enrollment .sec-item .text {
   font-size: 1.8rem;
   display: inline-block;
   text-align: left;
 }
-#procedure .sec-points {
-  margin: 40px auto 0;
-  width: 85.5%;
+#enrollment .sec-item .top-text {
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 24px;
 }
-#procedure .sec-points .item {
+#enrollment .sec-item-2 {
+  width: 99%;
+  padding: 30px 7.69%;
+  margin-bottom: 0;
+}
+#enrollment .sec-item-2 .table-row {
+  grid-template-columns: 200fr 665fr;
+}
+#enrollment .sec-item-2 .table-left {
+  padding: 8px 8px;
+}
+#enrollment .sec-item-3 {
+  width: 99%;
+  padding: 30px 11.65% 30px 3.88%;
+  margin-bottom: 0;
+  display: grid;
+  grid-template-columns: 152fr 678fr;
+  gap: 0 3.88%;
+  align-items: center;
+}
+#enrollment .sec-item-3:not(:nth-of-type(1)) {
+  margin-top: 16px;
+}
+#enrollment .sec-item-3 .table-row {
+  grid-template-columns: 191fr 482fr;
+}
+#enrollment .sec-item-3 .table-left {
+  padding: 8px 8px;
+}
+#enrollment .sec-item-3 .part {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+#enrollment .sec-item.col-y {
+  background: #FFE9B3;
+}
+#enrollment .sec-item.col-y .table-left {
+  background: #FFB400;
+}
+#enrollment .sec-points {
+  margin: 40px auto 0;
+}
+#enrollment .sec-points .item {
   padding-left: 13px;
   text-align: left;
   font-size: 1.8rem;
   position: relative;
 }
-#procedure .sec-points .item::before {
+#enrollment .sec-points .item::before {
   content: "";
   position: absolute;
   top: 0.9em;
@@ -248,21 +303,97 @@
   border-radius: 50%;
   background: #333;
 }
-#procedure .sec-points .item + .item {
+#enrollment .sec-points .item + .item {
   margin-top: 1.8em;
 }
-#procedure .sec-points .item + .item-mt0 {
+#enrollment .sec-points .item + .item-mt0 {
   margin-top: 0;
 }
-#procedure .sec-points .line {
+#enrollment .sec-points .line {
   background: linear-gradient(transparent 7%, #FFB400 7% 95%, transparent 95%);
   display: inline;
 }
-#procedure .sec-points .underline {
+#enrollment .sec-points .underline {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
-#procedure .sec-image {
+#enrollment .sec-image {
   margin: 18px auto 0;
-  width: 85.5%;
+}
+#enrollment .sec-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 69.27%;
+  border-radius: 100px;
+  background: #8CE3DE;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #084C49;
+  line-height: 1.5;
+  padding: 41px 10px 31px 10px;
+  box-shadow: 4px 4px 0 2px #05615C;
+  margin: 24px auto 0;
+  position: relative;
+}
+#enrollment .sec-btn .icon {
+  position: absolute;
+  content: "";
+  width: 75px;
+  height: auto;
+  bottom: 0;
+  left: 11%;
+  top: 50%;
+  transform: translateY(-50%);
+  aspect-ratio: 1/1;
+}
+#enrollment .sec-btn::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url(../img/common/bg-dot-20.png) top center/500px 250px repeat;
+  border-radius: 100px;
+}
+#enrollment .sec-btn .large {
+  font-size: 4rem;
+}
+#enrollment .sec-btn .txt {
+  z-index: 3;
+  position: relative;
+  display: inline-block;
+}
+#enrollment .sec-btn .txt::after {
+  content: "";
+  position: absolute;
+  width: 41px;
+  height: 48px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -35%;
+  background: url(../img/common/pdf.svg) center/contain no-repeat;
+}
+
+#faq {
+  background: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%);
+  margin-top: 330px;
+  padding-bottom: 484px;
+  position: relative;
+}
+#faq::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 330px;
+  top: -329px;
+  left: 0;
+  background: url(../img/enrollment/faq-bg.png) bottom center/cover no-repeat;
+}
+#faq .sec-box .question {
+  background: #B3EDEB;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 32px 13.41% 32px 9.34%;
 }/*# sourceMappingURL=enrollment.css.map */
