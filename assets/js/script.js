@@ -24,6 +24,7 @@ $(window).on('load', function() {
   if (!is_firstload) {
     const $nav = $("#nav");
     const $header = $("#header");
+    const $inner = $mv.find(".sec-inner");
     const $m = $loading.find(".m");
 
     $(window).scrollTop(0);
@@ -32,6 +33,9 @@ $(window).on('load', function() {
     $mv.addClass("hide");
     $nav.hide();
     $header.hide();
+    $inner.hide();
+    console.log($inner);
+    
     $('.js-slide-mv').slick("slickPause");
 
     setTimeout(function(){
@@ -46,6 +50,7 @@ $(window).on('load', function() {
     setTimeout(function(){
       $nav.fadeIn();
       $header.fadeIn();
+      $inner.fadeIn();
     },3800);
 
   } else {

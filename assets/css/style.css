@@ -490,6 +490,8 @@ figure img,
 #mv .sec-news {
   width: 563px;
   margin-top: 22px;
+}
+#mv .sec-news-inner {
   padding: 43px 40px 43px 50px;
   background: #fff;
   border-radius: 8px;
@@ -589,6 +591,97 @@ figure img,
 }
 #mv .sec-line.active {
   background: url(../img/index/mv-line.svg) top/cover no-repeat;
+}
+@media print, screen and (max-width: 1024px) {
+  #mv .sec-inner {
+    flex-direction: column-reverse;
+    padding-top: 0;
+    padding-left: 0;
+  }
+  #mv .sec-img-1 {
+    top: 15rem;
+    left: 5rem;
+    width: 45rem;
+    height: auto;
+  }
+  #mv .sec-img-2 {
+    top: 18rem;
+    left: 55rem;
+    width: 35rem;
+    border-width: 0.6rem;
+  }
+  #mv .sec-news {
+    max-width: calc(100% - 4rem);
+    min-height: calc(23lvh + 80px);
+  }
+  #mv .sec-news-inner {
+    padding: 17px 27px 16px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  #mv .sec-news-item {
+    display: block;
+    font-size: 14px;
+  }
+  #mv .sec-news .date {
+    margin-right: 8px;
+  }
+  #mv .sec-news .cat {
+    padding: 0 13px;
+    line-height: 1.6;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #mv .sec-slide .item {
+    height: 110lvh;
+  }
+  #mv .sec-slide .item img {
+    top: -5%;
+    left: 30%;
+    width: 174lvh;
+    min-width: 240vw;
+    height: 100%;
+    transform: translateX(-55%);
+  }
+  #mv .sec-img-1 {
+    top: 210px;
+    left: 0;
+    width: 100%;
+    height: 135px;
+  }
+  #mv .sec-img-1 img {
+    -o-object-position: top;
+       object-position: top;
+  }
+  #mv .sec-img-2 {
+    top: 122px;
+    left: 50%;
+    width: 352px;
+    max-width: calc(100% - 4.8rem);
+    margin: 0 auto;
+    border-width: 0.6rem;
+    transform: translateX(-50%);
+  }
+  #mv .sec-inner::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 4%;
+    width: 100%;
+    height: 38.75vw;
+    background: url(../img/index/mv-deco.svg) bottom/contain no-repeat;
+    pointer-events: none;
+  }
+  #mv .sec-news {
+    min-height: calc(12lvh + 80px);
+  }
+  #mv .sec-line {
+    bottom: 7%;
+    left: 30%;
+    width: 1280px;
+    height: 320px;
+    transform: translateX(-55%);
+  }
 }
 
 #driver {
@@ -899,6 +992,7 @@ figure img,
   }
   #driver .sec-title {
     margin-bottom: 16px;
+    padding: 0 2.4rem;
   }
   #driver .sec-box-top {
     grid-template-columns: 1fr;

@@ -172,9 +172,12 @@
     // left: 10rem;
     width: 563px;
     margin-top: 22px;
-    padding: 43px 40px 43px 50px;
-    background: #fff;
-    border-radius: 8px;
+    
+    &-inner {
+      padding: 43px 40px 43px 50px;
+      background: #fff;
+      border-radius: 8px;
+    }
 
     &-item {
       display: grid;
@@ -288,6 +291,105 @@
     // object {
     //   object-position: top;
     // }
+
+  }
+
+  @include media('tb') {
+    .sec-inner {
+      flex-direction: column-reverse;
+      // height: auto;
+      // min-height: 100lvh;
+      padding-top: 0;
+      padding-left: 0;
+    }
+    .sec-img-1 {
+      top: 15rem;
+      left: 5rem;
+      width: 45rem;
+      height: auto;
+    }
+    .sec-img-2 {
+      top: 18rem;
+      left: 55rem;
+      width: 35rem;
+      border-width: .6rem;
+    }
+    .sec-news {
+      max-width: calc(100% - 4rem);
+      min-height: calc(23lvh + 80px);
+      
+      &-inner {
+        padding: 17px 27px 16px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+      &-item {
+        display: block;
+        font-size: 14px;
+      }
+      .date {
+        margin-right: 8px;
+      }
+      .cat {
+        padding: 0 13px;
+        line-height: 1.6;
+      }
+    }
+  }
+  @include media('sp') {
+    .sec-slide {
+      .item {
+        height: 110lvh;
+
+        img {
+          top: -5%;
+          left: 30%;
+          width: 174lvh;
+          min-width: 240vw;
+          height: 100%;
+          transform: translateX(-55%);
+        }
+      }
+    }
+    .sec-img-1 {
+      top: 210px;
+      left: 0;
+      width: 100%;
+      height: 135px;
+
+      img {
+        object-position: top;
+      }
+    }
+    .sec-img-2 {
+      top: 122px;
+      left: 50%;
+      width: 352px;
+      max-width: calc(100% - 4.8rem);
+      margin: 0 auto;
+      border-width: .6rem;
+      transform: translateX(-50%);
+    }
+    .sec-inner::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 4%;
+      width: 100%;
+      height: 38.75vw;
+      background: url(../img/index/mv-deco.svg) bottom/contain no-repeat;
+      pointer-events: none;
+    }
+    .sec-news {
+      min-height: calc(12lvh + 80px);
+    }
+    .sec-line {
+      bottom: 7%;
+      left: 30%;
+      width: 1280px;
+      height: 320px;
+      transform: translateX(-55%);
+    }
   }
 }
 
@@ -653,6 +755,7 @@
     }
     .sec-title{
       margin-bottom: 16px;
+      padding: 0 2.4rem;
     }
     .sec-box-top{
       // display: grid;
