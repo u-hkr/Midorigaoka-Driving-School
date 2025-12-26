@@ -4,11 +4,37 @@
 
 .sec-container{
   box-shadow: 0 0 13px 2px #00A29A33;
-  // padding: 40px 20px 80px;
   padding: 40px 6.993% 80px;
 }
 .sec-title{
   margin: 18px;
+}
+.plus-btn{
+  position: absolute;
+  background: $white_color;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &::before,
+  &::after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+    background: $base_color;
+  }
+  &::before{
+    transform: translateX(-50%) translateY(-50%);
+  }
+  &::after{
+    transform: translateX(-50%) translateY(-50%) rotate(90deg);
+  }
 }
 
 #top {
@@ -31,7 +57,6 @@
       height: 100%;
       background: $main_gradient;
       opacity: .7;
-      // z-index: -1;
     }
     &::after {
       content: "";
@@ -82,61 +107,105 @@
     &+.sec-container{
       margin-top: 90px;
     }
+    &:nth-of-type(1){
+      .sec-box{
+        .box-top{
+          background: $sub_color;
+          .txt{
+            img{
+              width: 123px;
+            }
+          }
+        }
+        &:nth-of-type(1){
+          .box-top{
+            img{
+              left: -103px;
+            }
+          }
+        }
+        &:nth-of-type(2){
+          .box-top{
+            img{
+              right: -129px;
+            }
+          }
+        }
+        &:nth-of-type(3){
+          .box-top{
+            img{
+              left: -115px;
+            }
+          }
+        }
+        &:nth-of-type(4){
+          .box-top{
+            img{
+              right: -123px;
+            }
+          }
+        }
+      }
+    }
+    &:nth-of-type(2){
+      .sec-box{
+        .box-top{
+          background: $green_color;
+          .txt{
+            img{
+              width: 151px;
+            }
+          }
+        }
+        &:nth-of-type(1){
+          .box-top{
+            img{
+              left: -140px;
+            }
+          }
+        }
+        &:nth-of-type(2){
+          .box-top{
+            img{
+              right: -140px;
+            }
+          }
+        }
+      }
+    }
   }
   .sec-box{
     margin: 64px auto 0;
     width: 100%;
 
     .box-top{
-      background: $sub_color;
       color: $white_color;
       font-size: 3.2rem;
       font-weight: 700;
       line-height: 1.5;
-      padding: 16px;
+      padding: 24px 16px;
       text-align: center;
       position: relative;
 
       .txt{
         display: inline-block;
         position: relative;
-      }
-      .btn{
-        position: absolute;
-        background: $white_color;
-        width: 46px;
-        height: 46px;
-        border-radius: 50%;
-        right: 50px;
-        top: 50%;
-        transform: translateY(-50%);
 
-        &::before,
-        &::after{
+        img{
           content: "";
           position: absolute;
-          width: 30px;
-          height: 3px;
-          top: 50%;
-          left: 50%;
-          transform-origin: center;
-          background: $base_color;
-        }
-        &::before{
-          transform: translateX(-50%) translateY(-50%);
-        }
-        &::after{
-          transform: translateX(-50%) translateY(-50%) rotate(90deg);
+          bottom: -24px;
         }
       }
-      &-purple{
-        background: $green_color;
+      .plus-btn{
+        right: 50px;
       }
     }
     .box-content{
       background: #F5F5F5;
       padding: 40px 7.723%;
       text-align: center;
+      display: none;
     }
     .bg-white{
       margin: 0 auto;
@@ -345,7 +414,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 69.27%;
+    width: 81.92%;
     border-radius: 100px;
     background: #8CE3DE;
     font-size: 2.4rem;
@@ -414,13 +483,37 @@
     left: 0;
     background:  url(../img/enrollment/faq-bg.png) bottom center / cover no-repeat;
   }
+  .sec-container{
+    padding-top: 0;
+    padding-bottom: 0;
+  }
   .sec-box{
 
+    .box-item{
+      color: #084C49;
+      
+      &:not(:nth-of-type(1)){
+        margin-top: 16px;
+      }
+    }
     .question{
       background: #B3EDEB;
       font-size: 2rem;
       font-weight: 700;
       padding: 32px 13.41% 32px 9.34%;
+      position: relative;
+
+      .plus-btn{
+        right: 9.34%;
+      }
+    }
+    .answer{
+      background: $white_color;
+      font-size: 1.8rem;
+      font-weight: 700;
+      padding: 15px 9.34% 15px 9.34%;
+      color: #084C49;
+      display: none;
     }
   }
 }

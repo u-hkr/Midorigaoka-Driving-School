@@ -141,3 +141,11 @@ $(function(){
     return false;
   });
 });
+
+// アコーディオンボタン
+$(function () {
+  $('.js-ac-btn').on('click', function () {
+    $(this).next('.js-ac-content').slideToggle();
+    $(this).toggleClass('is-open');
+  });
+});
