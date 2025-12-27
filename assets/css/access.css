@@ -1,77 +1,81 @@
 .sec-container {
   box-shadow: 0 0 13px 2px rgba(0, 162, 154, 0.2);
-  padding: 40px 6.993% 80px;
+  padding: 40px 13.98% 80px;
+}
+.sec-container:not(:nth-of-type(1)) {
+  margin-top: 30px;
 }
 
 .sec-title {
   margin: 18px;
 }
 
-.plus-btn {
-  position: absolute;
-  background: #FFF;
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  top: 50%;
-  transform: translateY(-50%);
+#access {
+  margin-top: 80px;
+  margin-bottom: 524px;
 }
-.plus-btn::before, .plus-btn::after {
-  content: "";
-  position: absolute;
-  width: 30px;
-  height: 3px;
-  top: 50%;
-  left: 50%;
-  transform-origin: center;
-  background: #333;
+#access .sec-box {
+  background: #B3EDEB;
+  border-radius: 50px;
+  padding: 50px 7.76%;
+  text-align: center;
 }
-.plus-btn::before {
-  transform: translateX(-50%) translateY(-50%);
-}
-.plus-btn::after {
-  transform: translateX(-50%) translateY(-50%) rotate(90deg);
-}
-
-#top .sec-inner {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 31.2rem;
-  margin-top: 88px;
-  background: url(../img/enrollment/top-bg.png) center 43.5%/cover no-repeat;
-}
-#top .sec-inner::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%);
-  opacity: 0.7;
-}
-#top .sec-inner::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 27.24%;
-  background: url(../img/common/bg-dot.png) top left/auto 260% repeat-x;
-  opacity: 0.55;
-}
-#top .sec-title {
-  color: #fff;
-  font-size: 4.8rem;
+#access .sec-box .title {
+  font-size: 2.4rem;
   font-weight: 700;
   line-height: 1.5;
+  margin-bottom: 10px;
   text-align: center;
-  position: relative;
-  z-index: 3;
-  padding-top: 7rem;
+}
+#access .sec-box .text {
+  font-size: 1.8rem;
+  display: inline-block;
+  text-align: left;
+}
+#access .sec-box .line {
+  font-weight: 700;
+  background: linear-gradient(transparent 7%, #FFB400 7% 95%, transparent 95%);
+  display: inline;
+}
+#access .sec-box .map {
+  margin-bottom: 16px;
+}
+#access .sec-box .map iframe {
+  width: 100%;
+}
+#access .sec-box .title-bg {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #FFF;
+  background: #00C4BB;
+  margin-bottom: 8px;
+}
+#access .sec-box .text-bg {
+  background: #FFF;
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 15px 20px;
+}
+#access .sec-box .text-bg .txt {
+  display: inline-block;
+  text-align: left;
+}
+#access .sec-texts .top {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+#access .sec-texts .text {
+  font-size: 1.8rem;
+  margin-bottom: 18px;
+}
+#access .sec-texts .bg {
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 24px 20px;
+  background: F5F5F5;
 }
 
 #enrollment {
