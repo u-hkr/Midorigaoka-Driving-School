@@ -5,16 +5,6 @@
     margin: 0 auto;
     position: relative;
 
-    &::before{
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 44.6rem;
-      top: -48.4rem;
-      background:  url(../img/common/bg-dot-20.png) top left / 46.5rem 23.3rem repeat;
-      z-index: 2;
-      pointer-events: none;
-    }
     .pagetop{
       position: fixed;
       height: 172px;
@@ -329,5 +319,76 @@
       gap: 0 24px;
     }
     
+  }
+  @include media('tb') {
+    .sec-inner{
+      .pagetop{
+        right: 19px;
+        bottom: 55px;
+        height: 132px;
+      }
+    }
+    .sec-box-mid{
+      justify-content: center;
+      margin-bottom: 0;
+
+      .box-left{
+        width: 26rem;
+        padding: 0;
+      }
+    }
+
+  }
+  @include media('sp') {
+    .sec-bg{
+      top: -110px;
+      height: 306px;
+
+      &::before{
+        top: -150px;
+        height: 400px;
+      }
+      &::after{
+        height: 60%;
+      }
+    }
+    .sec-box-top {
+      .box-list{
+        flex-direction: column;
+        margin-top: -35px;
+        margin-bottom: 0;
+      }
+      .box-item{
+        height: 80px;
+      }
+      .box-image{
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        margin: 0;
+
+        .image{
+          height: 44.5vw;
+        }
+      }
+    }
+    .sec-box-mid{
+      margin-top: 12.5vw;
+    }
+    .sec-box-btm{
+      padding: 10.5vw 0 21px;
+      overflow: hidden;
+
+      .box{
+        flex-direction: column;
+        font-size: 3vw;
+        font-size: clamp(0px, 3vw, 12px);
+        white-space: nowrap;
+      }
+      .copyright{
+        display: block;
+        margin-top: 1em;
+      }
+    }
   }
 }
