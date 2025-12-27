@@ -2789,16 +2789,6 @@
   margin: 0 auto;
   position: relative;
 }
-#footer .sec-inner::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 44.6rem;
-  top: -48.4rem;
-  background: url(../img/common/bg-dot-20.png) top left/46.5rem 23.3rem repeat;
-  z-index: 2;
-  pointer-events: none;
-}
 #footer .sec-inner .pagetop {
   position: fixed;
   height: 172px;
@@ -3089,4 +3079,66 @@
   flex-wrap: wrap;
   flex-direction: row-reverse;
   gap: 0 24px;
+}
+@media print, screen and (max-width: 1024px) {
+  #footer .sec-inner .pagetop {
+    right: 19px;
+    bottom: 55px;
+    height: 132px;
+  }
+  #footer .sec-box-mid {
+    justify-content: center;
+    margin-bottom: 0;
+  }
+  #footer .sec-box-mid .box-left {
+    width: 26rem;
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #footer .sec-bg {
+    top: -110px;
+    height: 306px;
+  }
+  #footer .sec-bg::before {
+    top: -150px;
+    height: 400px;
+  }
+  #footer .sec-bg::after {
+    height: 60%;
+  }
+  #footer .sec-box-top .box-list {
+    flex-direction: column;
+    margin-top: -35px;
+    margin-bottom: 0;
+  }
+  #footer .sec-box-top .box-item {
+    height: 80px;
+  }
+  #footer .sec-box-top .box-image {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+  #footer .sec-box-top .box-image .image {
+    height: 44.5vw;
+  }
+  #footer .sec-box-mid {
+    margin-top: 12.5vw;
+  }
+  #footer .sec-box-btm {
+    padding: 10.5vw 0 21px;
+    overflow: hidden;
+  }
+  #footer .sec-box-btm .box {
+    flex-direction: column;
+    font-size: 3vw;
+    font-size: clamp(0px, 3vw, 12px);
+    white-space: nowrap;
+  }
+  #footer .sec-box-btm .copyright {
+    display: block;
+    margin-top: 1em;
+  }
 }/*# sourceMappingURL=common.css.map */
