@@ -19,7 +19,12 @@
   margin-top: 80px;
   margin-bottom: 524px;
 
-  .sec-box{
+  .line{
+    font-weight: 700;
+    background: linear-gradient(transparent 7%, $accent_color 7% 95%, transparent 95%);
+    display: inline;
+  }
+  .sec-box-1{
     background: #B3EDEB;
     border-radius: 50px;
     padding: 50px 7.76%;
@@ -36,13 +41,7 @@
       font-size: 1.8rem;
       display: inline-block;
       text-align: left;
-      
-    }
-    .line{
-      font-weight: 700;
-      background: linear-gradient(transparent 7%, $accent_color 7% 95%, transparent 95%);
-      display: inline;
-    }
+    }  
     .map{
       margin-bottom: 16px;
 
@@ -70,7 +69,154 @@
       }
     }
   }
+   .sec-box-2{
+    background: #B3EDEB;
+    border-radius: 50px;
+    padding: 50px 11.65% 80px;
+    text-align: center;
+
+    .title{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0 3rem;
+      font-size: 2.4rem;
+      font-weight: 700;
+      line-height: 1.5;
+      margin-bottom: 18px;
+
+      .small{
+        font-size: 2.1rem;
+      }
+      img{
+        width: 47px;
+      }
+    }
+    .text{
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+
+      .line{
+        font-size: 3.2rem;
+      }
+    }
+    .box{
+      background: #F5F5F5;
+      font-size: 16px;
+      padding: 24px 4.93%;
+      margin-bottom: 8px;
+
+      .ta-l{
+        display: inline-block;
+        text-align: left;
+      }
+      .link{
+        text-decoration: underline;
+      }
+      .large{
+        font-size: 18px;
+        font-weight: 700;
+      }
+    }
+    .title-bg{
+      font-size: 2.4rem;
+      font-weight: 700;
+      line-height: 1.5;
+      color: $white_color;
+      background: $green_color;
+      margin-bottom: 8px;
+    }
+    .list{
+      counter-reset: item;
+      margin-bottom: 8px;
+    }
+    .item{
+      background: $white_color;
+      display: grid;
+      grid-template-columns: 175px 1fr 165px;
+      gap: 0 3.79%;
+      counter-increment: item;
+      position: relative;
+      align-items: center;
+      padding: 15px 3.79%;
+      // counter-increment: item;
+      // position: relative;
+      // padding-left: 2em;
+
+      // &::before{
+      //   content: counter(item);
+      //   position: absolute;
+      //   left: 0;
+      // }
+      &:not(:nth-of-type(1)){
+        margin-top: 10px;
+      }
+    }
+    .num{
+      // font-size: 2.4rem;
+      // font-weight: 700;
+      // color: $white_color;
+      // padding: 10px 0;
+      // background: $green_color;
+      // display: inline-block;
+      // width: fit-content;
+    }
+    .route{
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: $green_color;
+      padding-left: 73px;
+      position: relative;
+
+      &::before{
+        content: "【"counter(item)"】";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: $white_color;
+        padding: 3px 0;
+        width: 63px;
+        text-align: center;
+        background: $green_color;
+        // display: inline-block;
+        // width: fit-content;
+      }
+    }
+    .direction{
+      font-size: 2.4rem;
+      line-height: 2;
+      text-align: left;
+    }
+    .files{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .pdf-dl{
+      font-size: 2.6rem;
+      font-weight: 700;
+      line-height: 1.5;
+      color: $white_color;
+      background: $green_color;
+      border-radius: 100px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2px 7px;
+
+      img{
+        width: 28px;
+      }
+    }
+  }
   .sec-texts{
+    text-align: center;
+
     .top{
       font-size: 2.4rem;
       font-weight: 700;
@@ -85,7 +231,13 @@
       font-size: 1.8rem;
       font-weight: 700;
       padding: 24px 20px;
-      background: F5F5F5;
+      background: #F5F5F5;
+      margin-bottom: 18px;
+      
+      .txt{
+        display: inline-block;
+        text-align: left;
+      }
     }
   }
 
