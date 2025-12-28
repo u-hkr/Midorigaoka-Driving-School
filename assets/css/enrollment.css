@@ -430,6 +430,10 @@
   padding-top: 0;
   padding-bottom: 0;
 }
+#faq .sec-title {
+  margin: 0 0 30px;
+  text-align: center;
+}
 #faq .sec-box .box-item {
   color: #084C49;
 }

@@ -369,6 +369,10 @@
   padding-bottom: 48.4rem;
   background: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%);
 }
+#interview .sec-title {
+  margin-bottom: 40px;
+  text-align: center;
+}
 #interview .sec-box {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

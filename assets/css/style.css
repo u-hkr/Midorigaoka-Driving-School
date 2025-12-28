@@ -343,7 +343,7 @@ figure img,
 }
 #heading .sec-title {
   color: #fff;
-  font-size: 4.8rem;
+  font-size: 48px;
   font-weight: 700;
   line-height: 1.5;
   text-align: center;
@@ -351,6 +351,9 @@ figure img,
 @media print, screen and (max-width: 1024px) {
   #heading .sec-inner {
     padding-top: 62px;
+  }
+  #heading .sec-title {
+    font-size: clamp(0px, 4.8rem, 48px);
   }
 }
 @media only screen and (max-width: 768px) {
