@@ -33,6 +33,10 @@
   transform: translateX(-50%) translateY(-50%) rotate(90deg);
 }
 
+.js-ac-btn.active .plus-btn::after {
+  content: none;
+}
+
 #top .sec-inner {
   position: relative;
   display: flex;
@@ -65,7 +69,7 @@
 }
 #top .sec-title {
   color: #fff;
-  font-size: 4.8rem;
+  font-size: 48px;
   font-weight: 700;
   line-height: 1.5;
   text-align: center;
@@ -101,6 +105,10 @@
 }
 #enrollment .sec-container:nth-of-type(1) .sec-box .box-top {
   background: #C4A1EC;
+  box-shadow: 4px 4px 0 2px #5B3882;
+}
+#enrollment .sec-container:nth-of-type(1) .sec-box .box-top:hover {
+  background: #7F54B1;
 }
 #enrollment .sec-container:nth-of-type(1) .sec-box .box-top .txt img {
   width: 123px;
@@ -119,6 +127,10 @@
 }
 #enrollment .sec-container:nth-of-type(2) .sec-box .box-top {
   background: #00C4BB;
+  box-shadow: 4px 4px 0 2px #05615C;
+}
+#enrollment .sec-container:nth-of-type(2) .sec-box .box-top:hover {
+  background: #00867F;
 }
 #enrollment .sec-container:nth-of-type(2) .sec-box .box-top .txt img {
   width: 151px;
@@ -135,12 +147,21 @@
 }
 #enrollment .sec-box .box-top {
   color: #FFF;
-  font-size: 3.2rem;
+  font-size: 32px;
   font-weight: 700;
   line-height: 1.5;
   padding: 24px 16px;
   text-align: center;
   position: relative;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.45, 0, 0.55, 1), box-shadow 0.3s cubic-bezier(0.45, 0, 0.55, 1), background 0.3s cubic-bezier(0.45, 0, 0.55, 1);
+}
+#enrollment .sec-box .box-top:not(.active):hover {
+  transform: translate(4px, 4px);
+  box-shadow: none !important;
+}
+#enrollment .sec-box .box-top.active {
+  box-shadow: none !important;
 }
 #enrollment .sec-box .box-top .txt {
   display: inline-block;
@@ -171,7 +192,7 @@
   text-align: center;
 }
 #enrollment .sec-text {
-  font-size: 1.8rem;
+  font-size: 18px;
   line-height: 1.8;
   display: inline-block;
   text-align: left;
@@ -184,7 +205,7 @@
   margin: 32px auto 0;
 }
 #enrollment .sec-item .table-header {
-  font-size: 2.4rem;
+  font-size: 24px;
   font-weight: 700;
   line-height: 1.5;
   color: #FFF;
@@ -197,7 +218,7 @@
   gap: 0 5px;
 }
 #enrollment .sec-item .table-left {
-  font-size: 2.4rem;
+  font-size: 24px;
   font-weight: 700;
   line-height: 1.8;
   color: #FFF;
@@ -209,7 +230,7 @@
   text-align: center;
 }
 #enrollment .sec-item .table-right {
-  font-size: 2.4rem;
+  font-size: 24px;
   font-weight: 700;
   line-height: 1.8;
   background: #FFF;
@@ -220,7 +241,7 @@
   text-align: center;
 }
 #enrollment .sec-item .table-text {
-  font-size: 1.8rem;
+  font-size: 18px;
   font-weight: 700;
   line-height: 1.8;
   background: #FFF;
@@ -231,7 +252,7 @@
   background: #00C4BB;
   padding: 15px 8px;
   color: #FFF;
-  font-size: 1.8rem;
+  font-size: 18px;
   font-weight: 700;
   line-height: 1.8;
   margin-top: 70px;
@@ -248,7 +269,7 @@
   background: url(../img/common/triangle.png) center/contain no-repeat;
 }
 #enrollment .sec-item .table-box .top {
-  font-size: 2.4rem;
+  font-size: 24px;
   background: #FFF;
   margin-bottom: 10px;
 }
@@ -267,15 +288,15 @@
   margin-top: 8px;
 }
 #enrollment .sec-item .large {
-  font-size: 3.2rem;
+  font-size: 32px;
 }
 #enrollment .sec-item .text {
-  font-size: 1.8rem;
+  font-size: 18px;
   display: inline-block;
   text-align: left;
 }
 #enrollment .sec-item .top-text {
-  font-size: 2.4rem;
+  font-size: 24px;
   font-weight: 700;
   text-align: center;
   margin-bottom: 24px;
@@ -310,7 +331,7 @@
   padding: 8px 8px;
 }
 #enrollment .sec-item-3 .part {
-  font-size: 2.4rem;
+  font-size: 24px;
   font-weight: 700;
 }
 #enrollment .sec-item.col-y {
@@ -325,7 +346,7 @@
 #enrollment .sec-points .item {
   padding-left: 13px;
   text-align: left;
-  font-size: 1.8rem;
+  font-size: 18px;
   position: relative;
 }
 #enrollment .sec-points .item::before {
@@ -362,7 +383,7 @@
   width: 81.92%;
   border-radius: 100px;
   background: #8CE3DE;
-  font-size: 2.4rem;
+  font-size: 24px;
   font-weight: 700;
   color: #084C49;
   line-height: 1.5;
@@ -393,7 +414,7 @@
   border-radius: 100px;
 }
 #enrollment .sec-btn .large {
-  font-size: 4rem;
+  font-size: 40px;
 }
 #enrollment .sec-btn .txt {
   z-index: 3;
@@ -442,17 +463,22 @@
 }
 #faq .sec-box .question {
   background: #B3EDEB;
-  font-size: 2rem;
+  font-size: 20px;
   font-weight: 700;
   padding: 32px 13.41% 32px 9.34%;
   position: relative;
+  cursor: pointer;
+  transition: opacity 0.3s cubic-bezier(0.45, 0, 0.55, 1);
+}
+#faq .sec-box .question:hover {
+  opacity: 0.63;
 }
 #faq .sec-box .question .plus-btn {
   right: 9.34%;
 }
 #faq .sec-box .answer {
   background: #FFF;
-  font-size: 1.8rem;
+  font-size: 18px;
   font-weight: 700;
   padding: 15px 9.34% 15px 9.34%;
   color: #084C49;
