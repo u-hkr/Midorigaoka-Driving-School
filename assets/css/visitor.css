@@ -1,4 +1,3 @@
-@charset "UTF-8";
 #top .sec-inner {
   position: relative;
   display: flex;
@@ -256,13 +255,15 @@
 }
 #reason .sec-box .box-item .top {
   text-align: center;
-  font-size: 3.2rem;
-  font-weight: 700;
-  font-family: "Jost", "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
-  line-height: 1.5;
-  color: transparent;
-  -webkit-text-stroke: 1px #FFF;
+  height: 30px;
   margin-bottom: 16px;
+}
+#reason .sec-box .box-item .top img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 #reason .sec-box .box-item .text {
   margin-bottom: 16px;
@@ -339,26 +340,25 @@
   top: 0;
   left: 0;
   mix-blend-mode: soft-light;
+  pointer-events: none;
 }
-#reason .sec-box .box-item .dot::before {
+#reason .sec-box .box-item .dot::before, #reason .sec-box .box-item .dot::after {
   content: "";
   position: absolute;
   width: 100%;
-  height: 93px;
-  top: 0;
   left: 0;
   border-radius: 50px 50px 0 0;
   background: url(../img/common/bg-dot-g.png) top center/cover repeat;
+  filter: brightness(0.4);
+}
+#reason .sec-box .box-item .dot::before {
+  height: 93px;
+  top: 0;
 }
 #reason .sec-box .box-item .dot::after {
-  content: "";
-  position: absolute;
-  width: 100%;
   height: 49px;
   bottom: 0;
-  left: 0;
-  border-radius: 50px 50px 0 0;
-  background: url(../img/common/bg-dot-g.png) bottom center/cover repeat;
+  background-position: bottom center;
   transform: scaleY(-1);
 }
 

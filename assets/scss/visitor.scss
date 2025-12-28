@@ -268,13 +268,21 @@
       }
       .top{
         text-align: center;
-        font-size: 3.2rem;
-        font-weight: 700;
-        font-family: $font_en;
-        line-height: 1.5;
-        color: transparent;
-        -webkit-text-stroke: 1px $white_color;
+        // font-size: 3.2rem;
+        // font-weight: 700;
+        // font-family: $font_en;
+        // line-height: 1.5;
+        // color: transparent;
+        // -webkit-text-stroke: 1px $white_color;
+        height: 30px;
         margin-bottom: 16px;
+
+        img{
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
       }
       .text{
         margin-bottom: 16px;
@@ -353,26 +361,26 @@
         top: 0;
         left: 0;
         mix-blend-mode: soft-light;
+        pointer-events: none;
 
-        &::before{
-          content: "";
-          position: absolute;
-          width: 100%;
-          height: 93px;
-          top: 0;
-          left: 0;
-          border-radius: 50px 50px 0 0;
-          background:  url(../img/common/bg-dot-g.png) top center / cover repeat;
-        }
+        &::before,
         &::after{
           content: "";
           position: absolute;
           width: 100%;
-          height: 49px;
-          bottom: 0;
           left: 0;
           border-radius: 50px 50px 0 0;
-          background:  url(../img/common/bg-dot-g.png) bottom center / cover repeat;
+          background:  url(../img/common/bg-dot-g.png) top center / cover repeat;
+          filter: brightness(.4);
+        }
+        &::before{
+          height: 93px;
+          top: 0;
+        }
+        &::after{
+          height: 49px;
+          bottom: 0;
+          background-position: bottom center;
           transform: scaleY(-1);
         }
       }
