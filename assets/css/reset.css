@@ -59,8 +59,8 @@ main::before {
 }
 @media only screen and (max-width: 768px) {
   main::before {
-    height: 130px;
-    background-position: left -50px;
+    height: 200px;
+    background: url(../img/common/bg-dot-20.png) left -50px/46.5rem 23.3rem repeat, linear-gradient(180deg, rgba(0, 162, 154, 0), rgba(0, 162, 154, 0.2));
   }
 }
 

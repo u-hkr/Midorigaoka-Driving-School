@@ -60,8 +60,8 @@ main {
   }
   @include media('sp') {
     &::before{
-      height: 130px;
-      background-position: left -50px;
+      height: 200px;
+      background: url(../img/common/bg-dot-20.png) left -50px / 46.5rem 23.3rem repeat, linear-gradient(180deg, #00A29A00, #00a29a33);  
     }
   }
 }
