@@ -123,7 +123,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 32rem;
+    height: 320px;
     padding: 88px 0 0;
     // padding: 7rem 0 0;
     background: $main_gradient;
@@ -145,5 +145,44 @@
     font-weight: 700;
     line-height: 1.5;
     text-align: center;
+  }
+  @include media('tb') {
+    .sec-inner {
+      padding-top: 62px;
+    }
+  }
+  @include media('sp') {
+    .sec-inner {
+      height: 260px;
+    }
+    .sec-title {
+      font-size: 3.2rem;
+    }
+  }
+}
+
+.c-post {
+  > *:first-child{
+    margin-top: 0 !important;
+  }
+  > *:last-child{
+    margin-bottom: 0 !important;
+  }
+
+  h1, h2, h3, h4, h5, h6{ margin: 1em 0 .5em; font-weight: bold; }
+  h1, h2 { font-size: 26px; }
+  h3 { font-size: 24px; }
+  h4 { font-size: 22px; }
+  h5 { font-size: 20px; }
+  h6 { font-size: 18px; }
+  p {
+    min-height: 1em;
+    margin-bottom: 1em;
+  }
+  ul { margin: 1em 0; padding-left: 1.5em; list-style: disc; }
+  ul ul { margin: .5em; list-style: circle; }
+  ol { margin: 1em 0; padding-left: 1.5em; list-style: decimal; }
+  > .wp-block-image {
+    margin-bottom: 3rem;
   }
 }
