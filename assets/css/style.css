@@ -407,4 +407,100 @@ figure img,
 }
 .c-post > .wp-block-image {
   margin-bottom: 3rem;
+}
+
+.c-newslist {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8.4rem;
+  font-size: 14px;
+  font-weight: 400;
+}
+.c-newslist .img {
+  position: relative;
+  width: 100%;
+  margin-bottom: 8px;
+  padding-top: 44.67%;
+}
+.c-newslist .img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.c-newslist .info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 9px;
+}
+.c-newslist .date {
+  display: inline-block;
+  font-family: "Jost", "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
+.c-newslist .bg {
+  display: inline-block;
+  color: #FFF;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  display: inline-block;
+  width: 162px;
+  padding: 2px 8px 3px;
+  background: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%);
+  font-size: 16px;
+  text-align: center;
+}
+.c-newslist .bg.important {
+  background: #C4A1EC;
+}
+.c-newslist .title {
+  position: relative;
+  padding-right: 50px;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.c-newslist .title > span {
+  display: block;
+  max-width: 373px;
+}
+.c-newslist .title::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 9px);
+  right: 0;
+  width: 16px;
+  height: 19px;
+  background: url(../img/common/arrow-g.svg) center/contain no-repeat;
+}
+@media print, screen and (max-width: 1024px) {
+  .c-newslist {
+    gap: 5rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .c-newslist {
+    gap: 0 8px;
+  }
+  .c-newslist .item {
+    position: relative;
+    padding-bottom: 44px;
+  }
+  .c-newslist .item::after {
+    content: "";
+    position: absolute;
+    bottom: 16px;
+    left: calc(50% - 8px);
+    width: 16px;
+    height: 19px;
+    background: url(../img/common/arrow-g.svg) center/contain no-repeat;
+  }
+  .c-newslist .title {
+    padding: 0;
+  }
+  .c-newslist .title::after {
+    content: none;
+  }
 }/*# sourceMappingURL=style.css.map */

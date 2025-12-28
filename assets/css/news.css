@@ -1,10 +1,10 @@
 @charset "UTF-8";
 #post {
   margin-bottom: 220px;
-  padding: 80px;
+  padding-top: 80px;
 }
 #post .sec-inner {
-  width: 1235px;
+  max-width: 1230px;
 }
 #post .sec-top {
   display: flex;
