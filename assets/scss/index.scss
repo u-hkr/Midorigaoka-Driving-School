@@ -771,6 +771,13 @@
     .sec-title{
       margin-bottom: 16px;
       padding: 0 2.4rem;
+
+      .en{
+        font-size: 6.4rem;
+      }
+      .ja{
+        font-size: 2rem;
+      }
     }
     .sec-box-top{
       // display: grid;
@@ -1242,6 +1249,11 @@
     .sec-box-left{
       margin-bottom: 24px;
 
+      .title{
+        .en{
+          font-size: 6.4rem;
+        }
+      }
       .btn{
         width: 149px;
 

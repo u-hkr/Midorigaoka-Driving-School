@@ -55,6 +55,27 @@
 }
 
 
+@-webkit-keyframes animate-reason-road {
+  0% {
+    stroke-dashoffset: 1590px;
+    stroke-dasharray: 1590px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+    stroke-dasharray: 1590px;
+  }
+}
+@keyframes animate-reason-road {
+  0% {
+    stroke-dashoffset: 1590px;
+    stroke-dasharray: 1590px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+    stroke-dasharray: 1590px;
+  }
+}
+
 
 // backup
 @-webkit-keyframes link-lineloop {

@@ -5,19 +5,23 @@ $(window).on('load', function() {
   const $loading = $("#loading");
   const $mv = $("#mv");
   const $mv_line = $("#mv .sec-line");
-  $('.js-slide-mv').slick({
-    slidesToShow: 1,
-    dots: false,
-    arrows: false,
-    infinite: true,
-    speed: 500,
-    fade: true,
-    cssEase: 'linear',
-    autoplay: true,
-    autoplaySpeed: 5000,
-    pauseOnFocus: false,
-    pauseOnHover: false,
-  });
+  const $mv_slide = $('.js-slide-mv');
+
+  if($mv_slide.length){
+    $mv_slide.slick({
+      slidesToShow: 1,
+      dots: false,
+      arrows: false,
+      infinite: true,
+      speed: 500,
+      fade: true,
+      cssEase: 'linear',
+      autoplay: true,
+      autoplaySpeed: 5000,
+      pauseOnFocus: false,
+      pauseOnHover: false,
+    });
+  }
 
   var is_firstload = sessionStorage.getItem('is-first-load');
 
@@ -36,7 +40,7 @@ $(window).on('load', function() {
     $inner.hide();
     console.log($inner);
     
-    $('.js-slide-mv').slick("slickPause");
+    if($mv_slide.length) $mv_slide.slick("slickPause");
 
     setTimeout(function(){
       $loading.addClass("hide");
@@ -44,7 +48,7 @@ $(window).on('load', function() {
     },1800);
     setTimeout(function(){
       $loading.fadeOut();
-      $('.js-slide-mv').slick("slickPlay");
+      if($mv_slide.length) $mv_slide.slick("slickPlay");
       $mv_line.addClass("active");
     },2500);
     setTimeout(function(){
@@ -127,6 +131,16 @@ $(function(){
     if(!$(e.target).hasClass("children")) return;
     $(this).fadeOut(100);
     $(this).closest("li").removeClass("active");
+  });
+
+
+  // reason
+  var road_index = 1;
+  $(".js-road").each(function(){
+    $(this).children("path").addClass("road-path-"+road_index);
+    $(this).children("mask").attr("id", "road-mask-"+road_index);
+    $(this).append('<defs><style>.road-path-'+road_index+'{mask: url(#road-mask-'+road_index+');}</style></defs>');
+    road_index++;
   });
 
 
