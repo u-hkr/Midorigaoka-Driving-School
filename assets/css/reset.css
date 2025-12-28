@@ -56,6 +56,7 @@ main::before {
   bottom: 0;
   background: url(../img/common/bg-dot-20.png) top left/46.5rem 23.3rem repeat, linear-gradient(180deg, rgba(0, 162, 154, 0), rgba(0, 162, 154, 0.2));
   z-index: -1;
+  pointer-events: none;
 }
 @media only screen and (max-width: 768px) {
   main::before {

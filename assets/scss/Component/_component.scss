@@ -87,6 +87,7 @@
 }
 
 .c-title-s {
+  margin-bottom: 18px;
   text-align: center;
 
   .ja {
@@ -112,6 +113,8 @@
   }
 
   @include media('sp') {
+    margin-bottom: 24px;
+    
     .ja {
       font-size: 20px;
       font-size: clamp(20px, 5vw, 5vw);

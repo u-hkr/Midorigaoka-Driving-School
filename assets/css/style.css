@@ -292,6 +292,7 @@ figure img,
 }
 
 .c-title-s {
+  margin-bottom: 18px;
   text-align: center;
 }
 .c-title-s .ja {
@@ -316,6 +317,9 @@ figure img,
   line-height: 1.5;
 }
 @media only screen and (max-width: 768px) {
+  .c-title-s {
+    margin-bottom: 24px;
+  }
   .c-title-s .ja {
     font-size: 20px;
     font-size: clamp(20px, 5vw, 5vw);

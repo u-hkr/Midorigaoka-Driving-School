@@ -4,10 +4,12 @@
 
 .sec-container{
   box-shadow: 0 0 13px 2px #00A29A33;
-  padding: 40px 6.993% 80px;
-}
-.sec-title{
-  margin: 18px;
+  // padding: 40px 6.993% 80px;
+  padding: 40px 24px 80px;
+
+  @include media('sp') {
+    padding-bottom: 40px;
+  }
 }
 .plus-btn{
   position: absolute;
@@ -35,6 +37,17 @@
   &::after{
     transform: translateX(-50%) translateY(-50%) rotate(90deg);
   }
+
+  @include media('sp') {
+    width: 34px;
+    height: 34px;
+
+    &::before,
+    &::after{
+      width: 22px;
+      height: 2px;
+    }
+  }
 }
 .js-ac-btn.active .plus-btn::after{
   content: none;
@@ -47,7 +60,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 31.2rem;
+    height: 312px;
     margin-top: 88px;
     background: url(../img/enrollment/top-bg.png) center 43.5%/cover no-repeat;
 
@@ -80,11 +93,28 @@
     text-align: center;
     position: relative;
     z-index: 3;
+    margin: 0;
     padding-top: 7rem;
+  }
+  @include media('tb') {
+    .sec-inner{
+      margin-top: 62px;
+    }
+    .sec-title{
+      padding: 0;
+    }
+  }
+  @include media('sp') {
+    .sec-inner{
+      height: 200px;
+    }
+    .sec-title{
+      font-size: 3.2rem;
+    }
   }
 } 
 #enrollment{
-  margin-bottom: 100px;
+  margin-bottom: 90px;
 
   .sec-inner{
     margin-top: 86px;
@@ -186,6 +216,11 @@
         }
       }
     }
+
+    .box-list{
+      width: 123rem;
+      margin: 0 auto;
+    }
   }
   .sec-box{
     margin: 64px auto 0;
@@ -226,13 +261,14 @@
     }
     .box-content{
       background: #F5F5F5;
-      padding: 40px 7.723%;
+      // padding: 40px 7.723%;
+      padding: 40px 24px;
       text-align: center;
       display: none;
     }
     .bg-white{
       margin: 0 auto;
-      width: 100%;
+      width: 104rem;
       background: $white_color;
       border: 1px solid;
       border-image: $main_gradient 1;
@@ -243,8 +279,12 @@
   .sec-text{
     font-size: 18px;
     line-height: 1.8;
-    display: inline-block;
+    display: block;
     text-align: left;
+
+    &-2{
+      text-align: center;
+    }
   }
   .sec-item{
     background: #B3EDEB;
@@ -261,10 +301,13 @@
       background: #00C4BB;
     }
     .table-row{
-      margin-top: 10px;
       display: grid;
       grid-template-columns: 384fr 303fr;
       gap: 0 5px;
+
+      + .table-row{
+        margin-top: 10px;
+      }
     }
     .table-left{
       font-size: 24px;
@@ -349,7 +392,7 @@
       font-size: 24px;
       font-weight: 700;
       text-align: center;
-      margin-bottom: 24px;
+      margin-bottom: 1em;
     }
     &-2{
       width: 99%;
@@ -448,6 +491,7 @@
     box-shadow: 4px 4px 0 2px #05615C;
     margin: 24px auto 0;
     position: relative;
+    z-index: 2;
     
     .icon{
       position: absolute;
@@ -469,6 +513,7 @@
       left: 0;
       background:  url(../img/common/bg-dot-20.png) top center / 500px 250px repeat;
       border-radius: 100px;
+      z-index: -1;
     }
     .large{
       font-size: 40px;
@@ -485,30 +530,235 @@
         height: 48px;
         top: 50%;
         transform: translateY(-50%);
-        right: -35%;
+        left: calc(100% + 50px);
         background:  url(../img/common/pdf.svg) center / contain no-repeat;
+      }
+    }
+  }
+  @include media('full') {
+    .sec-banner{
+      width: 600px;
+      max-width: 100%;
+    }
+    .sec-container{
+      .box-list{
+        width: 100%;
+        max-width: 1230px;
+      }
+    }
+    .sec-box{
+      .bg-white{
+        width: 100%;
+        max-width: 1040px;
+        padding-left: 4.89vw;
+        padding-right: 4.89vw;
+      }
+    }
+    .sec-item{
+      padding-left: 4.16vw;
+      padding-right: 4.16vw;
+    }
+  }
+  @include media('tb') {
+    margin-bottom: 40px;
+
+    .sec-item{
+      .table-row{
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .sec-btn{
+      width: 95.65%;
+      max-width: 400px;
+      padding: 30px 10px 29px;
+      font-size: 16px;
+
+      .large{
+        font-size: 20px;
+      }
+      .icon{
+        width: 2.695em;
+      }
+      .txt{
+        &::after{
+          left: calc(100% + 13px);
+          width: 48px;
+        }
+      }
+    }
+  }
+  @include media('sp') {
+    .sec-inner{
+      margin-top: 40px;
+      padding: 0;
+    }
+    .sec-banner{
+      max-width: calc(100% - 4.8rem);
+      margin-bottom: 40px;
+    }
+    .sec-container{
+      padding-left: 2vw;
+      padding-right: 2vw;
+
+      + .sec-container{
+        margin-top: 40px;
+      }
+    }
+    .sec-box{
+      + .sec-box{
+        margin-top: 28px;
+      }
+      &:first-child{
+        margin-top: 0;
+      }
+      .box-top{
+        padding: 25px 63px 25px 24px;
+        font-size: 20px;
+        text-align: left;
+
+        .txt{
+          display: block;
+          width: 100%;
+          padding-right: 90px;
+
+          img{
+            width: 90px !important;
+            max-height: 100px;
+            bottom: -25px;
+            left: auto !important;
+            right: 0 !important;
+            object-fit: contain;
+          }
+        }
+        .plus-btn{
+          right: 16px;
+        }
+      }
+      .box-content{
+        margin-top: 4px;
+        padding: 24px 2vw 2vw;
+      }
+      .bg-white{
+        padding: 24px 2vw 2vw;
+      }
+    }
+    .sec-text{
+      font-size: 16px;
+
+      &-2{
+        text-align: left;
+      }
+    }
+    .sec-item{
+      margin: 0 auto;
+      padding: 24px 4vw 16px;
+      border-radius: 16px;
+
+      &:not(:first-child) {
+        margin-top: 24px;
+      }
+      &-2{
+        width: 100%;
+
+        .table-row{
+          grid-template-columns: 120fr 212fr;
+        }
+      }
+      &-3{
+        grid-template-columns: 1fr;
+
+        .part{
+          margin-bottom: 16px;
+          font-size: 16px;
+        }
+        .table-row{
+          grid-template-columns: 120fr 212fr;
+        }
+      }
+
+      .table-row{
+        gap: 0 4px;
+
+        + .table-row{
+          margin-top: 4px;
+        }
+      }
+      .table-header{
+        padding: 10px 0;
+        font-size: 16px;
+      }
+      .table-left{
+        padding: 8px;
+        font-size: 16px;
+      }
+      .table-right{
+        font-size: 16px;
+        line-height: 1.6;
+      }
+      .large{
+        font-size: 24px;
+      }
+      .text{
+        margin-top: 16px;
+        font-size: 16px;
+      }
+      .table-box{
+        margin-top: 46px;
+        padding: 8px;
+
+        &::before{
+          top: -43px;
+          width: 40px;
+          height: 39px;
+        }
+        .top{
+          margin-bottom: 16px;
+          font-size: 16px;
+        }
+      }
+      .table-note{
+        padding: 8px;
+        text-align: left;
+      }
+      .top-text{
+        font-size: 16px;
+      }
+    }
+    .sec-points{
+      margin-top: 0;
+
+      .item{
+        font-size: 16px;
+      }
+    }
+    .sec-image{
+      margin-top: 24px;
+    }
+    .sec-btn{
+      margin-bottom: 8px;
+      box-shadow: 1px 1px 0 0 #05615C !important;
+
+      &:hover{
+        transform: none !important;
       }
     }
   }
 }
 #faq{
   background: $main_gradient;
-  margin-top: 330px;
-  padding-bottom: 484px;
+  padding-top: 37rem;
+  padding-bottom: 48.4rem;
   position: relative;
+  z-index: -2;
 
   &::before{
     content: "";
     position: absolute;
     width: 100%;
-    height: 330px;
-    top: -329px;
+    height: 23rem;
+    top: -1px;
     left: 0;
     background:  url(../img/enrollment/faq-bg.png) bottom center / cover no-repeat;
-  }
-  .sec-container{
-    padding-top: 0;
-    padding-bottom: 0;
   }
   .sec-title{
     margin: 0 0 30px;
@@ -546,6 +796,53 @@
       padding: 15px 9.34% 15px 9.34%;
       color: #084C49;
       display: none;
+    }
+  }
+  @include media('full') {
+    .sec-box{
+      .question{
+        padding-left: 5.98vw;
+        padding-right: 160px;
+
+        .plus-btn{
+          right: 5.98vw;
+        }
+      }
+      .answer{
+        padding-left: 5.98vw;
+        padding-right: 5.98vw;
+      }
+    }
+  }
+  @include media('tb') {
+    .sec-box{
+      .question{
+        padding-right: 16rem;
+      }
+    }
+  }
+  @include media('sp') {
+    padding: 72px 0 170px;
+
+    &::before{
+      content: none;
+    }
+    .sec-title{
+      margin-bottom: 16px;
+    }
+    .sec-box{
+      .question{
+        padding: 16px 72px 16px 16px;
+        font-size: 16px;
+
+        .plus-btn{
+          right: 16px;
+        }
+      }
+      .answer{
+        padding: 16px;
+        font-size: 16px;
+      }
     }
   }
 }
