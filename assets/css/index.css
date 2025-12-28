@@ -655,6 +655,12 @@
     margin-bottom: 16px;
     padding: 0 2.4rem;
   }
+  #driver .sec-title .en {
+    font-size: 6.4rem;
+  }
+  #driver .sec-title .ja {
+    font-size: 2rem;
+  }
   #driver .sec-box-top {
     grid-template-columns: 1fr;
     border-left: none;
@@ -991,6 +997,9 @@
   }
   #news .sec-box-left {
     margin-bottom: 24px;
+  }
+  #news .sec-box-left .title .en {
+    font-size: 6.4rem;
   }
   #news .sec-box-left .btn {
     width: 149px;

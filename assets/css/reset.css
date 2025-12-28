@@ -57,6 +57,12 @@ main::before {
   background: url(../img/common/bg-dot-20.png) top left/46.5rem 23.3rem repeat, linear-gradient(180deg, rgba(0, 162, 154, 0), rgba(0, 162, 154, 0.2));
   z-index: -1;
 }
+@media only screen and (max-width: 768px) {
+  main::before {
+    height: 200px;
+    background: url(../img/common/bg-dot-20.png) left -50px/46.5rem 23.3rem repeat, linear-gradient(180deg, rgba(0, 162, 154, 0), rgba(0, 162, 154, 0.2));
+  }
+}
 
 div,
 span,
@@ -348,6 +354,16 @@ fieldset {
     -webkit-mask-size: auto 450%;
             mask-size: auto 450%;
     opacity: 1;
+  }
+}
+@keyframes animate-reason-road {
+  0% {
+    stroke-dashoffset: 1590px;
+    stroke-dasharray: 1590px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+    stroke-dasharray: 1590px;
   }
 }
 @keyframes link-lineloop {

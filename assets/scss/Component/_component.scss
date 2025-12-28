@@ -1,28 +1,32 @@
 // 共通コンテナ
 .c-section {
-  padding: 0 0 0 2.5rem;
-  @include media('tc') {
-    padding-left: 10rem;
-    // max-width: 1920px;
-    width: 100%;
-    margin: 0 auto;
-  }
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0 0 10rem;
    @include media('tb') {
     padding: 0;
   }
 }
 .c-inner {
   // max-width: 1430px;
-  max-width: 147rem;
-  padding: 0 20px;
+  max-width: 147.8rem;
+  padding: 0 2.4rem;
   margin: 0 auto;
 
   // &-max {
   //   max-width: 1920px;
   // }
+  &-1250 {
+    max-width: 125rem;
+    margin: 0 auto;
+  }
   
   @include media('full') {
     max-width: 1470px;
+
+    &-1250 {
+      max-width: 1250px;
+    }
   }
 }
 
@@ -74,10 +78,10 @@
   }
   @include media('sp') {
    .en {
-      font-size: 6.4rem;
+      font-size: 5.6rem;
     }
     .ja {
-      font-size: 2rem;
+      font-size: 2.4rem;
     }
   }
 }

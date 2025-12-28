@@ -202,13 +202,13 @@ figure img,
     scale: 1.2;
     transform-origin: center;
     display: block;
+    transition: scale 1s ease-out, transform 0.5s;
   }
 
   &.inview {
     img {
       animation: thumbSwipe 1.3s cubic-bezier(0.25, 0.46, 0.45, 1) forwards;
       scale: 1;
-      transition: scale 1s ease-out, transform 0.5s;
     }
   }
 }

@@ -58,6 +58,12 @@ main {
     background: url(../img/common/bg-dot-20.png) top left / 46.5rem 23.3rem repeat, linear-gradient(180deg, #00A29A00, #00a29a33);
     z-index: -1;
   }
+  @include media('sp') {
+    &::before{
+      height: 200px;
+      background: url(../img/common/bg-dot-20.png) left -50px / 46.5rem 23.3rem repeat, linear-gradient(180deg, #00A29A00, #00a29a33);  
+    }
+  }
 }
 
 div,
