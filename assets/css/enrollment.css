@@ -245,7 +245,7 @@
   transform: translateX(-50%);
   width: 63px;
   height: 66px;
-  background: url(../img/enrollment/triangle.png) center/contain no-repeat;
+  background: url(../img/common/triangle.png) center/contain no-repeat;
 }
 #enrollment .sec-item .table-box .top {
   font-size: 2.4rem;

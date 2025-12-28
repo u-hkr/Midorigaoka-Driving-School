@@ -66,6 +66,7 @@
   background: #B3EDEB;
   border-radius: 50px;
   padding: 50px 11.65% 80px;
+  margin-bottom: 16px;
   text-align: center;
 }
 #access .sec-box-2 .title {
@@ -180,6 +181,100 @@
 }
 #access .sec-box-2 .pdf-dl img {
   width: 28px;
+}
+#access .sec-box-btm {
+  position: relative;
+  padding-top: 119px;
+}
+#access .sec-box-btm::before {
+  position: absolute;
+  content: "";
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 105px;
+  height: 101px;
+  background: url(../img/common/triangle.png) center/contain no-repeat;
+}
+#access .sec-box-btm .title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #FFF;
+  background: #C4A1EC;
+  padding: 11px 20px;
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 21px;
+}
+#access .sec-box-btm .title .icon {
+  width: 35px;
+  position: relative;
+}
+#access .sec-box-btm .title .icon::before {
+  content: "";
+  position: absolute;
+  width: 42px;
+  height: 56px;
+  right: -40px;
+  top: -12px;
+  background: url(../img/access/bubble.png) center/contain no-repeat;
+}
+#access .sec-box-btm .content {
+  background: #F5F5F5;
+  padding: 24px 6.39%;
+}
+#access .sec-box-btm .text {
+  font-size: clamp(16px, 1.6rem, 1.6rem);
+}
+#access .sec-box-btm .text .bold {
+  font-weight: 700;
+}
+#access .sec-box-btm .image {
+  width: 21.6rem;
+  margin: 10px auto;
+}
+#access .sec-box-btm .list {
+  margin: 24px auto 10px;
+  counter-reset: item;
+}
+#access .sec-box-btm .list-item {
+  font-size: clamp(16px, 1.6rem, 1.6rem);
+  counter-increment: item;
+  position: relative;
+  padding: 5px 0 5px 54px;
+}
+#access .sec-box-btm .list-item:not(:nth-of-type(1)) {
+  margin-top: 10px;
+}
+#access .sec-box-btm .list-item::before {
+  content: counter(item);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 44px;
+  text-align: center;
+  background: #00C4BB;
+  color: #FFF;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.666;
+}
+#access .sec-box-btm .dots-item {
+  padding-left: 1.3em;
+  position: relative;
+}
+#access .sec-box-btm .dots-item::before {
+  content: "";
+  position: absolute;
+  left: 0.5em;
+  top: 12px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #333;
 }
 #access .sec-texts {
   text-align: center;
