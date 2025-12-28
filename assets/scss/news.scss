@@ -1,0 +1,45 @@
+@charset "UTF-8";
+@import "Foundation/variable";
+@import "Foundation/mixin";
+
+#post {
+  margin-bottom: 220px;
+  padding-top: 80px;
+  
+  .sec-inner {
+    max-width: 1230px;
+  }
+  .sec-top {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0 30px;
+
+    .date{
+      display: inline-block;
+      font-family: $font_en;
+      color: $gray_color;
+      letter-spacing: .1em;
+    }
+    .bg{
+      display: inline-block;
+      color: $white_color;
+      font-weight: 700;
+      letter-spacing: .1em;
+      display: inline-block;
+      width: 162px;
+      padding: 3px 8px;
+      background: $main_gradient;
+      text-align: center;
+
+      &.important{
+        background: $sub_color;
+      }
+    }
+  }
+  .sec-title{
+    margin: 1em 0;
+    font-size: 26px;
+    font-weight: bold;
+  }
+}

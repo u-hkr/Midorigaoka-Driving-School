@@ -123,7 +123,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 32rem;
+    height: 320px;
     padding: 88px 0 0;
     // padding: 7rem 0 0;
     background: $main_gradient;
@@ -141,9 +141,150 @@
   }
   .sec-title {
     color: #fff;
-    font-size: 4.8rem;
+    font-size: 48px;
     font-weight: 700;
     line-height: 1.5;
     text-align: center;
+  }
+  @include media('tb') {
+    .sec-inner {
+      padding-top: 62px;
+    }
+    .sec-title {
+      font-size: clamp(0px, 4.8rem, 48px);
+    }
+  }
+  @include media('sp') {
+    .sec-inner {
+      height: 260px;
+    }
+    .sec-title {
+      font-size: 3.2rem;
+    }
+  }
+}
+
+.c-post {
+  > *:first-child{
+    margin-top: 0 !important;
+  }
+  > *:last-child{
+    margin-bottom: 0 !important;
+  }
+
+  h1, h2, h3, h4, h5, h6{ margin: 1em 0 .5em; font-weight: bold; }
+  h1, h2 { font-size: 26px; }
+  h3 { font-size: 24px; }
+  h4 { font-size: 22px; }
+  h5 { font-size: 20px; }
+  h6 { font-size: 18px; }
+  p {
+    min-height: 1em;
+    margin-bottom: 1em;
+  }
+  ul { margin: 1em 0; padding-left: 1.5em; list-style: disc; }
+  ul ul { margin: .5em; list-style: circle; }
+  ol { margin: 1em 0; padding-left: 1.5em; list-style: decimal; }
+  > .wp-block-image {
+    margin-bottom: 3rem;
+  }
+}
+
+.c-newslist {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8.4rem;
+  font-size: 14px;
+  font-weight: 400;
+  
+  .img {
+    position: relative;
+    width: 100%;
+    margin-bottom: 8px;
+    padding-top: 44.67%;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  .info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 9px;
+  }
+  .date {
+    display: inline-block;
+    font-family: $font_en;
+  }
+  .bg {
+    display: inline-block;
+    color: $white_color;
+    font-weight: 700;
+    letter-spacing: .1em;
+    display: inline-block;
+    width: 162px;
+    padding: 2px 8px 3px;
+    background: $main_gradient;
+    font-size: 16px;
+    text-align: center;
+
+    &.important {
+      background: $sub_color;
+    }
+  }
+  .title {
+    position: relative;
+    padding-right: 50px;
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
+    > span{
+      display: block;
+      max-width: 373px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: calc(50% - 9px);
+      right: 0;
+      width: 16px;
+      height: 19px;
+      background: url(../img/common/arrow-g.svg) center/contain no-repeat;
+    }
+  }
+  @include media('tb') {
+    gap: 5rem;
+  }
+  @include media('sp') {
+    gap: 0 8px;
+
+    .item {
+      position: relative;
+      padding-bottom: 44px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 16px;
+        left: calc(50% - 8px);
+        width: 16px;
+        height: 19px;
+        background: url(../img/common/arrow-g.svg) center/contain no-repeat;
+      }
+    }
+    .title {
+      padding: 0;
+
+      &::after {
+        content: none;
+      }
+    }
   }
 }

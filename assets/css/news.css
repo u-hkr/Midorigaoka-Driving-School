@@ -1,0 +1,39 @@
+@charset "UTF-8";
+#post {
+  margin-bottom: 220px;
+  padding-top: 80px;
+}
+#post .sec-inner {
+  max-width: 1230px;
+}
+#post .sec-top {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0 30px;
+}
+#post .sec-top .date {
+  display: inline-block;
+  font-family: "Jost", "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  color: #7D7D7D;
+  letter-spacing: 0.1em;
+}
+#post .sec-top .bg {
+  display: inline-block;
+  color: #FFF;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  display: inline-block;
+  width: 162px;
+  padding: 3px 8px;
+  background: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%);
+  text-align: center;
+}
+#post .sec-top .bg.important {
+  background: #C4A1EC;
+}
+#post .sec-title {
+  margin: 1em 0;
+  font-size: 26px;
+  font-weight: bold;
+}/*# sourceMappingURL=news.css.map */
