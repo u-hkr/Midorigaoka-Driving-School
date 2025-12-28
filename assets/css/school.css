@@ -1,21 +1,41 @@
 .sec-container {
   box-shadow: 0 0 13px 2px rgba(0, 162, 154, 0.2);
-  padding: 40px 20px 80px;
+  padding: 40px 30px 80px;
+}
+@media only screen and (max-width: 768px) {
+  .sec-container {
+    padding: 64px 2.4rem 48px;
+  }
 }
 
 .sec-title {
-  margin: 18px;
+  margin-bottom: 18px;
+}
+@media print, screen and (max-width: 1024px) {
+  .sec-title {
+    margin-bottom: 24px;
+  }
 }
 
 .section + .section {
   margin-top: 70px;
+}
+@media only screen and (max-width: 768px) {
+  .section + .section {
+    margin-top: 40px;
+  }
+  .section .sec-inner {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 #facilities {
   margin-top: 90px;
 }
 #facilities .sec-box {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 40px 24px;
   width: 74.1%;
   margin: 0 auto;
@@ -23,18 +43,35 @@
 #facilities .sec-box + .sec-box {
   margin-top: 40px;
 }
+#facilities .sec-box-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+#facilities .sec-box .box-item {
+  width: 100%;
+}
+#facilities .sec-box .image {
+  position: relative;
+  width: 100%;
+  padding-top: 63.61%;
+}
+#facilities .sec-box .image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 #facilities .sec-box .bg {
   display: inline-block;
   background: #00C4BB;
   color: #FFF;
-  font-size: 2.4rem;
+  font-size: 24px;
+  font-size: clamp(20px, 2.4rem, 2.4rem);
   line-height: 1.6;
   padding: 6px 16px;
   margin-top: 8px;
 }
 #facilities .sec-text {
   margin-top: 42px;
-  font-size: 2rem;
+  font-size: 20px;
   line-height: 1.6;
   text-align: center;
 }
@@ -42,6 +79,9 @@
   display: block;
   margin-top: 70px;
   position: relative;
+  border-radius: 24px;
+  border-bottom-right-radius: 0sec-text;
+  overflow: hidden;
 }
 #facilities .sec-banner::before {
   content: "";
@@ -51,6 +91,48 @@
   bottom: 0;
   right: 0;
   background: url(../img/common/check.svg) center/contain no-repeat;
+}
+@media print, screen and (max-width: 1920px) {
+  #facilities .sec-box {
+    width: 100%;
+    max-width: 1030px;
+  }
+}
+@media print, screen and (min-width: 1025px) {
+  #facilities .sec-box-3 .image {
+    padding-top: 97.76%;
+  }
+}
+@media print, screen and (max-width: 1024px) {
+  #facilities .sec-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  #facilities .sec-box .bg {
+    padding: 0 16px;
+  }
+  #facilities .sec-text {
+    margin: 10px 0 0;
+    font-size: 16px;
+    text-align: left;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #facilities {
+    margin-top: 40px;
+  }
+  #facilities .sec-box {
+    grid-template-columns: 1fr !important;
+  }
+  #facilities .sec-box .bg {
+    font-size: 16px;
+  }
+  #facilities .sec-text {
+    margin: 4px 0 0;
+  }
+  #facilities .sec-banner {
+    margin: 40px 2.4rem 0;
+  }
 }
 
 #course .sec-box {
@@ -68,22 +150,49 @@
   align-items: center;
 }
 #course .box-item .course {
-  font-size: 2.4rem;
+  font-size: 24px;
   color: #FFF;
   line-height: 1.6;
   padding: 6px 24px;
-  margin-right: 2.4rem;
+  margin-right: 24px;
   background: #00C4BB;
   display: inline-block;
 }
 #course .box-item .text {
-  font-size: 2rem;
+  font-size: 20px;
   line-height: 1.6;
   display: inline-block;
 }
+@media print, screen and (max-width: 1920px) {
+  #course .sec-box {
+    width: 100%;
+    max-width: 1030px;
+  }
+}
+@media print, screen and (max-width: 1024px) {
+  #course .box-item .texts {
+    flex-wrap: wrap;
+  }
+  #course .box-item .course {
+    margin-bottom: 8px;
+    padding: 0 24px;
+  }
+  #course .box-item .text {
+    display: block;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #course .box-item .course {
+    font-size: 16px;
+  }
+  #course .box-item .text {
+    font-size: 16px;
+  }
+}
 
 #system {
-  padding-bottom: 540px;
+  padding-bottom: 54rem;
 }
 #system .sec-container {
   text-align: center;
@@ -91,7 +200,7 @@
 #system .sec-text {
   display: inline-block;
   text-align: left;
-  font-size: 1.8rem;
+  font-size: 18px;
   line-height: 1.8;
   margin-bottom: 58px;
 }
@@ -99,13 +208,13 @@
   width: 68.34%;
   border-radius: 50px;
   background: #B3EDEB;
-  padding: 50px 20px;
+  padding: 50px 2.4rem;
   margin: 0 auto 58px;
 }
 #system .sec-box-top .top {
   width: 86.81%;
   margin: 0 auto;
-  font-size: 2.4rem;
+  font-size: 24px;
   font-weight: 700;
   line-height: 1.5;
   color: #FFF;
@@ -120,7 +229,7 @@
   text-align: center;
 }
 #system .sec-box-top .tel {
-  font-size: 4.8rem;
+  font-size: 48px;
   font-weight: 700;
   line-height: 1.8;
   margin-bottom: 15px;
@@ -130,10 +239,10 @@
   gap: 0 10px;
 }
 #system .sec-box-top .icon {
-  width: 24px;
+  width: 0.66em;
 }
 #system .sec-box-top .time {
-  font-size: 2.4rem;
+  font-size: 24px;
   line-height: 1.8;
   display: inline-block;
   text-align: right;
@@ -142,7 +251,7 @@
   background: #F5F5F5;
   width: 88.489%;
   margin: 0 auto;
-  padding: 80px 20px;
+  padding: 80px 30px;
 }
 #system .sec-box-btm .box {
   margin: 0 auto;
@@ -175,7 +284,7 @@
   background: url(../img/school/system-img-2.png) center/contain no-repeat;
 }
 #system .sec-box-btm .bg {
-  font-size: 2.4rem;
+  font-size: 24px;
   font-weight: 700;
   line-height: 1.5;
   color: #FFF;
@@ -184,15 +293,17 @@
   position: relative;
 }
 #system .sec-box-btm .line {
-  font-size: 3.2rem;
+  font-size: 32px;
   font-weight: 700;
   line-height: 1.8;
   margin-bottom: 24px;
-  background: linear-gradient(transparent 56%, #FFB400 56% 98%, transparent 98%);
+}
+#system .sec-box-btm .line > span {
   display: inline;
+  background: linear-gradient(transparent 56%, #FFB400 56% 98%, transparent 98%);
 }
 #system .sec-box-btm .text {
-  font-size: 1.8rem;
+  font-size: 18px;
   line-height: 1.8;
   width: 86%;
   margin: 0 auto;
@@ -213,8 +324,13 @@
   line-height: 1.5;
   padding: 32px 80px 25px 8px;
   box-shadow: 4px 4px 0 2px #05615C;
-  margin: 143px auto 0;
+  margin: 14rem auto 0;
   position: relative;
+  transition: transform 0.3s cubic-bezier(0.45, 0, 0.55, 1), box-shadow 0.3s cubic-bezier(0.45, 0, 0.55, 1);
+}
+#system .sec-btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: none;
 }
 #system .sec-btn::before {
   position: absolute;
@@ -247,4 +363,141 @@
 #system .sec-btn .icon {
   width: 75px;
   z-index: 3;
+}
+@media print, screen and (max-width: 1920px) {
+  #system .sec-box-top {
+    width: calc(100% - 4.8rem);
+    max-width: 950px;
+  }
+  #system .sec-box-btm {
+    width: 100%;
+    max-width: 1230px;
+  }
+  #system .sec-box-btm .box {
+    width: 100%;
+    max-width: 1030px;
+  }
+  #system .sec-box-btm .text {
+    width: 100%;
+    max-width: 822px;
+  }
+}
+@media print, screen and (max-width: 1024px) {
+  #system .sec-text {
+    max-width: calc(100% - 4.8rem);
+  }
+  #system .sec-box-btm {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  }
+  #system .sec-box-btm .item + .item {
+    margin-top: 64px;
+  }
+  #system .sec-box-btm .item:first-of-type .bg::before {
+    bottom: -18px;
+    right: -11px;
+  }
+  #system .sec-box-btm .item:nth-of-type(2) .bg::before {
+    bottom: -29px;
+    left: -7px;
+  }
+  #system .sec-box-btm .box {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  }
+  #system .sec-btn {
+    width: calc(100% - 4.8rem);
+    max-width: 852px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #system {
+    padding-bottom: 170px;
+  }
+  #system .sec-container {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+  #system .sec-box-top {
+    margin-bottom: 40px;
+    padding: 24px 16px 16px;
+    border-radius: 16px;
+  }
+  #system .sec-box-top .top {
+    width: 100%;
+    padding: 10px 10px 11px;
+    font-size: 16px;
+  }
+  #system .sec-box-top .box {
+    width: 100%;
+    margin-top: 4px;
+    padding: 8px 0;
+  }
+  #system .sec-box-top .tel {
+    margin-bottom: 4px;
+    font-size: 24px;
+  }
+  #system .sec-box-top .icon {
+    width: 20px;
+  }
+  #system .sec-box-top .time {
+    font-size: 16px;
+  }
+  #system .sec-box-btm .item + .item .bg {
+    text-align: right;
+  }
+  #system .sec-box-btm .item:first-of-type .bg::before {
+    bottom: -18px;
+    right: -11px;
+    width: 121px;
+    height: 149px;
+  }
+  #system .sec-box-btm .item:nth-of-type(2) .bg::before {
+    bottom: -29px;
+    right: -7px;
+    width: 133px;
+    height: 145px;
+  }
+  #system .sec-box-btm .bg {
+    padding: 2px 4vw;
+    font-size: 20px;
+    text-align: left;
+  }
+  #system .sec-box-btm .line {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  #system .sec-box-btm .line > span {
+    padding: 0 10px;
+    background: linear-gradient(transparent 18%, #FFB400 18% 90%, transparent 90%);
+  }
+  #system .sec-box-btm .text {
+    padding: 0 16px;
+    font-size: 16px;
+  }
+  #system .sec-text {
+    margin-bottom: 24px;
+    font-size: 16px;
+  }
+  #system .sec-btn {
+    max-width: 400px;
+    gap: 8px;
+    margin-top: 62px;
+    padding: 14px 80px 15px 0;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  #system .sec-btn::before {
+    width: 130px;
+    height: 111px;
+    right: 0;
+    bottom: -1px;
+  }
+  #system .sec-btn .icon {
+    width: 43px;
+  }
+  #system .sec-btn .large {
+    font-size: 2rem;
+  }
 }/*# sourceMappingURL=school.css.map */
