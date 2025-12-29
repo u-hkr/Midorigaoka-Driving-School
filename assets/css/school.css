@@ -262,6 +262,9 @@
      border-image: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%) 1;
   padding: 4rem;
 }
+#system .sec-box-btm .box.inview .line > span {
+  background-size: 100% 100%;
+}
 #system .sec-box-btm .item + .item {
   margin-top: 40px;
 }
@@ -300,7 +303,8 @@
 }
 #system .sec-box-btm .line > span {
   display: inline;
-  background: linear-gradient(transparent 56%, #FFB400 56% 98%, transparent 98%);
+  background: linear-gradient(transparent 56%, #FFB400 56% 98%, transparent 98%) left/0% 100% no-repeat;
+  transition: background-size 1s 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 #system .sec-box-btm .text {
   font-size: 18px;
@@ -469,8 +473,7 @@
     font-size: 24px;
   }
   #system .sec-box-btm .line > span {
-    padding: 0 10px;
-    background: linear-gradient(transparent 18%, #FFB400 18% 90%, transparent 90%);
+    background-image: linear-gradient(transparent 18%, #FFB400 18% 90%, transparent 90%);
   }
   #system .sec-box-btm .text {
     padding: 0 16px;

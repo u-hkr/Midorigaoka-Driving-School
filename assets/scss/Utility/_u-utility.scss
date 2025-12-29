@@ -156,6 +156,11 @@ figure img,
   list-style: disc;
   padding-left: 1.5em;
 }
+.u-delay-300{ transition-delay: .3s !important; }
+.u-delay-800{ transition-delay: .8s !important; }
+.u-delay-1200{ transition-delay: 1.2s !important; }
+.u-delay-1500{ transition-delay: 1.5s !important; }
+.u-delay-2000{ transition-delay: 2s !important; }
 
 .h-opacity a, a.h-opacity {
   transition: opacity .3s;
@@ -166,9 +171,27 @@ figure img,
   }
 }
 
+.u-inline{
+  display: inline;
+}
 .u-ib{
   display: inline-block;
 }
+.u-block{
+  display: block;
+}
+@include media('sp') {
+  .u-inline-sp{
+    display: inline;
+  }
+  .u-ib-sp{
+    display: inline-block;
+  }
+  .u-block-sp{
+    display: block;
+  }
+}
+
 
 // inview
 .js-inview.fadeup {
@@ -210,5 +233,16 @@ figure img,
       animation: thumbSwipe 1.3s cubic-bezier(0.25, 0.46, 0.45, 1) forwards;
       scale: 1;
     }
+  }
+}
+.js-line {
+  display: inline;
+  background-size: 0% 100%;
+  background-position: left;
+  background-repeat: no-repeat;
+  transition: background-size 1s 0s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+  &.inview{
+    background-size: 100% 100%;
   }
 }

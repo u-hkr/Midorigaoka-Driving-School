@@ -251,6 +251,10 @@
       }
       &.active{
         box-shadow: none !important;
+
+        + .box-content .line{
+          background-size: 100% 100%;
+        }
       }
 
       .txt{
@@ -473,8 +477,9 @@
       }
     }
     .line{
-      background: linear-gradient(transparent 7%, $accent_color 7% 95%, transparent 95%);
+      background: linear-gradient(transparent 7%, $accent_color 7% 95%, transparent 95%) left/0% 100% no-repeat;
       display: inline;
+      transition: background-size 1s 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
     }
     .underline{
       text-decoration: underline;
