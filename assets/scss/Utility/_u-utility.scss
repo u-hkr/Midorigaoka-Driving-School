@@ -177,21 +177,6 @@ figure img,
 .u-ib{
   display: inline-block;
 }
-.u-block{
-  display: block;
-}
-@include media('sp') {
-  .u-inline-sp{
-    display: inline;
-  }
-  .u-ib-sp{
-    display: inline-block;
-  }
-  .u-block-sp{
-    display: block;
-  }
-}
-
 
 // inview
 .js-inview.fadeup {

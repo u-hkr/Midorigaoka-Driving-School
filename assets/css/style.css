@@ -202,6 +202,11 @@ figure img,
   display: inline-block;
 }
 
+.u-line {
+  background: linear-gradient(transparent 7%, #FFB400 7% 95%, transparent 95%);
+  display: inline;
+}
+
 .u-block {
   display: block;
 }

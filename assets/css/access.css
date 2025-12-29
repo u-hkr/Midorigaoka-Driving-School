@@ -22,7 +22,8 @@
 }
 #access .line {
   font-weight: 700;
-  background-image: linear-gradient(transparent 7%, #FFB400 7% 95%, transparent 95%);
+  background: linear-gradient(transparent 7%, #FFB400 7% 95%, transparent 95%);
+  display: inline;
 }
 #access .sec-box-1 {
   background: #B3EDEB;
