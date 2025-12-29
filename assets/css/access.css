@@ -1,24 +1,19 @@
 @charset "UTF-8";
-#access {
-  margin-top: 80px;
-  margin-bottom: 52.4rem;
-}
-#access .sec-box {
-  max-width: 143rem;
-  margin: 0 auto;
-  padding: 40px 30px 80px;
-  background: #fff;
+.sec-container {
   box-shadow: 0 0 13px 2px rgba(0, 162, 154, 0.2);
+  padding: 40px 13.98% 80px;
 }
-#access .sec-box + .sec-box {
+.sec-container:not(:nth-of-type(1)) {
   margin-top: 30px;
 }
-#access .sec-inner {
-  max-width: 72.02%;
-  margin: 0 auto;
+
+.sec-title {
+  margin: 18px;
 }
-#access .sec-title {
-  margin-bottom: 18px;
+
+#access {
+  margin-top: 80px;
+  margin-bottom: 524px;
 }
 #access .line {
   font-weight: 700;

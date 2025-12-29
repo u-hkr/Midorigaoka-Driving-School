@@ -207,21 +207,6 @@ figure img,
   display: inline;
 }
 
-.u-block {
-  display: block;
-}
-
-@media only screen and (max-width: 768px) {
-  .u-inline-sp {
-    display: inline;
-  }
-  .u-ib-sp {
-    display: inline-block;
-  }
-  .u-block-sp {
-    display: block;
-  }
-}
 .js-inview.fadeup {
   transform: translateY(20px);
   opacity: 0;

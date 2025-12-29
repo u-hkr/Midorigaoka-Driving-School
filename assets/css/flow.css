@@ -249,7 +249,7 @@
 }
 #flow .sec-list .arrow-double-tall {
   width: 54%;
-  margin: -60px auto 10px;
+  margin: -70px auto 10px;
 }
 #flow .sec-btn {
   display: flex;
@@ -314,9 +314,6 @@
      border-image: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%) 1;
   margin: 0 9.5rem;
 }
-#flow .sec-part .title {
-  margin-bottom: 32px;
-}
 #flow .sec-part .box {
   background: #F5F5F5;
   font-weight: 700;
@@ -335,7 +332,7 @@
   font-weight: 700;
   color: #FFF;
   line-height: 1.5;
-  padding: 32px 80px 25px 8px;
+  padding: 36px 8px;
   box-shadow: 4px 4px 0 2px #05615C;
   margin: 24px auto;
   position: relative;
@@ -360,8 +357,118 @@
 }
 #flow .sec-part .btn .txt {
   z-index: 3;
+  position: relative;
 }
-#flow .sec-part .btn .icon {
-  width: 75px;
-  z-index: 3;
+#flow .sec-part .btn .image {
+  position: absolute;
+  max-width: 137px;
+  width: 16%;
+  height: auto;
+  bottom: 0;
+  left: 15%;
+  z-index: 2;
+}
+#flow .sec-part .btn .icon-pdf {
+  position: absolute;
+  width: 42px;
+  height: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -72px;
+  z-index: 2;
+}
+#flow .sec-part.p-1 {
+  margin-bottom: 64px;
+}
+#flow .sec-part.p-2 .item {
+  background: #B3EDEB;
+  border-radius: 50px;
+  padding: 5rem 8rem;
+  text-align: center;
+  margin-bottom: 32px;
+}
+#flow .sec-part.p-2 .item.i-2 .table-row {
+  grid-template-columns: 256fr 431fr;
+}
+#flow .sec-part.p-2 .item.i-2 .right {
+  text-align: center;
+  font-weight: 700;
+}
+#flow .sec-part.p-2 .item-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+#flow .sec-part.p-2 .item-text {
+  display: inline-block;
+  text-align: left;
+  margin-bottom: 16px;
+}
+#flow .sec-part.p-2 .table {
+  margin-bottom: 16px;
+}
+#flow .sec-part.p-2 .table-row {
+  display: grid;
+  grid-template-columns: 144fr 543fr;
+  gap: 0 5px;
+}
+#flow .sec-part.p-2 .table-row:not(:nth-of-type(1)) {
+  margin-top: 10px;
+}
+#flow .sec-part.p-2 .left {
+  background: #00C4BB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #FFF;
+  padding: 8px;
+}
+#flow .sec-part.p-2 .right {
+  background: #FFF;
+  text-align: left;
+  padding: 1.5rem 3.6rem;
+}
+#flow .sec-part.p-2 .bold {
+  font-weight: 700;
+}
+#flow .sec-part.p-2 .bg-g {
+  background: #F5F5F5;
+  padding: 24px 16px;
+}
+#flow .sec-part.p-2 .text-wrap {
+  margin: 0 auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 16px;
+}
+#flow .sec-part.p-2 .top {
+  margin-bottom: 10px;
+}
+#flow .sec-part.p-2 .list-box {
+  padding: 0 16px;
+  position: relative;
+  border-left: 3px solid;
+  -o-border-image: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%) 1;
+     border-image: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%) 1;
+  text-align: left;
+  background: #FFF;
+  display: inline-block;
+}
+#flow .sec-part.p-2 .text-box {
+  background: #F5F5F5;
+  font-size: 16px;
+  padding: 24px 27px;
+  text-align: left;
+  margin-bottom: 16px;
+}
+#flow .sec-part.p-2 .label {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #FFF;
+  background: #00C4BB;
+  margin-bottom: 8px;
 }/*# sourceMappingURL=flow.css.map */
