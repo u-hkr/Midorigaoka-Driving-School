@@ -15,11 +15,6 @@
   margin-top: 80px;
   margin-bottom: 524px;
 }
-#access .line {
-  font-weight: 700;
-  background: linear-gradient(transparent 7%, #FFB400 7% 95%, transparent 95%);
-  display: inline;
-}
 #access .sec-box-1 {
   background: #B3EDEB;
   border-radius: 50px;

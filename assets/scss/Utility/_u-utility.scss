@@ -169,6 +169,10 @@ figure img,
 .u-ib{
   display: inline-block;
 }
+.u-line{
+  background: linear-gradient(transparent 7%, $accent_color 7% 95%, transparent 95%);
+  display: inline;
+}
 
 // inview
 .js-inview.fadeup {
