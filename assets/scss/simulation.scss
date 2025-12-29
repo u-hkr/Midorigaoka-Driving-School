@@ -2,6 +2,9 @@
 @import "Foundation/variable";
 @import "Foundation/mixin";
 
+#pagetop{
+  display: none !important;
+}
 
 #heading{
   .sec-inner{
@@ -9,38 +12,75 @@
 
     .icon{
       position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 117px;
+      width: clamp(90px, 11.7rem, 117px);
       height: 117px;
+      height: clamp(90px, 11.7rem, 117px);
       border-radius: 24px;
       background: $gra_gradient;
       bottom: 0;
       left: 50%;
       transform: translateX(-50%) translateY(50%);
+      z-index: 2;
 
       &::before{
         content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%);
-        width: 58px;
-        height: 52px;
+        display: block;
+        width: 49.57%;
+        height: 44.44%;
         background: url(../img/common/price.svg) center/contain no-repeat;
+      }
+    }
+  }
+  @include media('tb') {
+    .sec-inner{
+      .icon{
+        width: 90px;
+        height: 90px;
+      }
+    }
+  }
+  @include media('sp') {
+    .sec-inner{
+      .icon{
+        position: static;
+        width: 48px;
+        height: 48px;
+        margin-top: 16px;
+        margin-bottom: -24px;
+        border-radius: 10px;
+        transform: none;
+
+        &::before{
+          position: static;
+          display: block;
+          width: 58.33%;
+          height: 58.33%;
+          transform: none;
+        }
       }
     }
   }
 }
 
 #access{
-  margin-top: 134px;
-  margin-bottom: 524px;
+  margin: 134px auto 52.4rem;
 
-  .sec-container{
+  .sec-box{
+    width: calc(100% - 60px);
+    max-width: 143rem;
     box-shadow: 0 0 13px 2px #00A29A33;
-    padding: 80px 8.11%;
+    padding: 80px 30px;
+  }
+  .sec-inner{
     display: grid;
     grid-template-columns: 635fr 535fr;
     gap: 0 28px;
+    max-width: 119.7rem;
+    margin: 0 auto;
   }
   .sec-box-select{
     .title{
@@ -50,8 +90,12 @@
       width: 100%;
       text-align: center;
       display: block;
+      margin: 21px 0;
       padding: 2px 16px;
-      margin-bottom: 21px;
+
+      &:first-child{
+        margin-top: 0;
+      }
     }
     .box{
       border: 1px solid #0000001A;
@@ -88,8 +132,7 @@
       }
     }
     .item{
-
-      &:not(:nth-of-type(1)){
+      + .item{
         margin-top: 14px;
       }
     }
@@ -111,6 +154,7 @@
       -webkit-appearance: none;
       width: 18px;
       height: 18px;
+      margin: 0;
       border-radius: 2px;
       border: 1px solid #767676;
       position: relative;
@@ -168,10 +212,14 @@
       align-items: center;
       justify-content: center;
       font-size: 32px;
+      font-size: clamp(24px, 3.2rem, 32px);
       font-weight: 700;
-      gap: 0 7px;
+      gap: 0 8px;
     }
     .icon{
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 45px;
       height: 45px;
       border-radius: 9px;
@@ -180,12 +228,9 @@
 
       &::before{
         content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%);
-        width: 23px;
-        height: 20px;
+        display: block;
+        width: 51.11%;
+        height: 44.44%;
         background: url(../img/common/price.svg) center/contain no-repeat;
       }
     }
@@ -198,8 +243,12 @@
       font-size: 16px;
       text-align: center;
       width: 100%;
+      margin-top: 10px;
       padding: 3px 16px;
       
+      &:first-child{
+        margin-top: 0;
+      }
       &-p{
         background: $sub_color;
       }
@@ -207,7 +256,7 @@
         background: $accent_color;
       }
     }
-    .texts{
+    .item{
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -216,9 +265,10 @@
       min-height: 39px;
       padding: 6px 0;
       border-bottom: 1px solid #F3F4F6;
-    }
-    .texts+.bg{
-      margin-top: 10px;
+
+      + .item{
+        margin-top: 0;
+      }
     }
     .small{
       color: #717182;
@@ -249,7 +299,12 @@
       gap: 0 7px;
       height: 80px;
       padding: 16px;
+      transition: opacity .3s;
+      cursor: pointer;
 
+      &:hover{
+        opacity: .63;
+      }
       img{
         width: 24px;
       }
@@ -260,10 +315,12 @@
     justify-content: center;
     align-items: center;
     gap: 0 1.6%;
-    width: 59.6%;
+    // width: 59.6%;
+    width: 85.2rem;
+    min-width: 852px;
     border-radius: 100px;
     background: #8CE3DE;
-    font-size: 2.4rem;
+    font-size: 24px;
     font-weight: 700;
     color: #084C49;
     line-height: 1.5;
@@ -301,7 +358,7 @@
       border-radius: 100px;
     }
     .large{
-      font-size: 4rem;
+      font-size: 40px;
     }
     .txt{
       z-index: 3;
@@ -311,6 +368,194 @@
       z-index: 3;
     }
   }
+  .sec-price{
+    display: none;
+  }
+  @include media('full') {
+    .sec-box{
+      max-width: 1430px;
+    }
+    .sec-inner{
+      max-width: 1197px;
+    }
+  }
+  @include media('tb'){
+    margin-top: 85px;
+    .sec-box{
+      width: 100%;
+    }
+    .sec-inner{
+      grid-template-columns: 1fr;
+      gap: 4.5vw;
+    }
+    .sec-btn{
+      width: 630px;
+      min-width: 0;
+      font-size: 20px;
+      gap: 0 15px;
+
+      &::before{
+        bottom: -1px;
+        right: 4%;
+        width: 180px;
+        max-width: 100%;
+      }
+      .icon{
+        width: 53px;
+      }
+      .large{
+        font-size: 30px;
+      }
+    }
+  }
+  @include media('sp'){
+    margin-top: 40px;
+    margin-bottom: 170px;
+    padding-bottom: 40px;
+    box-shadow: 0 0 13px 2px rgba(0, 162, 154, 0.2);
+
+    .sec-box{
+      padding: 40px 2.4rem 0;
+      box-shadow: none;
+
+      &-select{
+        .title{
+          padding: 5px 16px;
+          font-size: 18px;
+        }
+        .box{
+          padding: 16px;
+        }
+        .item{
+          + .item{
+            margin-top: 16px;
+          }
+        }
+        .text{
+          padding-left: 1.6em;
+        }
+      }
+    }
+    .sec-btn{
+      width: calc(100% - 4.8rem);
+      max-width: 420px;
+      margin-top: 40px;
+      padding: 15px 80px 14px 0;
+      box-shadow: 1px 1px 0 0 #05615C;
+      font-size: 1.6rem;
+
+      &:hover{
+        transform: translate(1px, 1px);
+      }
+      &::before{
+        right: 20px;
+        width: 112px;
+      }
+      .icon{
+        width: 3.9rem;
+      }
+      .large{
+        font-size: 2rem;
+      }
+    }
+    .sec-box-result{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      height: auto;
+
+      .top{
+        font-size: 24px;
+      }
+      .icon{
+        width: 32px;
+        height: 32px;
+
+        &::before{
+          width: 16px;
+          height: 15px;
+        }
+      }
+      .item{
+        padding: 8px 0;
+      }
+      .result{
+        margin-top: 10px;
+        padding: 6px 0 8px;
+        font-size: 4rem;
+      }
+      .btn{
+        gap: 0 10px;
+        height: 87px;
+        font-size: 26px;
+
+        img{
+          width: 26px;
+        }
+      }
+    }
+  }
 }
 
+#sp-price{
+  display: none;
 
+  @include media('tc') {
+    display: none !important;
+  }
+  
+  @include media('sp') {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 5px;
+    background: $sub_color;
+    font-size: 1.6rem;
+    z-index: 10;
+    line-height: 1.2;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+
+    &:hover{
+      .apply{
+        opacity: .63 !important;
+      }
+    }
+    .inner{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0 5vw;
+      height: 66px;
+    }
+    .total{
+      width: 6.4rem;
+    }
+    .price{
+      font-size: 3.2rem;
+      font-weight: 900;
+    }
+    .apply{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0 .8rem;
+      width: 10rem;
+      height: 50px;
+      background: $gra_gradient;
+      border: 2px solid #fff;
+      border-radius: 9px;
+      transition: opacity .3s;
+
+      &::before{
+        content: "";
+        display: block;
+        width: 2.7rem;
+        height: 2.7rem;
+        background: url(../img/common/bus-icon.png) center/contain no-repeat;
+      }
+    }
+  }
+}
