@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        <?php if (is_front_page() || is_home()) {
+            echo get_bloginfo('name');
+        } else {
+            wp_title('|', true, 'right');
+            echo bloginfo('name');
+        } ?>
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="<?php echo home_url(); ?>" />
+
+    <link rel="icon" type="image/vnd.microsoft.icon"
+        href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.ico" />
+
+    <!-- Fonts and CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/reset.css" /> -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/common.css">
+    <link rel="stylesheet" href="./assets/css/class.css">
+
+</head>
+<body>
+
+    <nav id="menu">
+        <div class="sec-inner">
+            <!-- <div  id="navClose" class="sec-close">
+                <p class="text">CLOSE</p>
+                <div class="btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div> -->
+            <div class="sec-boxes">
+                <div class="sec-box">
+                    <a href="" class="sec-top h-opacity"><img src="./assets/img/common/footer-icon-1.png" alt="" class="icon u-img-contain"><span class="txt">初めての方へ</span></a>
+                    <ul class="children">
+                        <li><a href="">緑ヶ丘自動車学校ってこんなところ</a></li>
+                        <li><a href="">選ばれる理由</a></li>
+                        <li><a href="">卒業生の声</a></li>
+                        <li><a href="">割引キャンペーン</a></li>
+                        <li><a href="">免許取得の流れ</a></li>
+                    </ul>
+                </div>
+                <div class="sec-box">
+                    <a href="" class="sec-top h-opacity"><img src="./assets/img/common/footer-icon-4.png" alt="" class="icon u-img-contain"><span class="txt">教習の種類</span></a>
+                    <ul class="children">
+                        <li><a href="">普通自動車</a></li>
+                        <li><a href="">二輪車</a></li>
+                        <li><a href="">準中型</a></li>
+                        <li><a href="">大型</a></li>
+                        <li><a href="">中型</a></li>
+                        <li><a href="">けん引</a></li>
+                        <li><a href="">大特</a></li>
+                        <li><a href="">二種</a></li>
+                        <li><a href="">各種講習</a></li>
+                    </ul>
+                </div>
+                <div class="sec-box">
+                    <a href="" class="sec-top h-opacity"><img src="./assets/img/common/footer-icon-3.png" alt="" class="icon u-img-contain"><span class="txt">学校案内</span></a>
+                    <ul class="children">
+                        <li><a href="">施設案内</a></li>
+                        <li><a href="">コース案内</a></li>
+                        <li><a href="">教習システム</a></li>
+                    </ul>
+                </div>
+                <div class="sec-box">
+                    <a href="" class="sec-top h-opacity"><img src="./assets/img/common/footer-icon-2.png" alt="" class="icon u-img-contain"><span class="txt">入校案内</span></a>
+                    <ul class="children">
+                        <li><a href="">入校手続きについて</a></li>
+                        <li><a href="">時間割</a></li>
+                        <li><a href="">よくある質問</a></li>
+                    </ul>
+                </div>
+                <div class="sec-box">
+                    <a href="" class="sec-top h-opacity"><span class="image image-1"><img src="./assets/img/common/footer-img-1.png" alt="" class="u-img-contain"></span><span class="txt">アクセス</span></a>
+                    <ul class="children">
+                        <li><a href="">アクセス情報</a></li>
+                        <li><a href="">無料スクールバス</a></li>
+                    </ul>
+                </div>
+                <div class="sec-box" style="align-self: start;">
+                    <a href="" class="sec-top h-opacity"><span class="image image-2"><img src="./assets/img/common/footer-img-2.png" alt="" class="u-img-contain"></span><span class="txt">在校生の方へ</span></a>
+                </div>
+            </div>
+            <div class="sec-bottom"></div>
+        </div>
+    </nav>
+
+    <nav id="nav" class="">
+        <div class="sec-inner">
+            <div class="sec-box">
+                <div  id="navBtn" class="sec-top" >
+                    <p class="text"></p>
+                    <div class="btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <a href="" class="sec-mid h-opacity">
+                    <div class="icon"><img src="./assets/img/common/price.svg" alt="" class="u-img-contain"></div>
+                    <p class="text">料金シミュレーション</p>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="header">
+        <div class="sec-inner">
+            <div class="sec-box h-opacity">
+                <a href="" class="sec-logo"><img src="./assets/img/common/logo.png" alt="緑ヶ丘自動車学校" class="u-img-contain"></a>
+                <ul class="sec-list-1">
+                    <li class="js-gnav"><a href="" class="item"><span>TOP</span></a></li>
+                    <li class="js-gnav"><a href="" class="item"><span>初めての方へ</span></a>
+                        <div class="children">
+                            <a href="">緑ヶ丘自動車学校ってこんなところ</a>
+                            <a href="">選ばれる理由</a>
+                            <a href="">卒業生の声</a>
+                            <a href="">割引キャンペーン</a>
+                            <a href="">免許取得の流れ</a>
+                        </div>
+                    </li>
+                    <li class="js-gnav"><a href="" class="item"><span>教習の種類</span></a>
+                        <div class="children">
+                            <a href="">普通自動車</a>
+                            <a href="">二輪車</a>
+                            <a href="">準中型</a>
+                            <a href="">大型</a>
+                            <a href="">中型</a>
+                            <a href="">けん引</a>
+                            <a href="">大特</a>
+                            <a href="">二種</a>
+                            <a href="">各種講習</a>
+                        </div>
+                    </li>
+                    <li class="js-gnav"><a href="" class="item"><span>学校案内</span></a>
+                        <div class="children">
+                            <a href="">施設案内</a>
+                            <a href="">コース案内</a>
+                            <a href="">教習システム</a>
+                        </div>
+                    </li>
+                    <li class="js-gnav"><a href="" class="item"><span>入校案内</span></a>
+                        <div class="children">
+                            <a href="">入校手続きについて</a>
+                            <a href="">時間割</a>
+                            <a href="">よくある質問</a>
+                        </div>
+                    </li>
+                    <li class="js-gnav"><a href="" class="item"><span>アクセス</span></a>
+                        <div class="children">
+                            <a href="">アクセス情報</a>
+                            <a href="">無料スクールバス</a>
+                        </div>
+                    </li>
+                    <li class="js-gnav"><a href="" class="item item-tb"><span>在校生の<br class="tb">方へ</span></a></li>
+                </ul>
+                <ul class="sec-list-2 pc">
+                    <li><a href="" class="list-item i-1">
+                        <div class="icon">
+                            <img src="./assets/img/common/phone-icon.png" alt="" class="u-img-contain">
+                        </div>
+                        <p class="text">電話お問い合わせ</p>
+                    </a></li>
+                    <li><a href="" class="list-item i-2">
+                        <div class="icon">
+                            <img src="./assets/img/common/info-icon.png" alt="" class="u-img-contain">
+                        </div>
+                        <p class="text">資料請求</p>
+                    </a></li>
+                    <li><a href="" class="list-item i-3">
+                        <div class="icon">
+                            <img src="./assets/img/common/bus-icon.png" alt="" class="u-img-contain">
+                        </div>
+                        <p class="text">入校申込</p>
+                    </a></li>
+                </ul>
+            </div>
+            
+        </div>
+    </header>
+
+    <div id="heading" class="c-section">
+        <div class="sec-inner">
+            <h1 class="sec-title">各種講習</h1>
+        </div>
+    </div>
+
+    <main id="main-top">
+
+        <section id="access" class="section c-section">
+           
+        </section>
+    </main>
+
+    <footer id="footer" class="c-section">
+        <div class="sec-inner">
+            <div class="sec-bg"></div>
+            <div class="sec-box-top">
+                <div class="box-image">
+                    <div class="image">
+                        <img src="./assets/img/index/bg-img-3.png" alt="" class="u-img-cover">
+                    </div>
+                    <div class="image">
+                        <img src="./assets/img/index/bg-img-4.png" alt="" class="u-img-cover">
+                    </div>
+                </div>
+                <div class="box-list">
+                    <a href="" class="box-item js-inview fadeup">
+                        <div class="icon-l">
+                            <img src="./assets/img/common/phone-icon.png" alt="" class="u-img-contain">
+                        </div>
+                        <span class="text">電話でお問い合わせはこちら</span>
+                        <div class="icon-r">
+                            <img src="./assets/img/common/link.svg" alt="" class="u-img-contain">
+                        </div>
+                    </a>
+                    <a href="" class="box-item js-inview fadeup">
+                        <div class="icon-l">
+                            <img src="./assets/img/common/info-icon.png" alt="" class="u-img-contain">
+                        </div>
+                        <span class="text">資料請求はこちら</span>
+                        <div class="icon-r">
+                            <img src="./assets/img/common/link-w.svg" alt="" class="u-img-contain">
+                        </div>
+                    </a>
+                    <a href="" class="box-item js-inview fadeup">
+                        <div class="icon-l">
+                            <img src="./assets/img/common/bus-icon.png" alt="" class="u-img-contain">
+                        </div>
+                        <span class="text">入校申込はこちら</span>
+                        <div class="icon-r">
+                            <img src="./assets/img/common/link.svg" alt="" class="u-img-contain">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="sec-box-mid c-inner">
+                <div class="box-left"><img src="./assets/img/common/logo.png" alt="緑ヶ丘自動車学校" class="u-img-contain"></div>
+                <div class="box-right pc">
+                    <div class="column">
+                        <div class="list">
+                            <a href="" class="top"><img src="./assets/img/common/footer-icon-1.png" alt="" class="icon u-img-contain"><span class="text">初めての方へ</span><span class="arrow"></span><span class="bg"></span></a>
+                            <a href="" class="item">緑ヶ丘自動車学校ってこんなところ</a>
+                            <a href="" class="item">選ばれる理由</a>
+                            <a href="" class="item">卒業生の声</a>
+                            <a href="" class="item">割引キャンペーン</a>
+                            <a href="" class="item">免許取得の流れ</a>
+                        </div>
+                        <div class="list">
+                            <a href="" class="top"><img src="./assets/img/common/footer-icon-2.png" alt="" class="icon u-img-contain"><span class="text">入校案内</span><span class="arrow"></span><span class="bg"></span></a>
+                            <a href="" class="item">入校手続きについて</a>
+                            <a href="" class="item">時間割</a>
+                            <a href="" class="item">よくある質問</a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="list">
+                            <a href="" class="top"><img src="./assets/img/common/footer-icon-3.png" alt="" class="icon u-img-contain"><span class="text">学校案内</span><span class="arrow"></span><span class="bg"></span></a>
+                            <a href="" class="item">施設案内</a>
+                            <a href="" class="item">コース案内</a>
+                            <a href="" class="item">教習システム</a>
+                            <a href="" class="item item-e"></a>
+                            <a href="" class="item item-e"></a>
+                        </div>
+                        <div class="list">
+                            <a href="" class="top top-i"><span class="image"><img src="./assets/img/common/footer-img-1.png" alt="" class="u-img-contain"></span><span class="text">アクセス</span><span class="arrow"></span><span class="bg"></span></a>
+                            <a href="" class="item">アクセス情報</a>
+                            <a href="" class="item">無料スクールバス</a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="list">
+                            <a href="" class="top"><img src="./assets/img/common/footer-icon-4.png" alt="" class="icon u-img-contain"><span class="text">教習の種類</span><span class="arrow"></span><span class="bg"></span></a>
+                            <a href="" class="item">普通自動車</a>
+                            <a href="" class="item">二輪車</a>
+                            <a href="" class="item">準中型</a>
+                            <a href="" class="item">大型</a>
+                            <a href="" class="item">中型</a>
+                            <a href="" class="item">けん引</a>
+                            <a href="" class="item">大特</a>
+                            <a href="" class="item">二種</a>
+                            <a href="" class="item">各種講習</a>
+                        </div>
+                        <a href="" class="top top-l">
+                            <div class="container">
+                                <span class="image"><img src="./assets/img/common/footer-img-2.png" alt="" class="u-img-contain"></span><span class="text">在校生の方へ</span>
+                            </div>
+                            <span class="arrow"></span><span class="bg"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="sec-box-btm">
+                <div class="box c-inner">
+                    <a href="" class="link">プライバシーポリシー</a>
+                    <small class="copyright">Copyright © Midorigaoka Driving School All Rights Reserved.</small>            
+                </div>
+            </div>
+            <a id="pagetop" href="#" class="pagetop" aria-label="ページの先頭へ戻る">PAGE TOP</a>
+        </div>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
