@@ -170,6 +170,16 @@ section {
   outline: 0 !important;
 }
 
+button {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+  font: inherit;
+}
+
 hr {
   box-sizing: content-box;
   height: 0;

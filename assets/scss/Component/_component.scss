@@ -306,3 +306,93 @@
     }
   }
 }
+
+#youtube{
+  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  z-index: 400;
+  background: #00000090;
+
+  .close{
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    width: 11.2rem;
+    min-width: 60px;
+    height: 11.2rem;
+    min-height: 60px;
+    background: $main_gradient;
+    border-radius: 50%;
+
+    &::before,
+    &::after{
+      content: "";
+      position: absolute;
+      left: 21.5%;
+      top: 46.43%;
+      width: 57%;
+      height: 7.14%;
+      background: #fff;
+      transform: rotate(45deg);
+    }
+    &::after{
+      transform: rotate(-45deg);
+    }
+  }
+  .inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 25px;
+  }
+  .youtube{
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+
+    iframe{
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .text{
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #fff;
+  }
+  @include media('tb') {
+    .close{
+      width: 60px;
+      height: 60px;
+    }
+  }
+  @include media('sp') {
+    .close{
+      top: 16px;
+      right: 16px;
+    }
+    .inner{
+      padding: 0;
+    }
+    .text{
+      padding: 0 1em;
+    }
+  }
+}

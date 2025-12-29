@@ -143,6 +143,29 @@ $(function(){
     road_index++;
   });
 
+  // youtube
+  const $modal = $("#youtube");
+  if($modal.length){
+    $(".js-youtube").click(function(){
+      var data = $(this).data("youtube");
+      var text = $(this).text();
+      if(!data) return;
+      data = data.substr(data.indexOf('youtu.be') + 9);
+      var html = '<iframe width="800" height="450" src="https://www.youtube.com/embed/'+data+'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+      $modal.find(".youtube").html(html);
+      $modal.find(".text").text(text);
+      $modal.fadeIn();
+    });
+    $modal.click(function(e){
+      if(!$(e.target).closest(".inner").length){
+        $modal.fadeOut();
+      }
+    });
+    // $modal.find(".close").click(function(){
+    //   $modal.fadeOut();
+    // });
+  }
+
 
   // ページ内リンク
   $('a[href^="#"]').click(function(){
