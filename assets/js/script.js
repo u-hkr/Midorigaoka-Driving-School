@@ -79,7 +79,7 @@ $(function(){
     }
   });
 
-	$(".js-inview").each(function(){
+	$(".js-inview, .js-line").each(function(){
 	  ScrollTrigger.create({
 	      trigger: $(this),
 	      start: "top 70%",

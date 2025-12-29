@@ -200,6 +200,9 @@
 #enrollment .sec-box .box-top.active {
   box-shadow: none !important;
 }
+#enrollment .sec-box .box-top.active + .box-content .line {
+  background-size: 100% 100%;
+}
 #enrollment .sec-box .box-top .txt {
   display: inline-block;
   position: relative;
@@ -408,8 +411,9 @@
   margin-top: 0;
 }
 #enrollment .sec-points .line {
-  background: linear-gradient(transparent 7%, #FFB400 7% 95%, transparent 95%);
+  background: linear-gradient(transparent 7%, #FFB400 7% 95%, transparent 95%) left/0% 100% no-repeat;
   display: inline;
+  transition: background-size 1s 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 #enrollment .sec-points .underline {
   text-decoration: underline;
