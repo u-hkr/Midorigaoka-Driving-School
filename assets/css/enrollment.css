@@ -8,6 +8,10 @@
   }
 }
 
+.js-ac-btn.active .plus-btn::after {
+  opacity: 0;
+}
+
 .plus-btn {
   position: absolute;
   background: #FFF;
@@ -26,6 +30,7 @@
   left: 50%;
   transform-origin: center;
   background: #333;
+  transition: all 0.3s;
 }
 .plus-btn::before {
   transform: translateX(-50%) translateY(-50%);

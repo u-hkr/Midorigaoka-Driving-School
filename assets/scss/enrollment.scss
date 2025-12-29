@@ -11,6 +11,13 @@
     padding-bottom: 40px;
   }
 }
+ .js-ac-btn.active{
+    .plus-btn{
+      &::after{
+        opacity: 0;
+      }
+    }
+  }
 .plus-btn{
   position: absolute;
   background: $white_color;
@@ -30,6 +37,7 @@
     left: 50%;
     transform-origin: center;
     background: $base_color;
+    transition: all .3s;
   }
   &::before{
     transform: translateX(-50%) translateY(-50%);
