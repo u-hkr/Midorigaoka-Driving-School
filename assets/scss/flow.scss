@@ -121,7 +121,6 @@
   }
 } 
 
-
 #flow{
 
   .sec-inner{
@@ -154,12 +153,6 @@
       &:hover{
         background: #7F54B1;
       }
-      .txt{
-        img{
-          width: 123px;
-        }
-      }
-
       &:not(.active):hover{
         transform: translate(4px, 4px);
         box-shadow: none !important;
@@ -173,22 +166,65 @@
         position: relative;
 
         img{
-          content: "";
           position: absolute;
-          bottom: -24px;
+          width: 100px;
+          aspect-ratio: 100/78;
+          top: 50%;
+          transform: translateY(-50%);
+          left: -114px;
         }
       }
       .plus-btn{
-        right: 11.5%;
+        right: 9.3%;
+      }
+      &-green{
+        background: $green_color;
+        box-shadow: 4px 4px 0 2px #05615C;
+
+        &:hover{
+          background: #00867F;
+        }
+      }
+      .tag{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 15.12%;
+        font-size: 16px;
+        font-weight: 700;
+        background: #F5F5F5;
+        border-radius: 100px;
+        padding: 0 24px;
+        
+        .col{
+          line-height: 1.5;
+          background: $main_gradient;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
       }
     }
     .box-content{
       background: #F5F5F5;
       padding-bottom: 80px;
+      display: none;
     }
   }
   .sec-title{
-    padding: 40px 0 18px;
+    padding-top: 40px;
+  }
+  .sec-text{
+    padding: 24px 10px;
+    max-width: 79.7rem;
+    width: 100%;
+    background: $white_color;
+    margin: 0 auto 18px;
+    text-align: center;
+
+    .txt{
+      display: inline-block;
+      text-align: left;
+    }
   }
   .sec-list{
     
@@ -215,6 +251,10 @@
       display: flex;
       justify-content: space-between;
       gap: 0 40px;
+
+      &.single{
+        justify-content: center;
+      }
     }
     .box-item{
       max-width: 550px;
@@ -250,6 +290,8 @@
         font-weight: 700;
         text-align: center;
         line-height: 1.2;
+        display: inline-block;
+        // text-align: left;
       }
       .underline{
         display: inline-block;
@@ -342,9 +384,6 @@
     border-image: $main_gradient 1;
     margin: 0 9.5rem;
 
-    .title{
-      // margin-bottom: 32px;
-    }
     .box{
       background: #F5F5F5;
       font-weight: 700;
@@ -359,7 +398,7 @@
       width: 100%;
       border-radius: 100px;
       background: $main_gradient;
-      font-size: 2.4rem;
+      font-size: clamp(16px, 2.4rem, 24px);
       font-weight: 700;
       color: $white_color;
       line-height: 1.5;
@@ -373,18 +412,6 @@
         transform: translate(2px, 2px);
         box-shadow: none;
       }
-      &::before{
-        // position: absolute;
-        // content: "";
-        // max-width: 189px;
-        // width: 22.18%;
-        // height: auto;
-        // bottom: 0;
-        // right: 42px;
-        // aspect-ratio: 1/1;
-        // background: url(../img/school/btn-img.png) center/contain no-repeat;
-        // z-index: 2;
-      }
       &::after{
         content: "";
         position: absolute;
@@ -395,16 +422,24 @@
         background:  url(../img/common/bg-dot-20.png) top center / 648px 324px repeat;
         border-radius: 100px;
       }
+      &-1{
+        margin-top: 38px;
+      }
+      &-2{
+        padding-left: 63px;
+      }
+      &-3{
+        background: #F6AE00;
+        box-shadow: 4px 4px 0 2px #725510;
+        margin-top: 40px;
+        padding-left: 44px;
+      }
       .large{
-        font-size: 4rem;
+        font-size: clamp(16px, 4rem, 40px);
       }
       .txt{
         z-index: 3;
         position: relative;
-      }
-      .icon{
-        // width: 75px;
-        // z-index: 3;
       }
       .image{
         position: absolute;
@@ -413,8 +448,6 @@
         height: auto;
         bottom: 0;
         left: 15%;
-        // aspect-ratio: 1/1;
-        // background: url(../img/school/btn-img.png) center/contain no-repeat;
         z-index: 2;
       }
       .icon-pdf{
@@ -424,8 +457,47 @@
         top: 50%;
         transform: translateY(-50%);
         right: -72px;
-        // aspect-ratio: 1/1;
-        // background: url(../img/common/pdf-w.svg) center/contain no-repeat;
+        z-index: 2;
+      }
+      .icon-price{
+        position: absolute;
+        width: 9.9%;
+        max-width: 85px;
+        aspect-ratio: 1/1;
+        border-radius: 17px;
+        background: $gra_gradient;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 10%;
+
+        &::before{
+          position: absolute;
+          content: "";
+          max-width: 42px;
+          width: 48%;
+          aspect-ratio: 42/38;
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+          background: url(../img/common/price.svg) center/contain no-repeat;
+        }
+      }
+      .img-l{
+        position: absolute;
+        max-width: 152px;
+        width: 16%;
+        height: auto;
+        bottom: 0;
+        left: 15.8%;
+        z-index: 2;
+      }
+      .img-r{
+        position: absolute;
+        max-width: 152px;
+        width: 16%;
+        height: auto;
+        bottom: 0;
+        right: 13.2%;
         z-index: 2;
       }
     }
@@ -511,7 +583,6 @@
       border-left: 3px solid;
       border-image: $main_gradient 1;
       text-align: left;
-      background: $white_color;
       display: inline-block;
     }
     .text-box{
