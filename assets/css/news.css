@@ -1,22 +1,21 @@
 @charset "UTF-8";
 #post {
-  margin-bottom: 220px;
+  padding-bottom: 220px;
   padding-top: 80px;
 }
 #post .sec-inner {
-  max-width: 1230px;
+  max-width: 1278px;
 }
 #post .sec-top {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
   gap: 0 30px;
 }
 #post .sec-top .date {
   display: inline-block;
   font-family: "Jost", "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
   color: #7D7D7D;
-  letter-spacing: 0.1em;
+  white-space: nowrap;
 }
 #post .sec-top .bg {
   display: inline-block;
@@ -36,4 +35,106 @@
   margin: 1em 0;
   font-size: 26px;
   font-weight: bold;
+}
+#post .sec-btn {
+  max-width: 392px;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.4rem;
+  margin-top: 40px;
+  position: relative;
+}
+#post .sec-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+@media only screen and (max-width: 768px) {
+  #post {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  #post .sec-top {
+    gap: 0 24px;
+  }
+  #post .sec-top .bg {
+    max-width: 254px;
+    width: 100%;
+    padding: 0 8px;
+  }
+  #post .sec-title {
+    font-size: 24px;
+  }
+  #post .sec-btn {
+    max-width: 167px;
+    height: 53px;
+    font-size: 16px;
+    margin: 24px auto 0;
+  }
+}
+
+#archive .sec-inner {
+  padding-top: 79px;
+  padding-bottom: 524px;
+  position: relative;
+  max-width: 1278px;
+}
+#archive .sec-border {
+  position: absolute;
+  content: "";
+  width: 100%;
+  aspect-ratio: 1229/13;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+  padding: 0 2.4rem;
+}
+#archive .sec-nav .nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 6px;
+  margin-top: 40px;
+}
+#archive .sec-nav .page-numbers {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 41px;
+  height: 41px;
+  border: 1px solid;
+  -o-border-image: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%) 1;
+     border-image: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%) 1;
+  font-size: 26px;
+  font-family: "Jost", "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  background: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#archive .sec-nav .page-numbers .current {
+  background: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%);
+  color: #FFF;
+}
+@media only screen and (max-width: 768px) {
+  #archive .sec-inner {
+    padding-top: 40px;
+    padding-bottom: 150px;
+  }
+  #archive .sec-nav .nav-links {
+    margin-top: 8px;
+  }
 }/*# sourceMappingURL=news.css.map */
