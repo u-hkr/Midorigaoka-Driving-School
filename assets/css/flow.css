@@ -1,6 +1,7 @@
 .sec-container {
   box-shadow: 0 0 13px 2px rgba(0, 162, 154, 0.2);
   padding: 40px 24px 80px;
+  background: #FFF;
 }
 @media only screen and (max-width: 768px) {
   .sec-container {
@@ -111,6 +112,19 @@
   }
 }
 
+#flow {
+  position: relative;
+}
+#flow::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  aspect-ratio: 2880/756;
+  left: 0;
+  top: 240px;
+  background: url(../img/flow/section-bg.png) center/cover no-repeat;
+  z-index: -2;
+}
 #flow .sec-inner {
   padding: 81px 0 524px;
 }
