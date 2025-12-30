@@ -558,6 +558,13 @@ figure img,
     height: 19px;
     background: url(../img/common/arrow-g.svg) center/contain no-repeat;
   }
+  .c-newslist .img {
+    padding-top: 69.76%;
+  }
+  .c-newslist .info {
+    gap: 0;
+    margin-bottom: 4px;
+  }
   .c-newslist .title {
     padding: 0;
   }
