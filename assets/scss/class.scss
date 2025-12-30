@@ -2,3 +2,118 @@
 @import "Foundation/variable";
 @import "Foundation/mixin";
 
+#class{
+
+  .sec-container{
+    background: #F5F5F5;
+    max-width: 1230px;
+    margin: 119px auto 539px;
+    padding: 80px 10rem;
+  }
+  .sec-box{
+    background: $white_color;
+    border: 1px solid;
+    border-image: $main_gradient 1;
+    padding: 4rem 4rem 8rem;
+
+    .box-title{
+      font-size: 3.2rem;
+      font-weight: 700;
+      line-height: 1.5;
+      text-align: center;
+      margin-bottom: 18px;
+      background: $green_color;
+      color: $white_color;
+    }
+    .box-text{
+      max-width: 832px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .box-text+.box-title{
+      margin-top: 64px;
+    }
+    .box-table{
+      max-width: 832px;
+      width: 100%;
+      margin: 42px auto 0;
+    }
+    .table-row{
+      display: grid;
+      grid-template-columns: 144fr 683fr;
+      gap: 0 5px;
+      border: 1px solid;
+      border-image: $main_gradient 1;
+
+      &:not(:nth-of-type(1)){
+        margin-top: 10px;
+      }
+    }
+    .table-left{
+      background: $green_color;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: $white_color;
+      padding: 8px;
+    }
+    .table-right{
+      padding: 15px 2.4rem;
+    }
+    .list{
+      counter-reset: item;
+    }
+    .item{
+      counter-increment: item;
+      position: relative;
+      padding-left: 1em;
+      font-weight: 700;
+
+      &::before {
+        content: counter(item) ".";
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+    .box-text-bg{
+      max-width: 832px;
+      width: 100%;
+      margin: 10px auto 18px;
+      background: #C9F4F2;
+      padding: 15px 2.4rem;
+    }
+  }
+  .sec-btns{
+    display: flex;
+    gap: 0 4rem;
+    margin: 40px auto;
+
+    .btn{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0 10px;
+      max-width: 495px;
+      width: 100%;
+      height: 111px;
+
+      &.-green{
+        background: #8CE3DE;
+      }
+      &.-yellow{
+        background: $gra_gradient;
+      }
+    }
+    .txt{
+      font-size: 16px;
+      font-weight: 700;
+    }
+    .icon{
+      width: 24px;
+    }
+  }
+}

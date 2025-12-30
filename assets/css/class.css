@@ -1,1 +1,109 @@
-/*# sourceMappingURL=class.css.map */
+#class .sec-container {
+  background: #F5F5F5;
+  max-width: 1230px;
+  margin: 119px auto 539px;
+  padding: 80px 10rem;
+}
+#class .sec-box {
+  background: #FFF;
+  border: 1px solid;
+  -o-border-image: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%) 1;
+     border-image: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%) 1;
+  padding: 4rem 4rem 8rem;
+}
+#class .sec-box .box-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 18px;
+  background: #00C4BB;
+  color: #FFF;
+}
+#class .sec-box .box-text {
+  max-width: 832px;
+  width: 100%;
+  margin: 0 auto;
+}
+#class .sec-box .box-text + .box-title {
+  margin-top: 64px;
+}
+#class .sec-box .box-table {
+  max-width: 832px;
+  width: 100%;
+  margin: 42px auto 0;
+}
+#class .sec-box .table-row {
+  display: grid;
+  grid-template-columns: 144fr 683fr;
+  gap: 0 5px;
+  border: 1px solid;
+  -o-border-image: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%) 1;
+     border-image: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%) 1;
+}
+#class .sec-box .table-row:not(:nth-of-type(1)) {
+  margin-top: 10px;
+}
+#class .sec-box .table-left {
+  background: #00C4BB;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #FFF;
+  padding: 8px;
+}
+#class .sec-box .table-right {
+  padding: 15px 2.4rem;
+}
+#class .sec-box .list {
+  counter-reset: item;
+}
+#class .sec-box .item {
+  counter-increment: item;
+  position: relative;
+  padding-left: 1em;
+  font-weight: 700;
+}
+#class .sec-box .item::before {
+  content: counter(item) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#class .sec-box .box-text-bg {
+  max-width: 832px;
+  width: 100%;
+  margin: 10px auto 18px;
+  background: #C9F4F2;
+  padding: 15px 2.4rem;
+}
+#class .sec-btns {
+  display: flex;
+  gap: 0 4rem;
+  margin: 40px auto;
+}
+#class .sec-btns .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 10px;
+  max-width: 495px;
+  width: 100%;
+  height: 111px;
+}
+#class .sec-btns .btn.-green {
+  background: #8CE3DE;
+}
+#class .sec-btns .btn.-yellow {
+  background: linear-gradient(180deg, #FFD776 0%, #FFB400 100%);
+}
+#class .sec-btns .txt {
+  font-size: 16px;
+  font-weight: 700;
+}
+#class .sec-btns .icon {
+  width: 24px;
+}/*# sourceMappingURL=class.css.map */
