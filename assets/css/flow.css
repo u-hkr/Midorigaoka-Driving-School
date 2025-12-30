@@ -126,7 +126,8 @@
   z-index: -2;
 }
 #flow .sec-inner {
-  padding: 81px 0 524px;
+  padding-top: 81px;
+  padding-bottom: 524px;
 }
 #flow .sec-container {
   max-width: 143rem;
@@ -229,6 +230,8 @@
   padding: 8px;
   text-align: center;
   margin: 0 auto 10px;
+  position: relative;
+  z-index: 2;
 }
 #flow .sec-list .list-item .txt {
   font-size: 2.4rem;
@@ -295,7 +298,7 @@
   width: 100%;
 }
 #flow .sec-list .arrow-single {
-  width: 12px;
+  height: 55px;
   margin: 0 auto 10px;
 }
 #flow .sec-list .arrow-double {
@@ -577,4 +580,303 @@
   color: #FFF;
   background: #00C4BB;
   margin-bottom: 8px;
+}
+@media only screen and (max-width: 768px) {
+  #flow .sec-inner {
+    padding: 40px 0 150px;
+  }
+  #flow .sec-container {
+    padding: 40px 0;
+  }
+  #flow .sec-box + .sec-box {
+    margin-top: 16px;
+  }
+  #flow .sec-box .box-top {
+    height: 87px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px 0;
+    font-size: 21px;
+    line-height: 1.2;
+    padding: 18px 16px;
+    margin-bottom: 8px;
+    margin-left: 8px;
+    margin-right: 10px;
+  }
+  #flow .sec-box .box-top .plus-btn {
+    right: 4.4%;
+  }
+  #flow .sec-box .box-top .tag {
+    position: static;
+    transform: none;
+  }
+  #flow .sec-box .box-content {
+    padding-bottom: 0;
+    display: none;
+  }
+  #flow .sec-title {
+    padding-top: 11px;
+  }
+  #flow .sec-text {
+    padding: 8px;
+    width: calc(100% - 48px);
+  }
+  #flow .sec-list {
+    width: calc(100% - 48px);
+    margin: 0 auto;
+  }
+  #flow .sec-list .list-item {
+    max-width: 304px;
+    margin-bottom: 4px;
+  }
+  #flow .sec-list .list-item .txt {
+    font-size: 16px;
+  }
+  #flow .sec-list .list-box {
+    max-width: 400px;
+    margin: 0 auto;
+    gap: 0 8px;
+  }
+  #flow .sec-list .box-item {
+    max-width: 157px;
+    padding: 24px 15px;
+    margin-bottom: 4px;
+  }
+  #flow .sec-list .box-item .icon {
+    height: 25px;
+  }
+  #flow .sec-list .box-item.col-y .icon {
+    width: 42px;
+  }
+  #flow .sec-list .box-item.col-p .icon {
+    width: 35px;
+  }
+  #flow .sec-list .box-item .icon {
+    position: static;
+    transform: none;
+    margin: 0 auto 20px;
+  }
+  #flow .sec-list .box-item .texts {
+    font-size: 16px;
+  }
+  #flow .sec-list .box-item .underline {
+    border-bottom: none;
+    padding: 0;
+    margin-bottom: 5px;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+  #flow .sec-list .box-item .text + .text {
+    margin-top: 2px;
+  }
+  #flow .sec-list .item-wrap {
+    max-width: 157px;
+  }
+  #flow .sec-list .arrow-single {
+    height: 15px;
+    margin-bottom: 4px;
+  }
+  #flow .sec-list .arrow-double {
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 4px;
+  }
+  #flow .sec-list .arrow-double-tall {
+    width: 100%;
+    max-width: 200px;
+  }
+  #flow .sec-btn {
+    max-width: 400px;
+    width: calc(100% - 48px);
+    gap: 8px;
+    margin-top: 38px;
+    margin-bottom: 22px;
+    padding: 14px 80px 15px 0;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  #flow .sec-btn::before {
+    width: 130px;
+    height: 111px;
+    right: 0;
+    bottom: -1px;
+  }
+  #flow .sec-btn .icon {
+    width: 43px;
+  }
+  #flow .sec-btn .large {
+    font-size: 2rem;
+  }
+  #flow .sec-part {
+    padding: 24px 0;
+    margin: 32px 8px 0;
+    position: relative;
+  }
+  #flow .sec-part::before {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 100%;
+    left: -8px;
+    top: 0;
+    background: #FFF;
+    z-index: -1;
+  }
+  #flow .sec-part .box {
+    padding: 8px;
+    width: calc(100% - 30px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #flow .sec-part .btn {
+    font-size: 18px;
+    padding: 8px;
+    height: 98px;
+    box-shadow: 1px 1px 0 1px #05615C;
+  }
+  #flow .sec-part .btn::after {
+    background: url(../img/common/bg-dot-20.png) top center/204px 102px repeat;
+  }
+  #flow .sec-part .btn-1 {
+    margin-top: 24px;
+  }
+  #flow .sec-part .btn-2 {
+    padding-left: 80px;
+  }
+  #flow .sec-part .btn-3 {
+    box-shadow: 1px 1px 0 1px #725510;
+    margin-top: 30px;
+    padding-left: 8px;
+  }
+  #flow .sec-part .btn .large {
+    font-size: 26px;
+  }
+  #flow .sec-part .btn .image {
+    max-width: 66px;
+    bottom: 50%;
+    transform: translateY(50%);
+    left: 8%;
+  }
+  #flow .sec-part .btn .icon-pdf {
+    right: -52px;
+  }
+  #flow .sec-part .btn .icon-price {
+    max-width: 40px;
+    border-radius: 8px;
+    left: 9%;
+  }
+  #flow .sec-part .btn .icon-price::before {
+    max-width: 20px;
+    width: 50%;
+  }
+  #flow .sec-part .btn .img-l {
+    max-width: 94px;
+    width: 26%;
+    left: 1%;
+    border-radius: 0 0 0 45px;
+  }
+  #flow .sec-part .btn .img-r {
+    max-width: 94px;
+    width: 26%;
+    right: 3%;
+    border-radius: 0 0 35px 0;
+  }
+  #flow .sec-part.p-1 {
+    margin-bottom: 24px;
+  }
+  #flow .sec-part.p-2 .item {
+    border-radius: 16px;
+    padding: 24px 16px;
+    margin-bottom: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(100% - 16px);
+  }
+  #flow .sec-part.p-2 .item.i-2 .table-row {
+    grid-template-columns: 256fr 431fr;
+  }
+  #flow .sec-part.p-2 .item.i-2 .right {
+    text-align: center;
+    font-weight: 700;
+  }
+  #flow .sec-part.p-2 .item-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+  #flow .sec-part.p-2 .item-text {
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 16px;
+  }
+  #flow .sec-part.p-2 .table {
+    margin-bottom: 16px;
+  }
+  #flow .sec-part.p-2 .table-row {
+    display: grid;
+    grid-template-columns: 144fr 543fr;
+    gap: 0 5px;
+  }
+  #flow .sec-part.p-2 .table-row:not(:nth-of-type(1)) {
+    margin-top: 10px;
+  }
+  #flow .sec-part.p-2 .left {
+    background: #00C4BB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #FFF;
+    padding: 8px;
+  }
+  #flow .sec-part.p-2 .right {
+    background: #FFF;
+    text-align: left;
+    padding: 1.5rem 3.6rem;
+  }
+  #flow .sec-part.p-2 .bold {
+    font-weight: 700;
+  }
+  #flow .sec-part.p-2 .bg-g {
+    background: #F5F5F5;
+    padding: 24px 16px;
+  }
+  #flow .sec-part.p-2 .text-wrap {
+    margin: 0 auto;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 16px;
+  }
+  #flow .sec-part.p-2 .top {
+    margin-bottom: 10px;
+  }
+  #flow .sec-part.p-2 .list-box {
+    padding: 0 16px;
+    position: relative;
+    border-left: 3px solid;
+    -o-border-image: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%) 1;
+       border-image: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%) 1;
+    text-align: left;
+    display: inline-block;
+  }
+  #flow .sec-part.p-2 .text-box {
+    background: #F5F5F5;
+    font-size: 16px;
+    padding: 24px 27px;
+    text-align: left;
+    margin-bottom: 16px;
+  }
+  #flow .sec-part.p-2 .label {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #FFF;
+    background: #00C4BB;
+    margin-bottom: 8px;
+  }
 }/*# sourceMappingURL=flow.css.map */
