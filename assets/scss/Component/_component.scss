@@ -212,7 +212,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8.4rem;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   
   .img {
@@ -233,6 +233,7 @@
     align-items: center;
     gap: 8px;
     margin-bottom: 9px;
+    font-size: 16px;
   }
   .date {
     display: inline-block;
@@ -244,7 +245,8 @@
     font-weight: 700;
     letter-spacing: .1em;
     display: inline-block;
-    width: 162px;
+    max-width: 162px;
+    width: 100%;
     padding: 2px 8px 3px;
     background: $main_gradient;
     font-size: 16px;
