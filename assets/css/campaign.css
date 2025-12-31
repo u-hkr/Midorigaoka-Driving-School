@@ -87,11 +87,6 @@
 #campaign .sec-container:not(:nth-of-type(1)) {
   margin-top: 30px;
 }
-@media only screen and (max-width: 768px) {
-  #campaign .sec-container {
-    padding-bottom: 40px;
-  }
-}
 #campaign .sec-title {
   margin-bottom: 24px;
 }
@@ -128,11 +123,13 @@
 #campaign .sec-box .table-row .parentheses {
   font-size: 16px;
   font-weight: 500;
+  display: inline-block;
+  text-align: left;
 }
 #campaign .sec-box .left {
   background: #00C4BB;
   color: #FFF;
-  font-size: 2.4rem;
+  font-size: 24px;
   font-weight: 700;
   padding: 15px 8px;
   display: flex;
@@ -153,7 +150,7 @@
   flex-direction: column;
 }
 #campaign .sec-box .right .large {
-  font-size: 3.2rem;
+  font-size: 32px;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -169,7 +166,7 @@
   font-size: 16px;
 }
 #campaign .sec-box .box-title {
-  font-size: 2.4rem;
+  font-size: 24px;
   font-weight: 700;
   line-height: 1.5;
   color: #FFF;
@@ -180,6 +177,55 @@
 #campaign .sec-box .box-text {
   text-align: center;
   margin-bottom: 8px;
+}
+@media print, screen and (max-width: 1920px) {
+  #campaign .sec-inner {
+    padding: 0 20px;
+  }
+  #campaign .sec-top {
+    max-width: 1430px;
+  }
+  #campaign .sec-container {
+    max-width: 1430px;
+  }
+  #campaign .sec-box {
+    max-width: 1030px;
+  }
+}
+@media print, screen and (max-width: 1024px) {
+  #campaign {
+    margin-bottom: 300px;
+  }
+  #campaign .sec-top {
+    margin: 60px auto 0;
+    width: calc(100% - 48px);
+  }
+  #campaign .sec-container {
+    width: calc(100% - 16px);
+    padding: 30px 16px 60px;
+  }
+  #campaign .sec-box {
+    border-radius: 30px;
+    padding: 30px 24px;
+  }
+  #campaign .sec-box .left {
+    font-size: 20px;
+    padding: 8px;
+  }
+  #campaign .sec-box .right {
+    font-size: 17px;
+    padding: 8px;
+  }
+  #campaign .sec-box .right .large {
+    font-size: 28px;
+  }
+  #campaign .sec-box .box {
+    padding: 16px;
+  }
+  #campaign .sec-box .box-title {
+    font-size: 20px;
+    padding: 5px 8px;
+  }
 }
 @media only screen and (max-width: 768px) {
   #campaign {
@@ -214,7 +260,7 @@
     padding: 24px 24px 16px;
   }
   #campaign .sec-box + .sec-box {
-    margin-top: 8px;
+    margin-top: 4px;
   }
   #campaign .sec-box .table-row {
     grid-template-columns: 1fr;
@@ -241,7 +287,6 @@
   #campaign .sec-box .box-title {
     font-size: 16px;
     padding: 5px 8px;
-    margin-bottom: 8px;
   }
   #campaign .sec-box .box-text {
     text-align: left;
