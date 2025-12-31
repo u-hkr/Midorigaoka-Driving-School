@@ -174,7 +174,7 @@
   left: -114px;
 }
 #flow .sec-box .box-top .plus-btn {
-  right: 9.3%;
+  right: 9%;
 }
 #flow .sec-box .box-top-green {
   background: #00C4BB;
@@ -275,7 +275,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 11.63%;
+  left: 11%;
 }
 #flow .sec-list .box-item .texts {
   color: #FFF;
@@ -582,6 +582,147 @@
   background: #00C4BB;
   margin-bottom: 8px;
 }
+@media print, screen and (max-width: 1920px) {
+  #flow .sec-container {
+    max-width: 1430px;
+    padding: 80px 6.9%;
+  }
+  #flow .sec-box .box-top .plus-btn {
+    right: calc(115px - (1920px - 100vw) / 9.9555555556);
+  }
+  #flow .sec-box .box-top .tag {
+    right: calc(186px - (1920px - 100vw) / 9.4315789474);
+  }
+  #flow .sec-list .box-item .icon {
+    left: calc(64px - (1920px - 100vw) / 22.4);
+  }
+}
+@media print, screen and (max-width: 1024px) {
+  #flow .sec-inner {
+    padding: 60px 24px 350px;
+  }
+  #flow .sec-container {
+    padding: 60px 20px;
+  }
+  #flow .sec-box .box-top {
+    height: 87px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px 0;
+    padding: 8px 16px;
+  }
+  #flow .sec-box .box-top .plus-btn {
+    right: 4.4%;
+  }
+  #flow .sec-box .box-top-green .txt img {
+    transform: translateY(-18px);
+  }
+  #flow .sec-box .box-top .tag {
+    position: static;
+    transform: none;
+  }
+  #flow .sec-list {
+    width: calc(100% - 48px);
+    margin: 0 auto;
+  }
+  #flow .sec-list .box-item {
+    padding: 24px 8px 24px 70px;
+    margin-bottom: 4px;
+  }
+  #flow .sec-list .box-item .icon {
+    height: 25px;
+    left: 3%;
+  }
+  #flow .sec-list .box-item .texts {
+    font-size: 20px;
+  }
+  #flow .sec-list .arrow-single {
+    height: 35px;
+  }
+  #flow .sec-part {
+    padding: 24px 24px;
+    margin: 32px 24px 0;
+  }
+  #flow .sec-part .btn {
+    max-width: 600px;
+    font-size: 21px;
+    padding: 8px;
+    height: 98px;
+    box-shadow: 2px 2px 0 2px #05615C;
+  }
+  #flow .sec-part .btn-2 {
+    padding-left: 56px;
+  }
+  #flow .sec-part .btn-3 {
+    box-shadow: 2px 2px 0 2px #725510;
+    padding-left: 8px;
+  }
+  #flow .sec-part .btn .large {
+    font-size: 33px;
+  }
+  #flow .sec-part .btn .image {
+    max-width: 90px;
+    bottom: 50%;
+    transform: translateY(50%);
+    left: 8%;
+  }
+  #flow .sec-part .btn .icon-pdf {
+    right: -62px;
+  }
+  #flow .sec-part .btn .icon-price {
+    max-width: 60px;
+    border-radius: 12px;
+    left: 7%;
+  }
+  #flow .sec-part .btn .icon-price::before {
+    max-width: 30px;
+    width: 50%;
+  }
+  #flow .sec-part .btn .img-l {
+    max-width: 120px;
+    width: 20%;
+    left: 1%;
+    border-radius: 0 0 0 45px;
+  }
+  #flow .sec-part .btn .img-r {
+    max-width: 120px;
+    width: 20%;
+    right: 3%;
+    border-radius: 0 0 35px 0;
+  }
+  #flow .sec-part.p-2 .item {
+    border-radius: 30px;
+    padding: 24px 16px;
+    margin-bottom: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(100% - 14px);
+  }
+  #flow .sec-part.p-2 .item-title {
+    font-size: 22px;
+  }
+  #flow .sec-part.p-2 .left {
+    font-size: 20px;
+    padding: 8px 4px;
+  }
+  #flow .sec-part.p-2 .right {
+    padding: 8px;
+  }
+  #flow .sec-part.p-2 .bg-g {
+    padding: 16px;
+  }
+  #flow .sec-part.p-2 .list-box {
+    padding: 0 0 0 16px;
+  }
+  #flow .sec-part.p-2 .text-box {
+    padding: 16px;
+  }
+  #flow .sec-part.p-2 .label {
+    font-size: 20px;
+  }
+}
 @media only screen and (max-width: 768px) {
   #flow .sec-inner {
     padding: 40px 0 150px;
@@ -593,16 +734,9 @@
     margin-top: 16px;
   }
   #flow .sec-box .box-top {
-    height: 87px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 4px 0;
     font-size: 2.1rem;
     font-size: clamp(16px, 2.1rem, 2.1rem);
     line-height: 1.2;
-    padding: 18px 16px;
     margin-bottom: 8px;
     margin-left: 8px;
     margin-right: 10px;
@@ -610,25 +744,17 @@
   #flow .sec-box .box-top .txt {
     display: block;
     width: 100%;
-    padding-left: 29%;
-    padding-right: 35px;
+    padding-left: 98px;
+    padding-right: 40px;
   }
   #flow .sec-box .box-top .txt img {
     max-width: 100px;
     width: 28%;
     left: 0;
   }
-  #flow .sec-box .box-top .plus-btn {
-    right: 4.4%;
-  }
-  #flow .sec-box .box-top-green .txt img {
-    transform: translateY(-18px);
-  }
   #flow .sec-box .box-top .tag {
-    position: static;
-    transform: none;
-    margin-left: 29%;
-    margin-right: 35px;
+    margin-left: 98px;
+    margin-right: 40px;
     font-size: 1.6rem;
   }
   #flow .sec-box .box-content {
@@ -640,10 +766,6 @@
   #flow .sec-text {
     padding: 8px;
     width: calc(100% - 48px);
-  }
-  #flow .sec-list {
-    width: calc(100% - 48px);
-    margin: 0 auto;
   }
   #flow .sec-list .list-item {
     max-width: 304px;
@@ -660,10 +782,6 @@
   #flow .sec-list .box-item {
     max-width: 160px;
     padding: 24px 4px;
-    margin-bottom: 4px;
-  }
-  #flow .sec-list .box-item .icon {
-    height: 25px;
   }
   #flow .sec-list .box-item.col-y .icon {
     width: 42px;
@@ -767,8 +885,6 @@
   #flow .sec-part .btn {
     max-width: 400px;
     font-size: clamp(16px, 1.8rem, 1.8rem);
-    padding: 8px;
-    height: 98px;
     box-shadow: 1px 1px 0 1px #05615C;
   }
   #flow .sec-part .btn::after {
@@ -778,21 +894,17 @@
     margin-top: 24px;
   }
   #flow .sec-part .btn-2 {
-    padding-left: 23%;
+    padding-left: 90px;
   }
   #flow .sec-part .btn-3 {
     box-shadow: 1px 1px 0 1px #725510;
     margin-top: 30px;
-    padding-left: 8px;
   }
   #flow .sec-part .btn .large {
     font-size: clamp(18px, 2.6rem, 2.6rem);
   }
   #flow .sec-part .btn .image {
     max-width: 66px;
-    bottom: 50%;
-    transform: translateY(50%);
-    left: 8%;
   }
   #flow .sec-part .btn .icon-pdf {
     right: -52px;
@@ -804,30 +916,20 @@
   }
   #flow .sec-part .btn .icon-price::before {
     max-width: 20px;
-    width: 50%;
   }
   #flow .sec-part .btn .img-l {
     max-width: 94px;
     width: 26%;
-    left: 1%;
-    border-radius: 0 0 0 45px;
   }
   #flow .sec-part .btn .img-r {
     max-width: 94px;
     width: 26%;
-    right: 3%;
-    border-radius: 0 0 35px 0;
   }
   #flow .sec-part.p-1 {
     margin-bottom: 24px;
   }
   #flow .sec-part.p-2 .item {
     border-radius: 16px;
-    padding: 24px 16px;
-    margin-bottom: 24px;
-    margin-left: auto;
-    margin-right: auto;
-    width: calc(100% - 14px);
   }
   #flow .sec-part.p-2 .item.i-1 .left {
     writing-mode: vertical-rl;
@@ -847,21 +949,13 @@
   }
   #flow .sec-part.p-2 .left {
     font-size: 16px;
-    padding: 8px 4px;
   }
   #flow .sec-part.p-2 .right {
-    padding: 8px;
     font-size: 16px;
-  }
-  #flow .sec-part.p-2 .bg-g {
-    padding: 16px;
   }
   #flow .sec-part.p-2 .top {
     margin-bottom: 16px;
     text-align: left;
-  }
-  #flow .sec-part.p-2 .list-box {
-    padding: 0 0 0 16px;
   }
   #flow .sec-part.p-2 .text-box {
     padding: 8px;
