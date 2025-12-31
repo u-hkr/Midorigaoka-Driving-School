@@ -44,6 +44,7 @@
         }
       }
       .btm-btn{
+        position: relative;
         width: 100%;
         // min-height: 9rem;
         // height: fit-content;
@@ -57,12 +58,45 @@
         min-height: 3em;
         font-size: 24px;
         font-weight: 700;
-        color: $white_color;
+        overflow: hidden;
+        z-index: 2;
 
+        .txt{
+          color: $white_color;
+          transition: color .2s cubic-bezier(0.45, 0, 0.55, 1);
+        }
         .arrow{
           width: 16px;
           height: 18px;
           background: url("../img/common/arrow-w.svg") center / contain no-repeat;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 110%;
+          height: 300%;
+          background: #fff;
+          transform: skewY(-10deg) scale(1, 0);
+          transform-origin: left top;
+          transition: transform .2s cubic-bezier(0.45, 0, 0.55, 1);
+          z-index: -1;
+        }
+      }
+    }
+
+    a:hover {
+      .btm-btn {
+        &::before {
+          transform: skewY(-10deg) scale(1, 1);
+        }
+        .txt {
+          color: $green_dark_color;
+        }
+        .arrow {
+          background-image: url(../img/common/arrow-g.svg);
         }
       }
     }

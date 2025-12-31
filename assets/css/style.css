@@ -563,7 +563,14 @@ figure img,
   }
   .c-newslist .info {
     gap: 0;
+    flex-direction: column;
+    align-items: flex-start;
     margin-bottom: 4px;
+  }
+  .c-newslist .bg {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
   }
   .c-newslist .title {
     padding: 0;

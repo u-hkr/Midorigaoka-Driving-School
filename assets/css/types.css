@@ -38,6 +38,7 @@
   left: 0;
 }
 #types .sec-box .box-item .btm-btn {
+  position: relative;
   width: 100%;
   background: #00A29A;
   display: flex;
@@ -48,12 +49,39 @@
   min-height: 3em;
   font-size: 24px;
   font-weight: 700;
+  overflow: hidden;
+  z-index: 2;
+}
+#types .sec-box .box-item .btm-btn .txt {
   color: #FFF;
+  transition: color 0.2s cubic-bezier(0.45, 0, 0.55, 1);
 }
 #types .sec-box .box-item .btm-btn .arrow {
   width: 16px;
   height: 18px;
   background: url("../img/common/arrow-w.svg") center/contain no-repeat;
+}
+#types .sec-box .box-item .btm-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110%;
+  height: 300%;
+  background: #fff;
+  transform: skewY(-10deg) scale(1, 0);
+  transform-origin: left top;
+  transition: transform 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+  z-index: -1;
+}
+#types .sec-box a:hover .btm-btn::before {
+  transform: skewY(-10deg) scale(1, 1);
+}
+#types .sec-box a:hover .btm-btn .txt {
+  color: #00A29A;
+}
+#types .sec-box a:hover .btm-btn .arrow {
+  background-image: url(../img/common/arrow-g.svg);
 }
 @media print, screen and (max-width: 1024px) {
   #types {

@@ -64,6 +64,74 @@ $(window).on('load', function() {
 
 });
 
+// simulation
+$(function(){
+  const $options = $(".js-simulation-option");
+  if(!$options.length) return;
+
+  const $option_result = $("#result-option");
+  const $licence1 = $("#licence-1");
+  const $licence1_result = $("#result-licence-1");
+  const $price_result = $("#result-price");
+  const $price_result_sp = $("#sp-price");
+  var price_result_sp = false;
+  var option_price = 0;
+  var licence1_price = 0;
+
+  check_licence1();
+  $options.click(function(){ check_options(); });
+  $licence1.change(function(){ check_licence1(); });
+
+  $(window).scroll(function () {
+    if ($(window).scrollTop() + $(window).height() < $price_result.offset().top) {
+      if(!price_result_sp){
+        $price_result_sp.fadeIn();
+        price_result_sp = true;
+      }
+    } else {
+      if(price_result_sp){
+        $price_result_sp.fadeOut();
+        price_result_sp = false;
+      }
+    }
+  });
+
+  function check_licence1(){
+    var val = $licence1.val();
+    if(!val){
+      licence1_price = 0;
+      $licence1_result.html(val);
+    }else{
+      var $option = $licence1.find("option[value='"+val+"']");
+      licence1_price = $option.data("price");
+      var price_text = String(licence1_price).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+      $licence1_result.html('<div class="left"><p class="small">免許種類</p><p class="text">'+val+'</p></div><p class="price">￥'+price_text+'</p>');
+    }
+    set_price();
+  }
+  function check_options(){
+    var html = "";
+    var price_total = 0;
+    var price_text = "";
+    $options.each(function(){
+      if($(this).prop('checked')){
+        var val = $(this).val();
+        var price = $(this).closest(".js-data").data("price");
+        price_total += price;
+        price_text = String(price).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+        html += '<div class="item"><div class="left"><p class="text">'+val+'</p></div><p class="price">+￥'+price_text+'</p></div>';
+      }
+    });
+    $option_result.html(html);
+    option_price = price_total;
+    set_price();
+  }
+  function set_price(){
+    var price = option_price + licence1_price;
+    var price_text = String(price).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+    $(".js-simulation-price").text("￥"+price_text);
+  }
+});
 
 // common
 $(function(){
@@ -166,70 +234,6 @@ $(function(){
     // });
   }
 
-  // simulation
-  const $options = $(".js-simulation-option");
-  const $option_result = $("#result-option");
-  const $licence1 = $("#licence-1");
-  const $licence1_result = $("#result-licence-1");
-  const $price_result = $("#result-price");
-  const $price_result_sp = $("#sp-price");
-  var price_result_sp = false;
-  var option_price = 0;
-  var licence1_price = 0;
-  check_licence1();
-
-  $options.click(function(){ check_options(); });
-  $licence1.change(function(){ check_licence1(); });
-
-  $(window).scroll(function () {
-    if ($(window).scrollTop() + $(window).height() < $price_result.offset().top) {
-      if(!price_result_sp){
-        $price_result_sp.fadeIn();
-        price_result_sp = true;
-      }
-    } else {
-      if(price_result_sp){
-        $price_result_sp.fadeOut();
-        price_result_sp = false;
-      }
-    }
-  });
-
-  function check_licence1(){
-    var val = $licence1.val();
-    if(!val){
-      licence1_price = 0;
-      $licence1_result.html(val);
-    }else{
-      var $option = $licence1.find("option[value='"+val+"']");
-      licence1_price = $option.data("price");
-      var price_text = String(licence1_price).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
-      $licence1_result.html('<div class="left"><p class="small">免許種類</p><p class="text">'+val+'</p></div><p class="price">￥'+price_text+'</p>');
-    }
-    set_price();
-  }
-  function check_options(){
-    var html = "";
-    var price_total = 0;
-    var price_text = "";
-    $options.each(function(){
-      if($(this).prop('checked')){
-        var val = $(this).val();
-        var price = $(this).closest(".js-data").data("price");
-        price_total += price;
-        price_text = String(price).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
-        html += '<div class="item"><div class="left"><p class="text">'+val+'</p></div><p class="price">+￥'+price_text+'</p></div>';
-      }
-    });
-    $option_result.html(html);
-    option_price = price_total;
-    set_price();
-  }
-  function set_price(){
-    var price = option_price + licence1_price;
-    var price_text = String(price).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
-    $(".js-simulation-price").text("￥"+price_text);
-  }
 
 
   // ページ内リンク

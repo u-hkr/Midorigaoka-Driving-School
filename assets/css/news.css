@@ -98,12 +98,30 @@
     margin: 24px auto 0;
   }
 }
+#post + #archive .sec-inner::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: 2.4rem;
+  display: block;
+  width: calc(100% - 4.8rem);
+  height: 14px;
+  background: url("data:image/svg+xml;charset=utf8,%3Csvg%20width%3D%221230%22%20height%3D%2214%22%20viewBox%3D%220%200%201230%2014%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M0.128906%207C32.9022%20-1.66667%2073.8689%20-1.66667%20123.029%207C172.189%2015.6667%20213.156%2015.6667%20245.929%207C278.702%20-1.66667%20319.669%20-1.66667%20368.829%207C417.989%2015.6667%20458.956%2015.6667%20491.729%207C524.502%20-1.66667%20565.469%20-1.66667%20614.629%207C663.789%2015.6667%20704.756%2015.6667%20737.529%207C770.302%20-1.66667%20811.269%20-1.66667%20860.429%207C909.589%2015.6667%20950.556%2015.6667%20983.329%207C1016.1%20-1.66667%201057.07%20-1.66667%201106.23%207C1155.39%2015.6667%201196.36%2015.6667%201229.13%207%22%20stroke%3D%22url(%23paint0_linear_3635_54506)%22%2F%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22paint0_linear_3635_54506%22%20x1%3D%220.128906%22%20y1%3D%227%22%20x2%3D%221229.13%22%20y2%3D%227%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%3Cstop%20stop-color%3D%22%2300A29A%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%2300C4BB%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3C%2Fsvg%3E") center/cover no-repeat;
+}
+@media only screen and (max-width: 768px) {
+  #post + #archive .sec-inner::before {
+    top: -5px;
+    height: 5px;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20width%3D%22355%22%20height%3D%225%22%20viewBox%3D%220%200%20355%205%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M0.136719%202.5C9.57672%20-0.166666%2021.3767%20-0.166666%2035.5367%202.5C49.6967%205.16667%2061.4967%205.16667%2070.9367%202.5C80.3767%20-0.166666%2092.1767%20-0.166666%20106.337%202.5C120.497%205.16667%20132.297%205.16667%20141.737%202.5C151.177%20-0.166666%20162.977%20-0.166666%20177.137%202.5C191.297%205.16667%20203.097%205.16667%20212.537%202.5C221.977%20-0.166666%20233.777%20-0.166666%20247.937%202.5C262.097%205.16667%20273.897%205.16667%20283.337%202.5C292.777%20-0.166666%20304.577%20-0.166666%20318.737%202.5C332.897%205.16667%20344.697%205.16667%20354.137%202.5%22%20stroke%3D%22url(%23paint0_linear_3635_54534)%22%2F%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22paint0_linear_3635_54534%22%20x1%3D%220.136719%22%20y1%3D%222.5%22%20x2%3D%22354.137%22%20y2%3D%222.5%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%3Cstop%20stop-color%3D%22%2300A29A%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%2300C4BB%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3C%2Fsvg%3E");
+  }
+}
 
 #archive .sec-inner {
+  position: relative;
   padding-top: 79px;
   padding-bottom: 524px;
   position: relative;
-  max-width: 1278px;
+  max-width: 127.8rem;
 }
 #archive .sec-border {
   position: absolute;
@@ -123,6 +141,7 @@
   margin-top: 40px;
 }
 #archive .sec-nav .page-numbers {
+  position: relative;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -131,15 +150,53 @@
   border: 1px solid;
   -o-border-image: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%) 1;
      border-image: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%) 1;
-  font-size: 26px;
-  font-family: "Jost", "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
   background: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%);
+  color: transparent;
+  font-family: "Jost", "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  font-size: 26px;
+  z-index: 2;
 }
-#archive .sec-nav .page-numbers .current {
+#archive .sec-nav .page-numbers::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%);
-  color: #FFF;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: -1;
+}
+#archive .sec-nav .page-numbers.prev, #archive .sec-nav .page-numbers.next {
+  display: none;
+  font-size: 0;
+}
+#archive .sec-nav .page-numbers.dots {
+  border: none;
+}
+#archive .sec-nav .page-numbers:not(span):hover {
+  background: #fff;
+  -webkit-text-fill-color: #fff;
+}
+#archive .sec-nav .page-numbers:not(span):hover::before {
+  opacity: 1;
+}
+#archive .sec-nav .page-numbers.current {
+  background: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%);
+  color: #fff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #fff;
+}
+#archive .sec-nav .page-numbers.current::before {
+  opacity: 1;
+}
+@media print, screen and (max-width: 1920px) {
+  #archive .sec-inner {
+    max-width: 1278px;
+  }
 }
 @media print, screen and (max-width: 1024px) {
   #archive .sec-inner {

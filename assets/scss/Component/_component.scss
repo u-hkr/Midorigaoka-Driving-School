@@ -304,7 +304,14 @@
     }
     .info {
       gap: 0;
+      flex-direction: column;
+      align-items: flex-start;
       margin-bottom: 4px;
+    }
+    .bg {
+      width: 100%;
+      max-width: 100%;
+      padding: 0;
     }
     .title {
       padding: 0;
