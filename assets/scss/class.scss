@@ -6,8 +6,8 @@
 
   .sec-container{
     background: #F5F5F5;
-    max-width: 1230px;
-    margin: 119px auto 539px;
+    max-width: 123rem;
+    margin: 120px auto 54rem;
     padding: 80px 10rem;
   }
   .sec-box{
@@ -117,6 +117,11 @@
       width: 24px;
     }
   }
+  @include media('full') {
+    .sec-container{
+      max-width: 1230px;
+    }
+  }
   @include media('tb') {
 
     .sec-container{
@@ -143,6 +148,7 @@
       }
     }
     .sec-btns{
+      gap: 4px 20px;
 
       .btn{
         height: 95px;
@@ -197,7 +203,6 @@
     }
     .sec-btns{
       flex-direction: column;
-      gap: 4px 0;
 
       .btn{
         height: 80px;

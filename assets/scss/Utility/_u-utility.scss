@@ -162,7 +162,7 @@ figure img,
 .u-delay-1500{ transition-delay: 1.5s !important; }
 .u-delay-2000{ transition-delay: 2s !important; }
 
-.h-opacity a, a.h-opacity {
+.h-opacity a, a.h-opacity, .h-opacity button, button.h-opacity {
   transition: opacity .3s;
   
   &:hover {
@@ -178,8 +178,13 @@ figure img,
   display: inline-block;
 }
 .u-line {
-  background: linear-gradient(transparent 7%, #FFB400 7% 95%, transparent 95%);
   display: inline;
+  background: linear-gradient(transparent 7%, #FFB400 7% 95%, transparent 95%) left/0% 100% no-repeat;
+  transition: background-size 1s 0s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+  &.inview{
+    background-size: 100% 100%;
+  }
 }
 
 // inview

@@ -49,11 +49,15 @@ function theme_scripts() {
 		}
 	}elseif(is_archive() || is_category()){
 
+		
+		if(is_post_type_archive("licence")){
+			$file = "/assets/css/flow.css";
+			wp_enqueue_style( 'flow-css', get_template_directory_uri().$file, array(), get_filemtime(get_template_directory().$file) );
+
+		}else{
 			$file = "/assets/css/news.css";
 			wp_enqueue_style( 'news-css', get_template_directory_uri().$file, array(), get_filemtime(get_template_directory().$file) );
-
-		// if(is_post_type_archive("blog")){
-		// }
+		}
 
 	}elseif(is_single() || is_singular()){
 		
@@ -154,6 +158,8 @@ add_action( 'admin_menu', 'admin_menu_change_label' );
 // 	return $use_block_editor;
 // },10,2);
 
+add_filter( 'licence_rewrite_rules', '__return_empty_array');
+
 /*
 	ページ存在確認
 */
@@ -172,6 +178,23 @@ function get_page_url($pageSlug){
 */
 function dir_img(){
 	return get_template_directory_uri()."/assets/img";
+}
+
+/*
+	各種リンク
+*/
+function echo_link($link){
+	switch ($link) {
+		case 'tel':
+			echo "https://www.e-license.jp/el25/?abc=V5LYiTSgKz4%2BbrGQYS%2B1OA%3D%3D&senisakiCd=2";
+			break;
+		case 'information':
+			echo "https://www.e-license.jp/el25/?abc=V5LYiTSgKz4%2BbrGQYS%2B1OA%3D%3D&senisakiCd=9";
+			break;
+		case 'apply':
+			echo "https://www.e-license.jp/el32/pc/regist/p34/p34a";
+			break;
+	}
 }
 
 ?>

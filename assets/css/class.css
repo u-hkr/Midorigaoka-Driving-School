@@ -1,7 +1,7 @@
 #class .sec-container {
   background: #F5F5F5;
-  max-width: 1230px;
-  margin: 119px auto 539px;
+  max-width: 123rem;
+  margin: 120px auto 54rem;
   padding: 80px 10rem;
 }
 #class .sec-box {
@@ -108,6 +108,11 @@
 #class .sec-btns .icon {
   width: 24px;
 }
+@media print, screen and (max-width: 1920px) {
+  #class .sec-container {
+    max-width: 1230px;
+  }
+}
 @media print, screen and (max-width: 1024px) {
   #class .sec-container {
     margin: 80px auto 300px;
@@ -130,6 +135,9 @@
   }
   #class .sec-box .box-text-bg {
     padding: 15px 24px;
+  }
+  #class .sec-btns {
+    gap: 4px 20px;
   }
   #class .sec-btns .btn {
     height: 95px;
@@ -181,7 +189,6 @@
   }
   #class .sec-btns {
     flex-direction: column;
-    gap: 4px 0;
   }
   #class .sec-btns .btn {
     height: 80px;

@@ -58,7 +58,7 @@ $(window).on('load', function() {
     },3800);
 
   } else {
-    $loading.hide();
+    $loading.fadeOut();
     $mv_line.addClass("active");
   }
 
@@ -234,24 +234,71 @@ $(function(){
     // });
   }
 
+  // 在校生の方へ
+  const $students = $("#students");
+  $(".js-students").click(function(){
+    $students.fadeIn();
+  });
+  $(".js-students-close").click(function(){
+    $students.fadeOut();
+  });
 
 
   // ページ内リンク
   $('a[href^="#"]').click(function(){
-    var speed = 500;
     var href= $(this).attr("href");
     var target = $(href == "#" || href == "" ? 'html' : href);
     var position = target.offset().top;
     if(position < 0) position = 0;
-    $("html, body").animate({scrollTop:position}, speed, "swing");
+    $("html, body").animate({scrollTop: position}, 500, "swing");
     return false;
   });
 });
 
 // アコーディオンボタン
 $(function () {
+  const $ac = $('.js-ac-btn');
+  if(!$ac.length) return;
+
+  const hash = location.hash;
+
+  if(hash && hash.match(/^#tab-/)){
+    var $target = $(hash);
+    if(!$target.length) return;
+
+    var position = $target.offset().top - 100;
+    $("html, body").animate({scrollTop: position}, 500, "swing");
+    $target.find(".js-ac-btn").addClass("active");
+    $target.find(".js-ac-content").show();
+
+  }else if($("body").hasClass("post-type-archive-licence")){
+    $("html, body").animate({scrollTop: 0}, 500, "swing");
+  }
+
   $('.js-ac-btn').on('click', function () {
-    $(this).next('.js-ac-content').slideToggle();
-    $(this).toggleClass('active');
+    var $content = $(this).next('.js-ac-content');
+    if($(this).hasClass('active')){
+      $content.slideUp();
+      $(this).removeClass('active');
+    }else{
+      $content.slideDown();
+      $(this).toggleClass('active');
+      
+      var position = $(this).offset().top - 100;
+      $("html, body").animate({scrollTop: position}, 500, "swing");
+
+      $content.find(".u-line").each(function(){
+        $(this).removeClass('inview');
+        ScrollTrigger.create({
+            trigger: $(this),
+            start: "top 90%",
+            toggleClass: {
+                targets: $(this),
+                className: "inview",
+            },
+            once: true,
+        });
+      });
+    }
   });
 });

@@ -186,10 +186,10 @@ figure img,
   transition-delay: 2s !important;
 }
 
-.h-opacity a, a.h-opacity {
+.h-opacity a, a.h-opacity, .h-opacity button, button.h-opacity {
   transition: opacity 0.3s;
 }
-.h-opacity a:hover, a.h-opacity:hover {
+.h-opacity a:hover, a.h-opacity:hover, .h-opacity button:hover, button.h-opacity:hover {
   transition: opacity 0.3s !important;
   opacity: 0.63 !important;
 }
@@ -203,8 +203,12 @@ figure img,
 }
 
 .u-line {
-  background: linear-gradient(transparent 7%, #FFB400 7% 95%, transparent 95%);
   display: inline;
+  background: linear-gradient(transparent 7%, #FFB400 7% 95%, transparent 95%) left/0% 100% no-repeat;
+  transition: background-size 1s 0s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.u-line.inview {
+  background-size: 100% 100%;
 }
 
 .js-inview.fadeup {
@@ -664,5 +668,251 @@ figure img,
   }
   #youtube .text {
     padding: 0 1em;
+  }
+}
+
+#page {
+  min-height: 500px;
+  margin-bottom: 10rem;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+#page .sec-btn {
+  position: relative;
+  max-width: 392px;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.4rem;
+  margin: 40px auto 0;
+}
+#page .sec-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+@media print, screen and (max-width: 1024px) {
+  #page .sec-btn {
+    max-width: 280px;
+    height: 67px;
+    font-size: 20px;
+    margin: 32px auto 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #page .sec-btn {
+    max-width: 167px;
+    height: 53px;
+    font-size: 16px;
+    margin: 24px auto 0;
+  }
+}
+
+#students {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: calc(100lvh + 100px);
+  padding: 0 2.4rem 100px;
+  background: url(../img/movie/item-bg.png) center/cover no-repeat;
+  z-index: 400;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+#students::-webkit-scrollbar {
+  display: none;
+}
+#students .sec-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100lvh;
+  max-width: 100rem;
+  margin: 0 auto;
+  padding: 80px 0;
+}
+#students .sec-title {
+  display: block;
+  margin-bottom: 45px;
+  background: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+}
+#students .sec-list {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+  flex-wrap: wrap;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+#students .sec-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 32.4rem;
+  border: 1px solid;
+  -o-border-image: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%) 1;
+     border-image: linear-gradient(90deg, #00A29A 0%, #00C4BB 100%) 1;
+}
+#students .sec-item .image {
+  position: relative;
+  width: 100%;
+  padding-top: 43.2%;
+}
+#students .sec-item .image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#students .sec-item .button {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 50px;
+  background: #00A29A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 5.3%;
+  padding: 13px 0;
+  font-size: 20px;
+  font-weight: 700;
+  overflow: hidden;
+  z-index: 2;
+  line-height: 1.2;
+}
+#students .sec-item .button .txt {
+  color: #FFF;
+  transition: color 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+}
+#students .sec-item .button .arrow {
+  width: 16px;
+  height: 18px;
+  background: url("../img/common/arrow-w.svg") center/contain no-repeat;
+}
+#students .sec-item .button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110%;
+  height: 300%;
+  background: #fff;
+  transform: skewY(-10deg) scale(1, 0);
+  transform-origin: left top;
+  transition: transform 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+  z-index: -1;
+}
+#students .sec-item:hover .button::before {
+  transform: skewY(-10deg) scale(1, 1);
+}
+#students .sec-item:hover .button .txt {
+  color: #00A29A;
+}
+#students .sec-item:hover .button .arrow {
+  background-image: url(../img/common/arrow-g.svg);
+}
+#students .sec-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  max-width: 32.5rem;
+  margin: 40px auto 0;
+  padding: 14px 35px;
+  background: linear-gradient(180deg, #FFD776 0%, #FFB400 100%);
+  font-size: 20px;
+  font-weight: bold;
+}
+#students .sec-btn .txt {
+  display: block;
+  width: 100%;
+}
+#students .sec-btn .icon {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+#students .sec-btn .icon::before, #students .sec-btn .icon::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1px);
+  left: calc(50% - 8px);
+  width: 17px;
+  height: 2px;
+  background: #000;
+  transform: rotate(45deg);
+}
+#students .sec-btn .icon::after {
+  transform: rotate(-45deg);
+}
+@media print, screen and (max-width: 1920px) {
+  #students .sec-inner {
+    max-width: 1000px;
+  }
+  #students .sec-item {
+    max-width: 324px;
+  }
+  #students .sec-btn {
+    max-width: 325px;
+  }
+}
+@media print, screen and (max-width: 1024px) {
+  #students .sec-item .button {
+    padding: 10px 8px;
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #students .sec-inner {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  #students .sec-title {
+    margin-bottom: 24px;
+    font-size: 24px;
+  }
+  #students .sec-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  #students .sec-item {
+    max-width: 100%;
+  }
+  #students .sec-item .button {
+    min-height: 48px;
+    padding: 5px 8px;
+    font-size: 16px;
+  }
+  #students .sec-btn {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 }/*# sourceMappingURL=style.css.map */

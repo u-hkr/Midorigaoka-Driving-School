@@ -20,7 +20,7 @@
 
   .line{
     font-weight: 700;
-    background: linear-gradient(transparent 7%, $accent_color 7% 95%, transparent 95%);
+    background-image: linear-gradient(transparent 7%, $accent_color 7% 95%, transparent 95%);
     display: inline;
   }
   .sec-box-1{

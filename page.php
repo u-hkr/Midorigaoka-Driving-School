@@ -8,7 +8,7 @@ get_header();
 		while ( have_posts() ) : the_post();
 	?>
 
-	<div id="top" class="c-section js-inview">
+	<div id="heading" class="c-section js-inview">
 		<div class="sec-inner">
 				<h1 class="sec-title"><?php the_title(); ?></h1>
 		</div>
@@ -16,9 +16,10 @@ get_header();
 
 	<main id="main">
 
-		<section class="section c-section">
+		<section id="page" class="section c-section">
 				<div class="sec-inner">
 					<?php the_content(); ?>
+        <a href="<?php echo home_url(); ?>" class="sec-btn h-opacity">TOPページに戻る</a>
 				</div>
 		</section>
 

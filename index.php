@@ -58,7 +58,7 @@
 								<strong class="ja">免許を取りたい方</strong>
 						</h2>
 						<div class="sec-box-top">
-								<a href="" class="box single js-inview fadeup">
+								<a href="<?php echo get_page_url("visitor"); ?>" class="box single js-inview fadeup">
 										<h3 class="title">初めての方へ</h3>
 										<div class="image"><img src="<?php echo dir_img(); ?>/index/box-top-s.png" alt="" class="u-img-contain"></div>
 										<p class="btm-btn"><span class="txt">詳しい内容を見る</span><span class="arrow"></span></p>
@@ -66,13 +66,13 @@
 								<div class="box double js-inview fadeup">
 										<h3 class="title">普通自動車・二輪車</h3>
 										<div class="bg">
-												<a href="" class="top-btn h-opacity"><span class="txt">料金シミュレーションをする</span><span class="arrow"></span></a>
+												<a href="<?php echo get_page_url("simulation"); ?>" class="top-btn h-opacity"><span class="txt">料金シミュレーションをする</span><span class="arrow"></span></a>
 												<div class="box-list">
-														<a href="" class="box-item">
+														<a href="<?php echo home_url("licence/#tab-standard"); ?>" class="box-item">
 																<div class="image"><img src="<?php echo dir_img(); ?>/index/box-top-d-1.png" alt="" class="u-img-contain"></div>
 																<p class="btm-btn"><span class="txt"><span class="large">普通自動車</span>を<br class="tb">詳しく見る</span><span class="arrow"></span></p>
 														</a>
-														<a href="" class="box-item">
+														<a href="<?php echo home_url("licence/#tab-motorcycle"); ?>" class="box-item">
 																<div class="image"><img src="<?php echo dir_img(); ?>/index/box-top-d-2.png" alt="" class=""></div>
 																<p class="btm-btn"><span class="txt"><span class="large">二輪車</span>を<br class="tb">詳しく見る</span><span class="arrow"></span></p>
 														</a>
@@ -83,19 +83,19 @@
 						<div class="sec-box-mid">
 								<h3 class="title js-inview fadeup">働く方向けの免許</h3>
 								<div class="box-list">
-										<a href="" class="box-item js-inview fadeup">
+										<a href="<?php echo home_url("licence/#tab-large"); ?>" class="box-item js-inview fadeup">
 												<div class="image"><img src="<?php echo dir_img(); ?>/index/box-mid-1.png" alt="" class="u-img-contain"></div>
 												<div class="btm-btn"><p class="txt"><span class="large">大型</span>を<br class="tb">詳しく見る</p><span class="arrow"></span></div>
 										</a>
-										<a href="" class="box-item js-inview fadeup">
+										<a href="<?php echo home_url("licence/#tab-mid"); ?>" class="box-item js-inview fadeup">
 												<div class="image"><img src="<?php echo dir_img(); ?>/index/box-mid-2.png" alt="" class="u-img-contain"></div>
 												<div class="btm-btn"><p class="txt"><span class="large">中型</span>を<br class="tb">詳しく見る</p><span class="arrow"></span></div>
 										</a>
-										<a href="" class="box-item js-inview fadeup">
+										<a href="<?php echo home_url("licence/#tab-towing"); ?>" class="box-item js-inview fadeup">
 												<div class="image"><img src="<?php echo dir_img(); ?>/index/box-mid-3.png" alt="" class="u-img-contain"></div>
 												<div class="btm-btn"><p class="txt"><span class="large">けん引</span>を<br class="tb">詳しく見る</p><span class="arrow"></span></div>
 										</a>
-										<a href="" class="box-item js-inview fadeup">
+										<a href="<?php echo home_url("licence/#tab-special-large"); ?>" class="box-item js-inview fadeup">
 												<div class="image"><img src="<?php echo dir_img(); ?>/index/box-mid-4.png" alt="" class="u-img-contain"></div>
 												<div class="btm-btn"><p class="txt"><span class="large">大特</span>を<br class="tb">詳しく見る</p><span class="arrow"></span></div>
 										</a>
@@ -103,15 +103,15 @@
 						</div>
 						<div class="sec-box-btm">
 								<div class="box-list">
-										<a href="" class="box-item js-inview fadeup">
+										<a href="<?php echo get_page_url("access"); ?>" class="box-item js-inview fadeup">
 												<div class="image"><img src="<?php echo dir_img(); ?>/index/box-btm-1.png" alt=""></div>
 												<p class="text">アクセス</p>
 										</a>
-										<a href="" class="box-item js-inview fadeup">
+										<a href="<?php echo get_page_url("school"); ?>" class="box-item js-inview fadeup">
 												<div class="image"><img src="<?php echo dir_img(); ?>/index/box-btm-2.png" alt=""></div>
 												<p class="text">学校案内</p>
 										</a>
-										<a href="" class="box-item js-inview fadeup">
+										<a href="<?php echo get_page_url("enrollment"); ?>" class="box-item js-inview fadeup">
 												<div class="image"><img src="<?php echo dir_img(); ?>/index/box-btm-3.png" alt=""></div>
 												<p class="text">入校案内</p>
 										</a>
@@ -183,7 +183,7 @@
 										</a>
 								</div>
 								<div class="js-inview fadeup">
-										<a href="" class="box-item">
+										<a href="<?php echo get_page_url("movie"); ?>" class="box-item">
 												<img src="<?php echo dir_img(); ?>/index/banner-4.png" alt="動画でわかる緑ヶ丘自動車学校" class="u-img-cover">
 										</a>
 								</div>

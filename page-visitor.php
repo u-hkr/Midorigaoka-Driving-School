@@ -30,7 +30,7 @@ get_header();
 						</div>
 						<div class="sec-box-btm h-opacity">
 								<div class="">
-										<a href="" class="box-item js-inview fadeup">
+										<a href="<?php echo get_page_url("movie"); ?>" class="box-item js-inview fadeup">
 												<img src="<?php echo dir_img(); ?>/visitor/about-banner-1.png" alt="動画でわかる緑ヶ丘自動車学校" class="u-img-cover">
 										</a>
 								</div>
@@ -40,12 +40,12 @@ get_header();
 										</a>
 								</div>
 								<div class="">
-										<a href="" class="box-item js-inview fadeup">
+										<a href="<?php echo get_page_url("campaign"); ?>" class="box-item js-inview fadeup">
 												<img src="<?php echo dir_img(); ?>/visitor/about-banner-3.png" alt="割引キャンペーン" class="u-img-cover">
 										</a>
 								</div>
 								<div class="">
-										<a href="" class="box-item js-inview fadeup">
+										<a href="<?php echo home_url("licence/"); ?>" class="box-item js-inview fadeup">
 												<img src="<?php echo dir_img(); ?>/visitor/about-banner-4.png" alt="免許取得の流れ" class="u-img-cover">
 										</a>
 								</div>
@@ -71,7 +71,7 @@ get_header();
 										<p class="top"><img src="<?php echo dir_img(); ?>/visitor/reason-2.svg" alt="REASON 02"></p>
 										<h3 class="text"><img src="<?php echo dir_img(); ?>/visitor/reason-text-2.png" alt="特殊免許の取得が可能で、業務に直結しそう（給料が上がりそう）" class="u-img-contain"></h3>
 										<div class="image"><img src="<?php echo dir_img(); ?>/visitor/reason-img-2.png" alt="" class="u-img-contain"></div>
-										<a href="" class="btn"><img src="<?php echo dir_img(); ?>/visitor/plan.svg" alt="" class="icon"><span class="txt"><span class="large">自動車免許やプラン</span><br class="sp">について見る</span></a>
+										<a href="<?php echo home_url("licence/"); ?>" class="btn"><img src="<?php echo dir_img(); ?>/visitor/plan.svg" alt="" class="icon"><span class="txt"><span class="large">自動車免許やプラン</span><br class="sp">について見る</span></a>
 										<div class="people"><img src="<?php echo dir_img(); ?>/visitor/reason-people-2.png" alt="" class="u-img-contain"></div>
 										<div class="bg"></div><div class="dot"></div>
 										<div class="road"><svg class="js-road" viewBox="0 0 640 1040" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 37.5H570C586.569 37.5 600 50.9315 600 67.5V1037.5" stroke="#A3A3A3" stroke-width="75"/><path d="M0 37.5H570C586.569 37.5 600 50.9315 600 67.5V1037.5" stroke="white" stroke-width="2" stroke-dasharray="4 4"/><mask><path d="M0 40H570C586.569 40 600 53.4315 600 70V1040" stroke="white" stroke-width="80" class="mask-path"></path></mask></svg></div>
